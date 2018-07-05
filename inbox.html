@@ -1,0 +1,404 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Transafty</title>
+	
+
+	<!-- STYLESHEETS-->
+	<link rel="stylesheet" type="text/css" href="libraries/bootstrap/css/bootstrap.min.css">
+
+	<!-- CUSTOM STYLES -->
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/switch.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/intro.css">
+	
+
+
+	<!-- WEBFONT -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+
+	<!-- ICON -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body class="">
+
+		
+
+		<div class="section">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-2">
+						<div class="leftbar">
+							<img src="assets/img/cross-out.svg" id="closebtn">
+							<!-- <i class="fa fa-times" id="closebtn"></i> -->
+							<div class="">
+								<div class="__dashlogoimg">
+									<a href=""><img src="assets/img/tralogo1.png" class=""></a>
+								</div>
+								<p class="activedashboard" >
+
+									<a href="dashboard.html">
+										<img src="assets/img/graphic.svg" class="" style="width: 20px;"><br>
+										DASHBOARD
+									</a>
+								</p>
+								<p class="" >
+									<a href="project.html">
+										<img src="assets/img/projection.svg" class="" style="width: 20px;"><br>
+										PROJECTS
+									</a>
+								</p>
+								<p class="" >
+									<a href="transation.html">
+										<img src="assets/img/t4.svg"><br>
+										TRANSACTIONS
+									</a>
+								</p>
+								<p class="" >
+									<a href="settings">
+										<img src="assets/img/tsupport.svg"><br>
+										SETTINGS
+									</a>
+								</p>
+								<p class="" >
+									<a href="inbox.html">
+										<img src="assets/img/tmsg.svg"><br>
+										INBOX
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-10">
+						<div class="__projds">
+							<div class="row">
+								<div class="col-md-8 col-sm-8 col-xs-4">
+									<a href="#" class="navbar-brand __navbar-brand1" id="openSidebar"><i class=" fa fa-bars" onclick="openSidebar()" ></i></a>
+
+									<a class="navbar-brand __navbar-brand2" href=""><span><img src="assets/img/uimg.svg" alt="" class="logo"></span>&nbsp; &nbsp;<span>JOHNSON TRUCKS</span></a>
+								</div>
+							
+								<div class="col-md-4 col-sm-4 col-xs-8">
+									<ul class="dropdown __dashdropdown">
+										<a href="#" class="dropdown-toggle " data-toggle="dropdown"><img src="assets/img/avatar.png" class="img-circle">&nbsp; &nbsp;<span>Abimbola Odugbesan</span>
+										</a>
+										<ul class="dropdown-menu __dropmenu">
+											<li>
+												<a href="">
+												<span><i class="icon icon-note"></i></span>&nbsp; &nbsp;&nbsp; &nbsp; Edit Profile</a>
+											</li>
+											<li>
+												<a href="">
+												<span><i class="icon icon-key"></i></span>&nbsp; &nbsp;&nbsp; &nbsp; Change Password</a>
+											</li>
+											<li>
+												<a href="">
+												<span><i class="icon icon-logout"></i></span>&nbsp; &nbsp;&nbsp; &nbsp;Logout</a>
+											</li>
+										</ul>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="__dasmenmsg">
+							<div class="__dashmsg">
+								<p class="f3 __dashmsgp">Messages</p>
+								<hr class="__dashhr">
+								<div class="row">
+									<div class="col-md-3 col-sm-3 __msgcol3">
+										<div class="__dashm">
+											<p class="__dashnewmsg">
+												<a href="">New Message</a>
+											</p>
+											<p class="f1 __dasp">New</p>
+											<p class="f1 __dasp">Sents</p>
+											<p class="f1 __dasp">Trash</p>
+											<p class="f1 __dasp">Draft</p>
+										</div>
+										<hr class="__dashhr">
+										<div class="__dashm">
+											<p class="f3 __dastag">Tags</p>
+											<p>
+												<span><img src="assets/img/msgt.svg" class="__dasimt"></span>
+												<span class="f1 __dasp">&nbsp; &nbsp;Transactions</span>
+											</p>
+											<p>
+												<span><img src="assets/img/msgs.svg" class="__dasimt"></span>
+												<span class="f1 __dasp">&nbsp; &nbsp;Support</span>
+											</p>
+											<p>
+												<span><img src="assets/img/msgi.svg" class="__dasimt"></span>
+												<span class="f1 __dasp">&nbsp; &nbsp;Inquiries</span>
+											</p>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-4 __daspos">
+										<div class="__dasposs">
+											<span class="__dassearc"><img src="assets/img/dasims.svg"></span>
+											<input type="search" name="" id="input" class="form-control __dasminp" value="" required="required" title="" placeholder="Search messages or name">
+										</div>
+
+										<div class="__dashscro">
+											<div class="__dasseapractive">
+												<div class="row">
+													<div class="col-md-2 col-xs-2">
+														<img src="assets/img/avatar.png" class="__dashimgasr1 img-circle">
+													</div>
+													<div class="col-md-10 col-xs-10">
+														<p style="margin-bottom: 0px;">
+															<span class="f3">Olagunju Tunde</span>
+															<span class="f2 __actr1">Mar 15</span>
+														</p>
+														<p class="f2">Lorem baby ipsum dolor dolor sit amet</p>
+													</div>
+												</div>
+											</div>
+											<hr class="__dashhr">
+
+											<div class="__dasseapractivea">
+												<div class="row">
+													<div class="col-md-2 col-xs-2">
+														<img src="assets/img/avatar.png" class="__dashimgasr1 img-circle">
+													</div>
+													<div class="col-md-10 col-xs-10">
+														<p style="margin-bottom: 0px;">
+															<span class="f3">Olagunju Tunde</span>
+															<span class="f2 __actr1">Mar 15</span>
+														</p>
+														<p class="f2">Lorem baby ipsum dolor dolor sit amet</p>
+													</div>
+												</div>
+											</div>
+											<hr class="__dashhr">
+
+											<div class="__dasseapractive3">
+												<div class="row">
+													<div class="col-md-2 col-xs-2">
+														<img src="assets/img/avatar.png" class="__dashimgasr1 img-circle">
+													</div>
+													<div class="col-md-10 col-xs-10">
+														<p style="margin-bottom: 0px;">
+															<span class="f3 __actr">Olagunju Tunde</span>
+															<span class="f2 __actr1">Mar 15</span>
+														</p>
+														<p class="f2">Lorem baby ipsum dolor dolor sit amet</p>
+													</div>
+												</div>
+											</div>
+											<hr class="__dashhr">
+
+											<div class="__dasseapractive1">
+												<div class="row">
+													<div class="col-md-2 col-xs-2">
+														<img src="assets/img/avatar.png" class="__dashimgasr1 img-circle">
+													</div>
+													<div class="col-md-10 col-xs-10">
+														<p style="margin-bottom: 0px;">
+															<span class="f3 __actr">Olagunju Tunde</span>
+															<span class="f2 __actr1">Mar 15</span>
+														</p>
+														<p class="f2">Lorem baby ipsum dolor dolor sit amet</p>
+													</div>
+												</div>
+											</div>
+											<hr class="__dashhr">
+
+											<div class="__dasseapractive2">
+												<div class="row">
+													<div class="col-md-2 col-xs-2">
+														<img src="assets/img/avatar.png" class="__dashimgasr1 img-circle">
+													</div>
+													<div class="col-md-10 col-xs-10">
+														<p style="margin-bottom: 0px;">
+															<span class="f3 __actr">Olagunju Tunde</span>
+															<span class="f2 __actr1">Mar 15</span>
+														</p>
+														<p class="f2">Lorem baby ipsum dolor dolor sit amet</p>
+													</div>
+												</div>
+											</div>
+											<hr class="__dashhr">
+
+											<div class="__dasseapractive3">
+												<div class="row">
+													<div class="col-md-2 col-xs-2">
+														<img src="assets/img/avatar.png" class="__dashimgasr1 img-circle">
+													</div>
+													<div class="col-md-10 col-xs-10">
+														<p style="margin-bottom: 0px;">
+															<span class="f3 __actr">Olagunju Tunde</span>
+															<span class="f2 __actr1">Mar 15</span>
+														</p>
+														<p class="f2">Lorem baby ipsum dolor dolor sit amet</p>
+													</div>
+												</div>
+											</div>
+											<hr class="__dashhr">
+
+											<div class="__dasseapractive3">
+												<div class="row">
+													<div class="col-md-2 col-xs-2">
+														<img src="assets/img/avatar.png" class="__dashimgasr1 img-circle">
+													</div>
+													<div class="col-md-10 col-xs-10">
+														<p style="margin-bottom: 0px;">
+															<span class="f3 __actr">Olagunju Tunde</span>
+															<span class="f2 __actr1">Mar 15</span>
+														</p>
+														<p class="f2">Lorem baby ipsum dolor dolor sit amet</p>
+													</div>
+												</div>
+											</div>
+											<hr class="__dashhr">
+											<div class="__dasseapractive3">
+												<div class="row">
+													<div class="col-md-2 col-xs-2">
+														<img src="assets/img/avatar.png" class="__dashimgasr1 img-circle">
+													</div>
+													<div class="col-md-10 col-xs-10">
+														<p style="margin-bottom: 0px;">
+															<span class="f3 __actr">Olagunju Tunde</span>
+															<span class="f2 __actr1">Mar 15</span>
+														</p>
+														<p class="f2">Lorem baby ipsum dolor dolor sit amet</p>
+													</div>
+												</div>
+											</div>
+											<hr class="__dashhr">
+											<div class="__dasseapractive3">
+												<div class="row">
+													<div class="col-md-2 col-xs-2">
+														<img src="assets/img/avatar.png" class="__dashimgasr1 img-circle">
+													</div>
+													<div class="col-md-10 col-xs-10">
+														<p style="margin-bottom: 0px;">
+															<span class="f3 __actr">Olagunju Tunde</span>
+															<span class="f2 __actr1">Mar 15</span>
+														</p>
+														<p class="f2">Lorem baby ipsum dolor dolor sit amet</p>
+													</div>
+												</div>
+											</div>
+											<hr class="__dashhr">
+											<div class="__dasseapractive3">
+												<div class="row">
+													<div class="col-md-2 col-xs-2">
+														<img src="assets/img/avatar.png" class="__dashimgasr1 img-circle">
+													</div>
+													<div class="col-md-10 col-xs-10">
+														<p style="margin-bottom: 0px;">
+															<span class="f3 __actr">Olagunju Tunde</span>
+															<span class="f2 __actr1">Mar 15</span>
+														</p>
+														<p class="f2">Lorem baby ipsum dolor dolor sit amet</p>
+													</div>
+												</div>
+											</div>
+											<hr class="__dashhr">
+										</div>
+									</div>
+									<div class="col-md-5 col-sm-5 __msgcol5">
+										<div class="__msgcol5r">
+											<div class="row">
+												<div class="col-md-2 col-xs-2">
+													<img src="assets/img/avatar.png" class="__dashimgasr1 img-circle">
+												</div>
+												<div class="col-md-7 col-xs-6">
+													<p class="f3 __msgtext">Nemi Banigo</p>
+												</div>
+												<div class="col-md-3 col-xs-4">
+													<p class="f2 __msgtext1">Mar 15 2018</p>
+												</div>
+											</div>
+										</div>
+										<hr class="__dashhr">
+										<div class="__dashmchat">
+											<div class="row">
+										  		<div class="col-md-10">
+										  			<p class="f2 __out">Hello. How are you today? Hello. How are you today? Hello. How are you today? Hello. How are you today? Hello. How are you today?</p><span class="time-left">11:00</span>
+												</div>
+										  		<div class="col-md-2"></div>
+										  	</div>
+
+										  	<div class="row">
+										    	<div class="col-md-2"></div>
+										    	<div class="col-md-10">
+										    		<p class="f2 __in">Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!</p>
+												    <span class="time-right">11:01</span>
+										    	</div>
+										    </div>
+
+										    <div class="row">
+										  		<div class="col-md-10">
+										  			<p class="__out">Hello. How are you today? Hello. How are you today? Hello. How are you today? Hello. How are you today? Hello. How are you today?</p><span class="time-left">11:00</span>
+												</div>
+										  		<div class="col-md-2"></div>
+										  	</div>
+
+										  	<div class="row">
+										    	<div class="col-md-2"></div>
+										    	<div class="col-md-10">
+										    		<p class="__in">Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!</p>
+												    <span class="time-right">11:01</span>
+										    	</div>
+										    </div>
+
+										    <div class="row">
+										  		<div class="col-md-10">
+										  			<p class="__out">Hello. How are you today? Hello. How are you today? Hello. How are you today? Hello. How are you today? Hello. How are you today?</p><span class="time-left">11:00</span>
+												</div>
+										  		<div class="col-md-2"></div>
+										  	</div>
+
+										  	<div class="row">
+										    	<div class="col-md-2"></div>
+										    	<div class="col-md-10">
+										    		<p class="__in">Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!Hey! I'm fine. Thanks for asking!</p>
+												    <span class="time-right">11:01</span>
+										    	</div>
+										    </div>
+										</div>
+										<div class="__msgcol5r1">
+											<textarea name="" id="input" class="form-control" rows="3" required="" placeholder="Click here to reply"></textarea><br>
+											<button type="submit" class="btn  __makep" style="float: right;">Send</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>			
+				</div>
+			</div>
+		</div>
+
+
+	
+
+
+	<script type="text/javascript" src="libraries/bootstrap/js/jquery-3.1.1.min.js"></script>
+
+    <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/intro.js"></script>
+    </script>
+</body>
+
+	<script type="text/javascript">
+  		$('#openSidebar').click(function(){
+			$('.leftbar').addClass('biger');
+		});
+		$('#closebtn').click(function(){
+			$('.leftbar').removeClass('biger');
+		});
+    </script>
+</html>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="371 2495 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #94d2d1;
+      }
+
+      .cls-2 {
+        fill: #7a51cc;
+      }
+    </style>
+  </defs>
+  <g id="trophy_1_" data-name="trophy (1)" transform="translate(371 2495)">
+    <g id="Group_126" data-name="Group 126" transform="translate(0 0.058)">
+      <path id="Path_185" data-name="Path 185" class="cls-1" d="M362.5.455a3.681,3.681,0,0,0-4.25,1.5c-4.5,6.25-14.75,8.75-22.5,9.5v7.5c6.25-.5,15-2.25,21.75-6.25a57.987,57.987,0,0,1-37.5,49v8c26.25-8.75,45-33.75,45-62V3.955A3.53,3.53,0,0,0,362.5.455Z" transform="translate(-245 -0.263)"/>
+      <path id="Path_186" data-name="Path 186" class="cls-1" d="M7.75,12.441c6,3.75,13.25,5.25,19.25,6v-7.5c-7.5-1-16-3.75-20.25-9.25A3.81,3.81,0,0,0,2.5.441,3.53,3.53,0,0,0,0,3.941v3.75a64.864,64.864,0,0,0,44.75,61.5v-8A56.814,56.814,0,0,1,7.75,12.441Z" transform="translate(0 -0.249)"/>
+    </g>
+    <path id="Path_187" data-name="Path 187" class="cls-1" d="M193.1,421.35V398.6a5.015,5.015,0,0,0-5-5H142.6a5.015,5.015,0,0,0-5,5v22.75Z" transform="translate(-105.35 -301.35)"/>
+    <path id="Path_188" data-name="Path 188" class="cls-2" d="M189.617,305.067h-17.75a24.066,24.066,0,0,1-14,20.75h45.75A24.067,24.067,0,0,1,189.617,305.067Z" transform="translate(-120.867 -233.567)"/>
+    <path id="Path_189" data-name="Path 189" class="cls-1" d="M110.933,0V35.75a41.5,41.5,0,0,0,34,40.75h0a41.306,41.306,0,0,0,34-40.75V0Z" transform="translate(-84.933)"/>
+  </g>
+</svg>
