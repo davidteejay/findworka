@@ -11,10 +11,8 @@ body {
 	font-family: 'Lato', 'sans-serif' !important;
 	font-size: 14px;
 	color: #222222;
-	font-weight: normal;
 	overflow-x: hidden;
-	line-height: 20px;
-	background: #c6ccc70a;
+	background: #1351ad05;
 }
  
  .l-h2{line-height: 27px}
@@ -1026,15 +1024,11 @@ i#closebtn {
 }
 
 .leftbar p {
-    background-color: white;
-    padding: 3px 40px;
     margin-bottom: 10%;
     font-size: 13px;
     text-align: left;
     color: #4a4a4a;
     cursor: pointer;
-    text-align: center;
-    font-weight: 400;
 }
 
 /*THIS NEED TO BE DELETED IF YOUR TABLE LINE ARE NOT SHOWING*/
