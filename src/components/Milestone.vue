@@ -75,110 +75,52 @@
 		          
 		        </div>
 	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-		          	<h1 class="page-header __dashp">Avaliable Talents</h1>
+		          	<h1 class="page-header __dashp">Milestone</h1>
 
 		          	<div class="__nxtmilestone">
-						<p class="__milestonenext">Select reqiured skills</p>
-
-						<div class="row">
-					        <div class="form-group">
-					            <div class="card-container">
-					                <div class="items col-xs-6 col-sm-6 col-md-4 col-lg-4">
-					                    <div class="info-block block-info clearfix">
-					                        <div data-toggle="buttons" class="btn-group">
-					                            <label class="btn btn-default">
-					                            	<div class="row">
-					                            		<div class="col-md-4 col-sm-4">
-					                            			<img src="../assets/avatar.png" class="img-rounded __cardimg">
-					                            		</div>
-					                            		<div class="col-md-8 col-sm-8">
-					                            			<div class="text-justify">
-					                            				<p>Odugbesan Abimbpola</p>
-					                            				<p>
-					                            					<span>HTML</span>
-					                            					<span>Laravel</span>
-					                            					<span>Bootstrap</span>
-					                            					<span>PHP</span>
-					                            				</p>
-					                            				<p>Level</p>
-					                            			</div>
-					                            		</div>
-					                            	</div>
-					                                <div class="bizcontent">
-					                                    <input type="checkbox" name="">
-					                                    <!-- <span class="glyphicon glyphicon-ok glyphicon-lg"></span> -->
-					                                </div>
-					                            </label>
-					                        </div>
-					                    </div>
-					                </div>
-					                <div class="items col-xs-6 col-sm-6 col-md-4 col-lg-4">
-					                    <div data-toggle="buttons" class="btn-group bizmoduleselect">
-				                            <label class="btn btn-default">
-				                            	<div class="row">
-				                            		<div class="col-md-4 col-sm-4">
-				                            			<img src="../assets/avatar.png" class="img-rounded __cardimg">
-				                            		</div>
-				                            		<div class="col-md-8 col-sm-8">
-				                            			<div class="__cardp">
-				                            				<p>Odugbesan Abimbpola ifeoluwa</p>
-				                            				<p>
-				                            					<span>HTML</span>
-				                            					<span>Laravel</span>
-				                            					<span>Bootstrap</span>
-				                            					<span>PHP</span>
-				                            					<span>PHP</span>
-				                            				</p>
-				                            				<p>Level</p>
-				                            			</div>
-				                            		</div>
-				                            	</div>
-				                                <div class="bizcontent">
-				                                    <input type="checkbox" name="">
-				                                    <!-- <span class="glyphicon glyphicon-ok glyphicon-lg"></span> -->
-				                                </div>
-				                            </label>
-				                        </div>
-					                </div>
-					                <div class="items col-xs-6 col-sm-6 col-md-4 col-lg-4">
-					                    <div class="info-block block-info clearfix">
-					                        <div data-toggle="buttons" class="btn-group bizmoduleselect">
-					                            <label class="btn btn-default">
-					                            	<div class="row">
-					                            		<div class="col-md-4 col-sm-4">
-					                            			<img src="../assets/avatar.png" class="img-rounded __cardimg">
-					                            		</div>
-					                            		<div class="col-md-8 col-sm-8">
-					                            			<div class="text-justify">
-					                            				<p>Odugbesan Abimbpola</p>
-					                            				<p>
-					                            					<span>HTML</span>
-					                            					<span>Laravel</span>
-					                            					<span>Bootstrap</span>
-					                            					<span>PHP</span>
-					                            				</p>
-					                            				<p>Level</p>
-					                            			</div>
-					                            		</div>
-					                            	</div>
-					                                <div class="bizcontent">
-					                                    <input type="checkbox" name="">
-					                                    <!-- <span class="glyphicon glyphicon-ok glyphicon-lg"></span> -->
-					                                </div>
-					                            </label>
-					                        </div>
-					                    </div>
-					                </div>
-					                <br><br>
-									<div class="row">
-										<div class="col-md-10"></div>
-										<div class="col-md-2">
-											<router-link to="/avaliabletalent" class="btn __projectbtn">Assign Dev</router-link>
-										</div>
-									</div>
-					            </div>
+						<form action="" method="POST" role="form">
+							<div class="form-group">
+								<label for="">Title</label>
+								<input type="text" class="form-control" id="" placeholder="">
 							</div>
-						</div>
+						
+							<div class="form-group">
+								<label for="">Description</label>
+								<textarea name="" id="input" class="form-control" rows="2" ></textarea>
+							</div>	
+
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="">Start Date</label>
+										<input type="text" class="form-control" id="" placeholder="">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="">End Date</label>
+										<input type="text" class="form-control" id="" placeholder="">
+									</div>
+								</div>
+							</div>
+                    	
+                    		<div class="form-group">
+                    			<label for="">Text Period</label>
+                    			<input type="text" class="form-control" id="" placeholder="">
+                    		</div>
+
+                    		<div class="form-group">
+                    			<label for="">Status</label>
+                    			<select name="" id="input" class="form-control" >
+                    				<option value=""></option>
+                    			</select>
+                    		</div>
+
+	                    	<div class="text-center">
+								                
+				                <button class="btn btn-next"><i class="fa fa-paper-plane"></i> Done</button>
+				            </div>
+						</form>
 					</div>
 		        </div>
 	      	</div>
@@ -188,7 +130,12 @@
 
 <script>
 	export default {
-
+		name: 'app',
+		methods: {
+			submit() {
+				alert('submitted')
+			}
+		}
 	}
 </script>
 

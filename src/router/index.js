@@ -7,6 +7,7 @@ import Lead from '@/components/Lead'
 import LeadPage from '@/components/LeadPage'
 import Talent from '@/components/Talent'
 import AvaliableTalent from '@/components/AvaliableTalent'
+import Milestone from '@/components/Milestone'
 
 Vue.use(Router)
 
@@ -51,6 +52,12 @@ export default new Router({
       path: '/avaliabletalent',
       name: 'AvaliableTalent',
       component: AvaliableTalent
+    },
+
+    {
+      path: '/milestone',
+      name: 'Milestone',
+      component: Milestone
     }
   ]
 })
