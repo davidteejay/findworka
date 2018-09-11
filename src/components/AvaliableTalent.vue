@@ -24,10 +24,10 @@
 		        </div>
 		        <div id="navbar" class="navbar-collapse collapse">
 		          	<ul class="nav navbar-nav navbar-right">
-			            <li><a href="#">Dashboard</a></li>
+			            <!-- <li><a href="#">Dashboard</a></li>
 			            <li><a href="#">Settings</a></li>
 			            <li><a href="#">Profile</a></li>
-			            <li><a href="#">Help</a></li>
+			            <li><a href="#">Help</a></li> -->
 			            <li class="dropdown __dashdropdown">
 			              	<a href="#" class="dropdown-toggle " data-toggle="dropdown"><img src="../assets/avatar.png" class="img-circle">&nbsp; &nbsp;<span>Abimbola Odugbesan</span>
 							</a>
@@ -47,9 +47,9 @@
 							</ul>
 			            </li>
 		          </ul>
-		          <form class="navbar-form navbar-right">
+		          <!-- <form class="navbar-form navbar-right">
 		            <input type="text" class="form-control" placeholder="Search...">
-		          </form>
+		          </form> -->
 		        </div>
 		    </div>
 	    </nav>
@@ -92,7 +92,7 @@
 					                            			<img src="../assets/avatar.png" class="img-rounded __cardimg">
 					                            		</div>
 					                            		<div class="col-md-8 col-sm-8">
-					                            			<div class="text-justify">
+					                            			<div class="__cardp">
 					                            				<p>Odugbesan Abimbpola</p>
 					                            				<p>
 					                            					<span>HTML</span>
@@ -149,7 +149,7 @@
 					                            			<img src="../assets/avatar.png" class="img-rounded __cardimg">
 					                            		</div>
 					                            		<div class="col-md-8 col-sm-8">
-					                            			<div class="text-justify">
+					                            			<div class="__cardp">
 					                            				<p>Odugbesan Abimbpola</p>
 					                            				<p>
 					                            					<span>HTML</span>
@@ -213,6 +213,10 @@
 	.__dashdropdown img {
 	    width: 25px;
 	    /*box-shadow: 0px 0px 16px 0px rgba(241, 239, 239, 1);*/
+	}
+
+	.__dashdropdown a:hover{
+		color: #9d9d9d !important;
 	}
 
 	.__dashp span {
@@ -341,13 +345,15 @@
 	.card-container label.btn-default.active{
 		background-color:#007ba7;
 		outline: none;
-		color:#FFF}
+		color:#FFF;
+		border: #007ba7;
+	}
 	.card-container label.btn-default{
 		width:100%;
 		border:1px solid #efefef;
 		outline: none;
 		margin:5px; 
-		box-shadow:5px 8px 8px 0 #ccc;
+		/*box-shadow:5px 8px 8px 0 #ccc;*/
 	}
 	.card-container label .bizcontent{
 		width:100%;
@@ -368,6 +374,22 @@
 	.__cardp p{
 		white-space: pre-wrap;
 		margin-bottom:0;
+	}
+	.__cardp p:nth-child(1){
+		white-space: pre-wrap;
+		margin-bottom:0;
+		font-size: 14px;
+	}
+
+	.__cardp p:nth-child(2){
+		white-space: pre-wrap;
+		margin-bottom:0;
+		font-size: 10px;
+	}
+	.__cardp p:nth-child(3){
+		white-space: pre-wrap;
+		margin-bottom:0;
+		font-size: 10px;
 	}
 
 	
@@ -407,6 +429,7 @@ body {
  */
 .navbar-fixed-top {
   border: 0;
+  background: #ffffff;
 }
 
 /*
@@ -444,11 +467,20 @@ body {
   padding-left: 20px;
 }
 
+.navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
 a, a:active, a:hover, a:focus, a:visited {
     text-decoration: none;
     /* background: transparent; */
     outline: none;
     color: inherit;
+}
+
+.__dashdropdown a:hover{
+	color: #9d9d9d !important;
 }
 
 .nav-sidebar > li > a {

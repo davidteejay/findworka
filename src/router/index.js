@@ -8,6 +8,8 @@ import LeadPage from '@/components/LeadPage'
 import Talent from '@/components/Talent'
 import AvaliableTalent from '@/components/AvaliableTalent'
 import Milestone from '@/components/Milestone'
+import Transaction from '@/components/Transaction'
+import Inbox from '@/components/Inbox'
 
 Vue.use(Router)
 
@@ -58,6 +60,18 @@ export default new Router({
       path: '/milestone',
       name: 'Milestone',
       component: Milestone
+    },
+
+    {
+      path: '/transaction',
+      name: 'Transaction',
+      component: Transaction
+    },
+
+    {
+      path: '/inbox',
+      name: 'Inbox',
+      component: Inbox
     }
   ]
 })

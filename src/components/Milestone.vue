@@ -24,10 +24,10 @@
 		        </div>
 		        <div id="navbar" class="navbar-collapse collapse">
 		          	<ul class="nav navbar-nav navbar-right">
-			            <li><a href="#">Dashboard</a></li>
+			            <!-- <li><a href="#">Dashboard</a></li>
 			            <li><a href="#">Settings</a></li>
 			            <li><a href="#">Profile</a></li>
-			            <li><a href="#">Help</a></li>
+			            <li><a href="#">Help</a></li> -->
 			            <li class="dropdown __dashdropdown">
 			              	<a href="#" class="dropdown-toggle " data-toggle="dropdown"><img src="../assets/avatar.png" class="img-circle">&nbsp; &nbsp;<span>Abimbola Odugbesan</span>
 							</a>
@@ -47,9 +47,9 @@
 							</ul>
 			            </li>
 		          </ul>
-		          <form class="navbar-form navbar-right">
+		          <!-- <form class="navbar-form navbar-right">
 		            <input type="text" class="form-control" placeholder="Search...">
-		          </form>
+		          </form> -->
 		        </div>
 		    </div>
 	    </nav>
@@ -63,9 +63,9 @@
 			            <li><router-link to="/" class="" ><span class="icon icon-home icon-sm"></span>
 						&nbsp;&nbsp;Dashboard</router-link></li>
 
-			            <li class="active"><router-link to="/project" ><span class="icon icon-briefcase icon-sm"></span>
+			            <li ><router-link to="/project" ><span class="icon icon-briefcase icon-sm"></span>
 						&nbsp;&nbsp;PROJECTS</router-link></li>
-			            <li><router-link to="/login" ><span class="icon icon-credit-card icon-sm"></span>
+			            <li><router-link to="/transaction" ><span class="icon icon-credit-card icon-sm"></span>
 						&nbsp;&nbsp;TRANSACTIONS</router-link></li>
 			            <li><router-link to="/lead" ><span class="icon icon-settings icon-sm"></span>
 						&nbsp;&nbsp;LEADS</router-link></li>
@@ -77,51 +77,61 @@
 	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 		          	<h1 class="page-header __dashp">Milestone</h1>
 
-		          	<div class="__nxtmilestone">
-						<form action="" method="POST" role="form">
-							<div class="form-group">
-								<label for="">Title</label>
-								<input type="text" class="form-control" id="" placeholder="">
-							</div>
-						
-							<div class="form-group">
-								<label for="">Description</label>
-								<textarea name="" id="input" class="form-control" rows="2" ></textarea>
-							</div>	
-
-							<div class="row">
-								<div class="col-md-6">
+		          	<div class="row">
+		          		<div class="col-md-8">
+		          			<div class="__nxtmilestone">
+								<form action="" method="POST" role="form">
 									<div class="form-group">
-										<label for="">Start Date</label>
+										<label for="">Title</label>
 										<input type="text" class="form-control" id="" placeholder="">
 									</div>
-								</div>
-								<div class="col-md-6">
+								
 									<div class="form-group">
-										<label for="">End Date</label>
-										<input type="text" class="form-control" id="" placeholder="">
+										<label for="">Description</label>
+										<textarea name="" id="input" class="form-control" rows="2" ></textarea>
+									</div>	
+
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="">Start Date</label>
+												<input type="text" class="form-control" id="" placeholder="">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="">End Date</label>
+												<input type="text" class="form-control" id="" placeholder="">
+											</div>
+										</div>
 									</div>
-								</div>
+
+		                    		<div class="form-group">
+		                    			<label for="">Status</label>
+		                    			<select name="" id="input" class="form-control" >
+		                    				<option value=""></option>
+		                    			</select>
+		                    		</div>
+
+		                    		<div class="form-group">
+		                    			<label for="">Task</label>
+		                    			<input type="text" class="form-control" id="" placeholder="">
+		                    		</div>
+
+			                    	<div class="row">
+										<div class="col-md-10"></div>                
+										<div class="col-md-2">
+											<button class="btn btn-next"><i class="fa fa-paper-plane"></i> Done</button>
+										</div>                
+						                
+						            </div>
+								</form>
+
+								
 							</div>
-                    	
-                    		<div class="form-group">
-                    			<label for="">Text Period</label>
-                    			<input type="text" class="form-control" id="" placeholder="">
-                    		</div>
-
-                    		<div class="form-group">
-                    			<label for="">Status</label>
-                    			<select name="" id="input" class="form-control" >
-                    				<option value=""></option>
-                    			</select>
-                    		</div>
-
-	                    	<div class="text-center">
-								                
-				                <button class="btn btn-next"><i class="fa fa-paper-plane"></i> Done</button>
-				            </div>
-						</form>
-					</div>
+		          		</div>
+		          		<div class="col-md-4"></div>
+		          	</div>
 		        </div>
 	      	</div>
 	    </div>
@@ -129,14 +139,9 @@
 </template>
 
 <script>
-	export default {
-		name: 'app',
-		methods: {
-			submit() {
-				alert('submitted')
-			}
-		}
-	}
+export default {
+  
+}
 </script>
 
 <style>
@@ -354,6 +359,7 @@ body {
  */
 .navbar-fixed-top {
   border: 0;
+  background: #ffffff;
 }
 
 /*
@@ -391,11 +397,20 @@ body {
   padding-left: 20px;
 }
 
+.navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
 a, a:active, a:hover, a:focus, a:visited {
     text-decoration: none;
     /* background: transparent; */
     outline: none;
     color: inherit;
+}
+
+.__dashdropdown a:hover{
+	color: #9d9d9d !important;
 }
 
 .nav-sidebar > li > a {
