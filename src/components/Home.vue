@@ -1,78 +1,10 @@
 <template>
 	<div>
-
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-		    <div class="container-fluid">
-		        <div class="navbar-header">
-		          	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-			            <span class="sr-only">Toggle navigation</span>
-			            <span class="icon-bar"></span>
-			            <span class="icon-bar"></span>
-			            <span class="icon-bar"></span>
-		          </button>
-		          <a class="navbar-brand __dashlogoimg" href="#">
-		          	<router-link to="/" class="" >
-			          	<center>
-							<a href="">
-								<span>h</span>
-								<img src="../assets/o.png">&nbsp;&nbsp;
-								<span>rus</span>
-							</a>
-						</center>
-					</router-link>
-				</a>
-		        </div>
-		        <div id="navbar" class="navbar-collapse collapse">
-		          	<ul class="nav navbar-nav navbar-right">
-			            <!-- <li><a href="#">Dashboard</a></li>
-			            <li><a href="#">Settings</a></li>
-			            <li><a href="#">Profile</a></li>
-			            <li><a href="#">Help</a></li> -->
-			            <li class="dropdown __dashdropdown">
-			              	<a href="#" class="dropdown-toggle " data-toggle="dropdown"><img src="../assets/avatar.png" class="img-circle">&nbsp; &nbsp;<span>Abimbola Odugbesan</span>
-							</a>
-							<ul class="dropdown-menu __dropmenu">
-								<li>
-									<a href="">
-									<span><i class="icon icon-note"></i></span>&nbsp; &nbsp;&nbsp; &nbsp; Edit Profile</a>
-								</li>
-								<li>
-									<a href="">
-									<span><i class="icon icon-key"></i></span>&nbsp; &nbsp;&nbsp; &nbsp; Change Password</a>
-								</li>
-								<li>
-									<a href="">
-									<span><i class="icon icon-logout"></i></span>&nbsp; &nbsp;&nbsp; &nbsp;Logout</a>
-								</li>
-							</ul>
-			            </li>
-		          </ul>
-		          <!-- <form class="navbar-form navbar-right">
-		            <input type="text" class="form-control" placeholder="Search...">
-		          </form> -->
-		        </div>
-		    </div>
-	    </nav>
-
+      <Nav/>
 	    <div class="container-fluid">
 	      	<div class="row">
 		        <div class="col-sm-3 col-md-2 sidebar">
-		          	<ul class="nav nav-sidebar">
-			            <!-- <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li> -->
-
-			            <li class="active"><router-link to="/" class="" ><span class="icon icon-home icon-sm"></span>
-						&nbsp;&nbsp;Dashboard</router-link></li>
-
-			            <li><router-link to="/project" ><span class="icon icon-briefcase icon-sm"></span>
-						&nbsp;&nbsp;PROJECTS</router-link></li>
-			            <li><router-link to="/login" ><span class="icon icon-credit-card icon-sm"></span>
-						&nbsp;&nbsp;TRANSACTIONS</router-link></li>
-			            <li><router-link to="/lead" ><span class="icon icon-settings icon-sm"></span>
-						&nbsp;&nbsp;LEADS</router-link></li>
-			            <li><router-link to="/milestone" >Milestone</router-link></li>
-			            <li><router-link to="/talent" >Talents</router-link></li>
-		          	</ul>
-		          
+		          	<Sidebar active="dashboard"/>
 		        </div>
 	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 		          	<h1 class="page-header __dashp">Dashboard</h1>
@@ -237,7 +169,120 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-5"></div>
+						<div class="col-md-4 col-sm-5">
+              <div class="__dash3">
+										<div class="row __dashrow">
+											<div class="col-md-8">
+												<p class="__dashpt">Milestones</p>
+											</div>
+											<div class="col-md-4">
+
+											</div>
+										</div>
+
+										<div class="row __dashrow1">
+											<!-- <p class="f2 small">See milestones for your projects</p> -->
+										</div>
+										<hr class="__dashhr">
+										<div class="__overflow1">
+											<div class="row __dashrow2">
+												<div class="col-md-7 col-xs-6">
+													<p>
+														<span><img src="assets/img/color.svg"></span>&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Lagos</span>
+													</p>
+												</div>
+												<div class="col-md-5 col-xs-6">
+													<p class="f2 __dashpt1">Kaduna</p>
+												</div>
+											</div>
+
+											<div class="row __dashrow2">
+												<div class="col-md-7 col-xs-6">
+													<p>
+														<span><img src="assets/img/color2.svg"></span>&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Kaduna</span>
+													</p>
+												</div>
+												<div class="col-md-5 col-xs-6">
+													<p class="f2 __dashpt1">Lagos</p>
+												</div>
+											</div>
+
+											<div class="row __dashrow2">
+												<div class="col-md-7 col-xs-6">
+													<p>
+														<span><img src="assets/img/color3.svg"></span>&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Kebbi</span>
+													</p>
+												</div>
+												<div class="col-md-5 col-xs-6">
+													<p class="f2 __dashpt1">Kebbi</p>
+												</div>
+											</div>
+
+											<div class="row __dashrow2">
+												<div class="col-md-7 col-xs-6">
+													<p>
+														<span><img src="assets/img/color4.svg"></span>&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Port Harcourt</span>
+													</p>
+												</div>
+												<div class="col-md-5 col-xs-6">
+													<p class="f2 __dashpt1">Lagos</p>
+												</div>
+											</div>
+
+											<div class="row __dashrow2">
+												<div class="col-md-7 col-xs-6">
+													<p>
+														<span><img src="assets/img/color2.svg"></span>&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Calabar</span>
+													</p>
+												</div>
+												<div class="col-md-5 col-xs-6">
+													<p class="f2 __dashpt1">Calabar</p>
+												</div>
+											</div>
+
+											<div class="row __dashrow2">
+												<div class="col-md-7 col-xs-6">
+													<p>
+														<span><img src="assets/img/color6.svg"></span>&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Enugu</span>
+													</p>
+												</div>
+												<div class="col-md-5 col-xs-6">
+													<p class="f2 __dashpt1">Enugu</p>
+												</div>
+											</div><div class="row __dashrow2">
+												<div class="col-md-7 col-xs-6">
+													<p>
+														<span><img src="assets/img/color6.svg"></span>&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Enugu</span>
+													</p>
+												</div>
+												<div class="col-md-5 col-xs-6">
+													<p class="f2 __dashpt1">Enugu</p>
+												</div>
+											</div><div class="row __dashrow2">
+												<div class="col-md-7 col-xs-6">
+													<p>
+														<span><img src="assets/img/color6.svg"></span>&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Enugu</span>
+													</p>
+												</div>
+												<div class="col-md-5 col-xs-6">
+													<p class="f2 __dashpt1">Enugu</p>
+												</div>
+											</div>
+
+											<div class="row __dashrow2">
+												<div class="col-md-7 col-xs-6">
+													<p>
+														<span><img src="assets/img/color5.svg"></span>&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Lagos</span>
+													</p>
+												</div>
+												<div class="col-md-5 col-xs-6">
+													<p class="f2 __dashpt1">Kaduna</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+            </div>
 					</div>
 
 			        <!-- <div class="row placeholders">
@@ -394,32 +439,25 @@
 	        	</div>
 	      	</div>
 	    </div>
-	</div>
 </template>
 
 <script>
-	export default {
+  import Nav from './includes/nav.vue';
+  import Sidebar from './includes/sidebar.vue';
 
+	export default {
+      name: 'Home',
+      components: {
+        Nav,
+        Sidebar
+      }
 	}
 </script>
 
 <style>
-	
+
 	/*dashboard page*/
 
-	.__dashlogoimg span {
-	    text-transform: uppercase !important;
-	    font-size: 22px;
-	    letter-spacing: .4rem;
-	    color: #0000008c;
-	}
-	.__dashlogoimg img {
-	    width: 30px !important;
-	    width: 30px !important;
-	    position: relative;
-	    top: -5.5px;
-	    bottom: 5.5px;
-	}
 
 	.__dashdropdown img {
 	    width: 25px;
@@ -540,6 +578,57 @@
 	    color: #fff !important;
 	}
 
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background-color: #a7a7a7;
+}
+::-webkit-scrollbar-track {
+    border-radius: 50px;
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); */
+}
+
+  .__dash3 {
+    /* box-shadow: 0px 0px 16px 0px rgba(241, 239, 239, 1); */
+    border-radius: 4px;
+    height: 349px;
+    padding-bottom: 5%;
+    background-color: #ffffff;
+    border: 1px solid #8888881f;
+    border-radius: 6px;
+}
+
+.__dashpt {
+      font-size: 14px;
+    color: #26acf5;
+    text-transform: uppercase;
+}
+
+.__dashrow1 {
+    padding: 0px 20px 0px;
+    /* margin-top: 10px; */
+}
+
+.__dashhr {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border: 1px solid #ddf6ff;
+}
+
+.__overflow1 {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 280px;
+}
+
+.__dashrow2 {
+    padding: 10px 20px 0px;
+    /* margin-top: 10px; */
+}
+
 	/*dashboard page end*/
 
 	/*
@@ -561,55 +650,6 @@ body {
   border-bottom: 1px solid #eee;
 }
 
-/*
- * Top navigation
- * Hide default border to remove 1px line.
- */
-.navbar-fixed-top {
-  border: 0;
-  background: #ffffff;
-}
-
-/*
- * Sidebar
- */
-
-/* Hide for mobile, show later */
-.sidebar {
-  display: none;
-}
-@media (min-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 51px;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    padding: 20px;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #ffffff;
-    border-right: 1px solid #eee;
-  }
-}
-
-/* Sidebar navigation */
-.nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
-  margin-bottom: 20px;
-  margin-left: -20px;
-}
-.nav-sidebar > .red {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-.navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
-    color: #fff;
-    background-color: transparent;
-}
-
 a, a:active, a:hover, a:focus, a:visited {
     text-decoration: none;
     /* background: transparent; */
@@ -620,20 +660,6 @@ a, a:active, a:hover, a:focus, a:visited {
 .__dashdropdown a:hover{
 	color: #9d9d9d !important;
 }
-
-.nav-sidebar > li > a {
-  padding-right: 20px;
-  padding-left: 20px;
-  text-decoration: none;
-}
-.nav-sidebar > .active > a,
-.nav-sidebar > .active > a:hover,
-.nav-sidebar > .active > a:focus {
-  color: #00aeef !important;
-  border-right: 4px solid #00aeef;
-  background-color: #ffffff !important;
-}
-
 
 /*
  * Main content

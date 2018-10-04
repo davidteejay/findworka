@@ -25,7 +25,7 @@ export default new Router({
       name: 'Viewallproject',
       component: Viewallproject
     },
-    
+
     {
       path: '/project',
       name: 'Project',
@@ -63,7 +63,7 @@ export default new Router({
     },
 
     {
-      path: '/transaction',
+      path: '/transactions',
       name: 'Transaction',
       component: Transaction
     },

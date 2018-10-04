@@ -6,26 +6,30 @@
     </div> -->
 
     <div>
-        
+
           <!-- <router-link to="/">Dashboard</router-link>
           <router-link to="/login">Lead</router-link>
           <router-link to="/project">Project</router-link>
           <router-link to="/milestone">Milestone</router-link>
           <router-link to="/talent">Talents</router-link> -->
 
-
-       
-        
-        <router-view/>
+        <transition name="fade">
+              <router-view/>
+          </transition>
     </div>
 </template>
 
 <script>
-    export default {
+export default {
 
-    }
+}
 </script>
 
 <style>
-  
+  .fade-enter-active, .fade-leave-active {
+      transition: opacity .5s
+    }
+    .fade-enter, .fade-leave-active {
+      opacity: 0
+    }
 </style>
