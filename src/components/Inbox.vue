@@ -10,7 +10,7 @@
 
 		        </div>
 	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-		          	<h1 class="page-header __dashp">Inbox</h1>
+		          	<!-- <h1 class="page-header __dashp">Inbox</h1> -->
 
 		          	<div class="__nxtmilestone">
 						<div class="row">
@@ -207,12 +207,12 @@
 								</div>
 							</div>
 							<div class="col-md-5 col-sm-5 __msgcol5">
-								<div class="__msgcol5r">
-									<div class="row">
-										<div class="col-md-2 col-xs-2">
+								<div class="row __msgcol5r">
+									<div>
+										<div class="col-md-1 col-xs-1">
 											<img src="assets/img/avatar.png" class="__dashimgasr1 img-circle">
 										</div>
-										<div class="col-md-7 col-xs-6">
+										<div class="col-md-8 col-xs-7">
 											<p class="f3 __msgtext">Nemi Banigo</p>
 										</div>
 										<div class="col-md-3 col-xs-4">
@@ -268,7 +268,7 @@
 								    </div>
 								</div>
 								<div class="__msgcol5r1">
-									<textarea name="" id="input" class="form-control" rows="3" required="" placeholder="Click here to reply"></textarea><br>
+									<textarea name="" id="input" class="form-control" rows="3" required style="resize: none" placeholder="Click here to reply"></textarea><br>
 									<button type="submit" class="btn  __makep" style="float: right;">Send</button>
 								</div>
 							</div>
@@ -292,7 +292,20 @@ export default {
 </script>
 
 <style>
+  .__in {
+    background-color: #00aeef;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 15px;
+    color: #fff;
+  }
 
+  .__out {
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 15px;
+    background-color: #d6f4ff;
+  }
 	/*project page*/
 
 	.__dashlogoimg span {

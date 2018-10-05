@@ -1,4 +1,4 @@
-<template>
+S<template>
 	<div>
 
 		<Nav/>
@@ -7,13 +7,14 @@
 	      	<div class="row">
 		        <div class="col-sm-3 col-md-2 sidebar">
 		          	<Sidebar active="transactions"/>
-
 		        </div>
 	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-		          	<h1 class="page-header __dashp">Transaction</h1>
+		          	<!-- <h1 class="page-header __dashp">Transaction</h1> -->
 
 		          	<div class="__nxtmilestone">
-						<div class="row">
+                  <h3>Transaction History</h3>
+                  <hr class="__dashhr">
+						<div class="row" style="box-shadow: 0px 8px 20px 0px rgba(241, 239, 239, 1)">
 							<ul class="nav nav-pills nav-stacked __nav-pills col-md-5 col-sm-5">
 								<li class="active">
 							    	<a href="#tab_a" data-toggle="pill" class="a">
@@ -79,7 +80,6 @@
 							<div class="tab-content col-md-7 col-sm-7">
 						        <div class="tab-pane active" id="tab_a">
 						            <div class="__tab">
-						            	1
 						            	<div class="__carddb">
 										  	<div class="__carddbok">
 										  		<p class="f1 __cardp1">Order #100078998</p>
@@ -132,7 +132,6 @@
 						        </div>
 						        <div class="tab-pane" id="tab_b">
 						            <div class="__tab">
-						            	2
 						            	<div class="__carddb">
 										  	<div class="__carddbok">
 										  		<p class="f1 __cardp1">Order #100078998</p>
@@ -185,7 +184,6 @@
 						        </div>
 						        <div class="tab-pane" id="tab_c">
 						            <div class="__tab">
-						            	3
 						            	<div class="__carddb">
 										  	<div class="__carddbok">
 										  		<p class="f1 __cardp1">Order #100078998</p>
@@ -238,7 +236,6 @@
 						        </div>
 						        <div class="tab-pane" id="tab_d">
 						            <div class="__tab">
-						            	4
 						            	<div class="__carddb">
 										  	<div class="__carddbok">
 										  		<p class="f1 __cardp1">Order #100078998</p>
@@ -356,6 +353,12 @@ export default {
 
 	/*transaction*/
 
+  .__dashhr {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border: 1px solid #ddf6ff;
+}
+
 	.__nav-pills li .a {
     /*padding: 0px;*/
     border: 1px solid #f0f0f0;
@@ -438,6 +441,16 @@ a, a:active, a:hover, a:focus, a:visited {
 /*
  * Main content
  */
+
+ .a {
+   border: none !important;
+   border-bottom: 2px solid #d6f4ff !important;
+ }
+
+ li.active .a {
+   background-color: #d6f4ff !important;
+   color: inherit !important;
+ }
 
 .main {
   padding: 20px;

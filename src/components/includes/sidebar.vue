@@ -1,16 +1,15 @@
 <template>
 <div>
-   <router-link to="/" class="__dashlogoimg" >
-			    <!-- <center> -->
-					  <span>h</span>
-						<img src="../../assets/o.png">&nbsp;&nbsp;
-						<span>rus</span>
-					<!-- </center> -->
+   <div class="__dashlogoimg">
+      		<center>
+        		<router-link to="/" >
+					<span>h</span>
+					<img src="../../assets/o.png">&nbsp;&nbsp;
+					<span>rus</span>
 				</router-link>
+      		</center>
+    	</div>
 <ul class="nav nav-sidebar">
-			            <!-- <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li> -->
-
-
     <li :class="{active: classObject('dashboard')}"><router-link to="/" class="" ><span class="icon icon-home icon-sm"></span>
 &nbsp;&nbsp;DASHBOARD</router-link></li>
 
@@ -46,11 +45,13 @@
   </script>
 
 <style>
-
+.__dashlogoimg {
+  padding: 10px;
+}
 .__dashlogoimg span {
 	    text-transform: uppercase !important;
 	    font-size: 22px;
-	    letter-spacing: .4rem;
+	    letter-spacing: 6px;
 	    color: #0000008c;
 	}
 	.__dashlogoimg img {
@@ -68,7 +69,7 @@
     left: 0;
     z-index: 1000000000;
     display: block;
-    padding: 15px 20px;
+    padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: #ffffff;
@@ -112,11 +113,14 @@
     background-color: transparent;
 }
 
-.nav-sidebar > li > a {
-  padding-right: 20px;
-  padding-left: 20px;
-  text-decoration: none;
+.nav-sidebar > li {
   margin-bottom: 10px;
+}
+
+.nav-sidebar > li > a {
+  text-decoration: none;
+   padding: 10px;
+   padding-left: 25px;
 }
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,

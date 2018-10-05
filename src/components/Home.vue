@@ -7,58 +7,56 @@
 		          	<Sidebar active="dashboard"/>
 		        </div>
 	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-		          	<h1 class="page-header __dashp">Dashboard</h1>
+		          	<!-- <h1 class="page-header __dashp">Dashboard</h1> -->
 
 		          	<div class="row">
 		          		<div class="col-md-8 col-sm-7">
 		          			<div class="__dash">
-								<div class="table-responsive">
-									<table class="table table-hover">
-										<thead>
-											<tr>
-												<th class="">Current Projects</th>
-												<th class="">Start Date</th>
-												<th class="">End Date</th>
-												<th class="">Talents</th>
-												<th class="">Status</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><a href=""> Website Development for Transafty</a></td>
-												<td><a href="">12-05-2018</a></td>
-												<td><a href="">05-06-2018</a></td>
-												<td class="text-center"><a href="">5</a></td>
-												<td><a href=""><span class="label label-success label-sm">completed</span></a></td>
-											</tr>
-
-											<tr>
-												<td><a href="">Website Development for Transafty</a></td>
-												<td><a href="">12-05-2018</a></td>
-												<td><a href="">05-06-2018</a></td>
-												<td class="text-center"><a href="">5</a></td>
-												<td><a href=""><span class="label label-warning label-sm">in-progress</span></a></td>
-											</tr>
-
-											<tr>
-												<td><a href="">Website Development for Transafty</a></td>
-												<td><a href="">12-05-2018</a></td>
-												<td><a href="">05-06-2018</a></td>
-												<td class="text-center"><a href="">5</a></td>
-												<td><a href=""><span class="label label-danger label-sm">cancelled</span></a></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<br>
-								<div class="row">
-									<div class="col-md-9"></div>
-									<div class="col-md-3">
-										<router-link to="/viewallproject" class="">See all Projects</router-link>
+								  <div class="row __dashrow">
+										<div class="col-md-8 col-sm-6">
+											<p class="__dashpt">Current Projects</p>
+										</div>
+										<div class="col-md-4 col-sm-6">
+											<p class="hidden-xs"><span class="__dashpt"> Status</span></p>
+										</div>
 									</div>
-								</div>
+									<hr class="__dashhr">
+									<div class="__overflow">
+										<div class="row __dashrow">
+												<div class="col-md-8 col-sm-8">
+													<p>
+														 Website Development for Transafty
+													</p>
+												</div>
+												<div class="col-md-4 col-sm-4">
+													<span class="label label-success label-sm">completed</span>
+												</div>
+											</div>
 
-								<!-- <a href="all_project.html" class="row __dashrow small pull-right hover-blue m-t-5p">See all Projects</a> -->
+											<div class="row __dashrow">
+												<div class="col-md-8 col-sm-8">
+													<p>
+														Website Development for Transafty
+													</p>
+												</div>
+												<div class="col-md-4 col-sm-4">
+													<span class="label label-warning label-sm">in-progress</span>
+												</div>
+											</div>
+
+											<div class="row __dashrow">
+												<div class="col-md-8 col-sm-8">
+													<p>
+														Website Development for Transafty
+													</p>
+												</div>
+												<div class="col-md-4 col-sm-4">
+													<span class="label label-danger label-sm">cancelled</span>
+												</div>
+											</div>
+
+											<a href="all_project.html" class="row __dashrow small pull-right hover-blue" style="margin-top: 5%">See all Projects</a>
+									</div>
 							</div>
 		          		</div>
 		          		<div class="col-md-4 col-sm-5">
@@ -284,158 +282,6 @@
 								</div>
             </div>
 					</div>
-
-			        <!-- <div class="row placeholders">
-			            <div class="col-xs-6 col-sm-3 placeholder">
-			              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-			              <h4>Label</h4>
-			              <span class="text-muted">Something else</span>
-			            </div>
-			            <div class="col-xs-6 col-sm-3 placeholder">
-			              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-			              <h4>Label</h4>
-			              <span class="text-muted">Something else</span>
-			            </div>
-			            <div class="col-xs-6 col-sm-3 placeholder">
-			              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-			              <h4>Label</h4>
-			              <span class="text-muted">Something else</span>
-			            </div>
-			            <div class="col-xs-6 col-sm-3 placeholder">
-			              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-			              <h4>Label</h4>
-			              <span class="text-muted">Something else</span>
-			            </div>
-			        </div> -->
-
-			        <!-- <h2 class="sub-header">Section title</h2>
-			        <div class="table-responsive">
-			            <table class="table table-striped">
-			              <thead>
-			                <tr>
-			                  <th>#</th>
-			                  <th>Header</th>
-			                  <th>Header</th>
-			                  <th>Header</th>
-			                  <th>Header</th>
-			                </tr>
-			              </thead>
-			              <tbody>
-			                <tr>
-			                  <td>1,001</td>
-			                  <td>Lorem</td>
-			                  <td>ipsum</td>
-			                  <td>dolor</td>
-			                  <td>sit</td>
-			                </tr>
-			                <tr>
-			                  <td>1,002</td>
-			                  <td>amet</td>
-			                  <td>consectetur</td>
-			                  <td>adipiscing</td>
-			                  <td>elit</td>
-			                </tr>
-			                <tr>
-			                  <td>1,003</td>
-			                  <td>Integer</td>
-			                  <td>nec</td>
-			                  <td>odio</td>
-			                  <td>Praesent</td>
-			                </tr>
-			                <tr>
-			                  <td>1,003</td>
-			                  <td>libero</td>
-			                  <td>Sed</td>
-			                  <td>cursus</td>
-			                  <td>ante</td>
-			                </tr>
-			                <tr>
-			                  <td>1,004</td>
-			                  <td>dapibus</td>
-			                  <td>diam</td>
-			                  <td>Sed</td>
-			                  <td>nisi</td>
-			                </tr>
-			                <tr>
-			                  <td>1,005</td>
-			                  <td>Nulla</td>
-			                  <td>quis</td>
-			                  <td>sem</td>
-			                  <td>at</td>
-			                </tr>
-			                <tr>
-			                  <td>1,006</td>
-			                  <td>nibh</td>
-			                  <td>elementum</td>
-			                  <td>imperdiet</td>
-			                  <td>Duis</td>
-			                </tr>
-			                <tr>
-			                  <td>1,007</td>
-			                  <td>sagittis</td>
-			                  <td>ipsum</td>
-			                  <td>Praesent</td>
-			                  <td>mauris</td>
-			                </tr>
-			                <tr>
-			                  <td>1,008</td>
-			                  <td>Fusce</td>
-			                  <td>nec</td>
-			                  <td>tellus</td>
-			                  <td>sed</td>
-			                </tr>
-			                <tr>
-			                  <td>1,009</td>
-			                  <td>augue</td>
-			                  <td>semper</td>
-			                  <td>porta</td>
-			                  <td>Mauris</td>
-			                </tr>
-			                <tr>
-			                  <td>1,010</td>
-			                  <td>massa</td>
-			                  <td>Vestibulum</td>
-			                  <td>lacinia</td>
-			                  <td>arcu</td>
-			                </tr>
-			                <tr>
-			                  <td>1,011</td>
-			                  <td>eget</td>
-			                  <td>nulla</td>
-			                  <td>Class</td>
-			                  <td>aptent</td>
-			                </tr>
-			                <tr>
-			                  <td>1,012</td>
-			                  <td>taciti</td>
-			                  <td>sociosqu</td>
-			                  <td>ad</td>
-			                  <td>litora</td>
-			                </tr>
-			                <tr>
-			                  <td>1,013</td>
-			                  <td>torquent</td>
-			                  <td>per</td>
-			                  <td>conubia</td>
-			                  <td>nostra</td>
-			                </tr>
-			                <tr>
-			                  <td>1,014</td>
-			                  <td>per</td>
-			                  <td>inceptos</td>
-			                  <td>himenaeos</td>
-			                  <td>Curabitur</td>
-			                </tr>
-			                <tr>
-			                  <td>1,015</td>
-			                  <td>sodales</td>
-			                  <td>ligula</td>
-			                  <td>in</td>
-			                  <td>libero</td>
-			                </tr>
-			              </tbody>
-			            </table>
-			        </div> -->
 	        	</div>
 	      	</div>
 	    </div>
@@ -607,6 +453,10 @@
     text-transform: uppercase;
 }
 
+.__dashrow {
+    padding: 10px 20px 0px;
+}
+
 .__dashrow1 {
     padding: 0px 20px 0px;
     /* margin-top: 10px; */
@@ -698,3 +548,4 @@ a, a:active, a:hover, a:focus, a:visited {
   border-radius: 50%;
 }
 </style>
+

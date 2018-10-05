@@ -66,6 +66,10 @@ export default {
   text-align: right;
 }
 
+.__dashdropdown-toggle img {
+  height: 100%;
+}
+
 .dropdown-menu {
   position: absolute !important;
   background-color: #fff !important;

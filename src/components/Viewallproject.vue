@@ -10,46 +10,118 @@
 
 		        </div>
 	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-		          	<h1 class="page-header __dashp">All Projects</h1>
+		          	<!-- <h1 class="page-header __dashp">All Projects</h1> -->
+					<div class="col-md-11">
+						<div class="__dash">
+							<div class="row __dashrow">
+								<div class="col-md-8 col-sm-6">
+									<p class="f3 __dashpt">Currents Projects</p>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<p class="hidden-xs"><span class="f2 __dashpt1 __dashpt1on"> Status<!-- </span>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<span><img src="assets/img/right-arrow1.svg"> --></span></p>
+								</div>
+							</div>
+							<hr class="__dashhr">
+							<div class="__overflow">
+								<div class="row __dashrow">
+												<div class="col-md-8 col-sm-8">
+													<p>
+														<a href="project.html"><span><img src="assets/img/ellipse1.svg"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Website Development for Transafty</span></a>
+													</p>
+												</div>
+												<div class="col-md-4 col-sm-4">
+													<p class="f2 __dashpt1 __smll">Live</p>
+												</div>
+											</div>
 
-		          	<div class="__dash">
-						<div class="table-responsive">
-							<table class="table table-hover">
-								<thead>
-									<tr>
-										<th class="">Current Projects</th>
-										<th class="">Start Date</th>
-										<th class="">End Date</th>
-										<th class="">Talents</th>
-										<th class="">Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><a href=""> Website Development for Transafty</a></td>
-										<td><a href="">12-05-2018</a></td>
-										<td><a href="">05-06-2018</a></td>
-										<td class=""><a href="">5</a></td>
-										<td><a href=""><span class="label label-success label-sm">completed</span></a></td>
-									</tr>
+											<div class="row __dashrow">
+												<div class="col-md-8 col-sm-8">
+													<p>
+														<a href="project.html"><span><img src="assets/img/ellipse1.svg"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Findworka new Design</span></a>
+													</p>
+												</div>
+												<div class="col-md-4 col-sm-4">
+													<p class="f2 __dashpt1 __smll">Inprogres</p>
+												</div>
+											</div>
 
-									<tr>
-										<td><a href="">Website Development for Transafty</a></td>
-										<td><a href="">12-05-2018</a></td>
-										<td><a href="">05-06-2018</a></td>
-										<td class=""><a href="">5</a></td>
-										<td><a href=""><span class="label label-warning label-sm">in-progress</span></a></td>
-									</tr>
+											<div class="row __dashrow">
+												<div class="col-md-8 col-sm-8">
+													<p>
+														<span><img src="assets/img/ellipse2.svg"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Findworka Dashboard</span>
+													</p>
+												</div>
+												<div class="col-md-4 col-sm-4">
+													<p class="f2 __dashpt1 __smll">Brief</p>
+												</div>
+											</div>
 
-									<tr>
-										<td><a href="">Website Development for Transafty</a></td>
-										<td><a href="">12-05-2018</a></td>
-										<td><a href="">05-06-2018</a></td>
-										<td class=""><a href="">5</a></td>
-										<td><a href=""><span class="label label-danger label-sm">cancelled</span></a></td>
-									</tr>
-								</tbody>
-							</table>
+											<div class="row __dashrow">
+												<div class="col-md-8 col-sm-8">
+													<p>
+														<span><img src="assets/img/ellipse3.svg"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Schinder fit Welch</span>
+													</p>
+												</div>
+												<div class="col-md-4 col-sm-4">
+													<p class="f2 __dashpt1 __smll">On Trip</p>
+												</div>
+											</div>
+
+											<div class="row __dashrow">
+												<div class="col-md-8 col-sm-8">
+													<p>
+														<span><img src="assets/img/ellipse3.svg"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Harrowmind</span>
+													</p>
+												</div>
+												<div class="col-md-4 col-sm-4">
+													<p class="f2 __dashpt1 __smll">On Trip</p>
+												</div>
+											</div>
+
+											<div class="row __dashrow">
+												<div class="col-md-8 col-sm-8">
+													<p>
+														<span><img src="assets/img/ellipse2.svg"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Jaeger Maersk Turner Truck</span>
+													</p>
+												</div>
+												<div class="col-md-4 col-sm-4">
+													<p class="f2 __dashpt1 __smll">Undergoing repair</p>
+												</div>
+											</div>
+
+											<div class="row __dashrow">
+												<div class="col-md-8 col-sm-8">
+													<p>
+														<span><img src="assets/img/ellipse1.svg"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Maesrk 30 x 30</span>
+													</p>
+												</div>
+												<div class="col-md-4 col-sm-4">
+													<p class="f2 __dashpt1 __smll">Avaliable</p>
+												</div>
+											</div>
+
+											<div class="row __dashrow">
+												<div class="col-md-8 col-sm-8">
+													<p>
+														<span><img src="assets/img/ellipse1.svg"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Duble Harrowhammer</span>
+													</p>
+												</div>
+												<div class="col-md-4 col-sm-4">
+													<p class="f2 __dashpt1 __smll">Avaliable</p>
+												</div>
+											</div>
+
+											<div class="row __dashrow">
+												<div class="col-md-8 col-sm-8">
+													<p>
+														<span><img src="assets/img/ellipse3.svg"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Fich Helsinki</span>
+													</p>
+												</div>
+												<div class="col-md-4 col-sm-4">
+													<p class="f2 __dashpt1 __smll">On Trip</p>
+												</div>
+											</div>
+							</div>
 						</div>
 					</div>
 	        	</div>
