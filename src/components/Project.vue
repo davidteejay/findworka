@@ -1,495 +1,695 @@
 <template>
 	<div>
-
 		<Nav/>
-
 	    <div class="container-fluid">
 	      	<div class="row">
 		        <div class="col-sm-3 col-md-2 sidebar">
 		          	<Sidebar active="projects"/>
-
 		        </div>
-	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-		          	<h1 class="page-header __dashp">Projects</h1>
-
-		          	<h1 class="__dashp">Transafty&nbsp; &nbsp;<span class="label label-success label-sm">completed</span></h1>
-
-		          	<div class="row">
-		          		<div class="col-md-8 col-sm-7">
-		          			<div class="__nxtmilestone">
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					<div class="__dasmenmsg">
+						<div class="__dashmsg">
+							<p class="f3 __dashmsgp">Transafty</p>
+							<hr class="__dashhr">
+							<div class="__traccard">
 								<div class="row">
-									<div class="col-lg-8 col-md-8 col-sm-8">
-										<p class="__milestonenext">Next Milstone</p>
-										<p class="__milestonenextp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										</p>
-										<div class="__milestonecheck">
-											<label for="chk" class="check">
-												<input type="checkbox" id="chk" name="" checked disabled="">
-										  		<span class="checkmark"></span>
-										  		&nbsp; &nbsp;Task
-											</label>
-
-											<label for="chk" class="check">
-												<input type="checkbox" id="chk" name="" checked disabled="">
-										  		<span class="checkmark"></span>
-										  		&nbsp; &nbsp;Task
-											</label>
-
-											<label for="chk" class="check">
-												<input type="checkbox" id="chk" name="" checked disabled="">
-										  		<span class="checkmark"></span>
-										  		&nbsp; &nbsp;Task
-											</label>
-
-											<label for="chk" class="check">
-												<input type="checkbox" id="chk" name="" checked disabled="">
-										  		<span class="checkmark"></span>
-										  		&nbsp; &nbsp;Task
-											</label>
+									<div class="col-md-4 col-sm-4">
+										<div class="__prcard">
+											<div class="row">
+												<div class="col-md-7 col-sm-7 col-xs-7">
+													<p class="f2">Start Date</p>
+													<p class="f2">20/02/2018</p>
+												</div>
+												<div class="col-md-5 col-sm-5 col-xs-5">
+													<div class="__prcard1">
+														<span><i class="icon icon-calendar"></i></span>
+														<!-- <img src="../assets/img/clock.svg"> -->
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
-									<div class="col-lg-4 col-md-4 col-sm-4">
-										<p>Milestone</p>
-										<p>Text Date</p>
+									<div class="col-md-4 col-sm-4">
+										<div class="__prcard">
+											<div class="row">
+												<div class="col-md-7 col-sm-7 col-xs-7">
+													<p class="f2">Delivery Date</p>
+													<p class="f2">20/10/2018</p>
+												</div>
+												<div class="col-md-5 col-sm-5 col-xs-5">
+													<div class="__prcard1">
+														<span><i class="icon icon-calendar"></i></span>
+														<!-- <img src="../assets/img/clock.svg"> -->
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-								</div>
-							</div>
-		          		</div>
-		          		<div class="col-md-4 col-sm-5">
-		          			<div class="__dash1">
-								<div class="row __dashrow">
-									<div class="col-md-2 col-xs-2">
-										<p class="__dashimgr1">
-											<span class="icon icon-briefcase icon-sm" style="color: #8c0f0f;"></span>
-										</p>
+									<div class="col-md-4 col-sm-4">
+										<div class="__prcard">
+											<div class="row">
+												<div class="col-md-7 col-sm-7 col-xs-7">
+													<p class="f2">Milestone</p>
+													<p class="f2">1/3</p>
+												</div>
+												<div class="col-md-5 col-xs-5 col-xs-5">
+													<div>
+														<div id="demo-pie-1" class="pie-title-center" data-percent="25"> <span class="pie-value"></span> </div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="col-md-10 col-xs-10">
-										<p class="f2 __dashpt2">Start Date:</p>
+								</div><br><br>
+								<div class="__dash">
+									<div class=" __pdashrow">
+										<div class="row">
+											<p class="f2 __dashpt">Name of people working on the Project</p>
+										</div>
 									</div>
-								</div>
+									<hr class="__dashhr">
+									<div class="__overflow">
+										<div class="row __dashrow">
+											<div class="col-md-8 col-sm-8 col-xs-7">
+												<p>
+													<span><img src="../assets/img/avatar.png" style="width: 40px;"></span>&nbsp;&nbsp;<span class="f2 __dashpt1">Ali Oseni</span>
+												</p>
+											</div>
+											<div class="col-md-4 col-sm-4 col-xs-5">
+												<p class="f2 __dashpt1 __smll">Designer</p>
+											</div>
+										</div>
+										<div class="row __dashrow">
+											<div class="col-md-8 col-sm-8 col-xs-7">
+												<p>
+													<span><img src="../assets/img/avatar.png" style="width: 40px;"></span>&nbsp;&nbsp;<span class="f2 __dashpt1">Odugbesan Abimbola</span>
+												</p>
+											</div>
+											<div class="col-md-4 col-sm-4 col-xs-5">
+												<p class="f2 __dashpt1 __smll">Front-end</p>
+											</div>
+										</div>
+										<div class="row __dashrow">
+											<div class="col-md-8 col-sm-8 col-xs-7">
+												<p>
+													<span><img src="../assets/img/avatar.png" style="width: 40px;"></span>&nbsp;&nbsp;<span class="f2 __dashpt1">Tunde Yusuf</span>
+												</p>
+											</div>
+											<div class="col-md-4 col-sm-4 col-xs-5">
+												<p class="f2 __dashpt1 __smll">Back-end</p>
+											</div>
+										</div>
 
-								<div class="row __dashrow">
-									<div class="col-md-2 col-xs-2">
-										<p class="__dashimgr2">
-											<span class="icon icon-briefcase icon-sm" style="color: #545408;"></span>
-										</p>
 									</div>
-									<div class="col-md-10 col-xs-10">
-										<p class="f2 __dashpt2">Delivery Date:</p>
-									</div>
-								</div>
-
-								<div class="row __dashrow">
-									<div class="col-md-2 col-xs-2">
-										<p class="__dashimgr3">
-											<span class="icon icon-briefcase icon-sm" style="    color: #077507;"></span>
-										</p>
-									</div>
-									<div class="col-md-10 col-xs-10">
-										<p class="f2 __dashpt2">Number of Milestone:</p>
-									</div>
-								</div>
-								<div class="row __dashrow">
-									<div class="col-md-2 col-xs-2">
-										<p class="__dashimgr4">
-											<span class="icon icon-credit-card icon-sm" style="color: #0972ce;"></span>
-										</p>
-									</div>
-									<div class="col-md-10 col-xs-10">
-										<p class="f2 __dashpt2">Number of Talents:</p>
-									</div>
-								</div>
-
-								<div class="row __dashrow">
-									<div class="col-md-2 col-xs-2">
-										<p class="__dashimgr4">
-											<span class="icon icon-credit-card icon-sm" style="color: #0972ce;"></span>
-										</p>
-									</div>
-									<div class="col-md-10 col-xs-10">
-										<p class="f2 __dashpt2">Tractions:</p>
-									</div>
-								</div>
-							</div>
-						</div>
-		          	</div>
-		          	<br>
-
-		          	<div class="row">
-						<div class="col-md-8 col-sm-7">
-							<div class="__nxtmilestone">
-								<p class="f3 __dashp">Transaction</p>
-								<div class="table-responsive">
-									<table class="table table-hover">
-										<thead>
-											<tr>
-												<th class="">Name</th>
-												<th class="">Projects</th>
-												<th class="">Date</th>
-												<th class="">Status</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Transafty</td>
-												<td>Transafty</td>
-												<td>March 1, 2018</td>
-												<td class="">Paid</td>
-											</tr>
-
-											<tr>
-												<td>Findworka</td>
-												<td>Findworka</td>
-												<td>March 1, 2018</td>
-												<td class="">Not Paid</td>
-											</tr>
-
-											<tr>
-												<td>Transafty</td>
-												<td>Transafty</td>
-												<td>March 1, 2018</td>
-												<td class="">Paid</td>
-											</tr>
-
-											<tr>
-												<td>Findworka</td>
-												<td>Findworka</td>
-												<td>March 1, 2018</td>
-												<td class="">Not Paid</td>
-											</tr>
-
-											<tr>
-												<td>Transafty</td>
-												<td>Transafty</td>
-												<td>March 1, 2018</td>
-												<td class="">Paid</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-5">
-							<div class="__dash">
-								<p class="f3 __dashp">Talents</p>
-								<div class="row __dashrow">
-									<div class="col-md-2 col-sm-2 col-xs-2">
-										<p class="__dashimgr1">
-											<span class="icon icon-briefcase icon-sm" style="color: #8c0f0f;"></span>
-										</p>
-									</div>
-									<div class="col-md-8 col-sm-8 col-xs-7">
-										<p class="f2">Adesola Adekunle</p>
-										<p class="f2">Front-end</p>
-										<hr>
-									</div>
-
-									<div class="col-md-1 col-sm-1 col-xs-2">
-										<div>1</div>
-									</div>
-								</div>
-
-								<div class="row __dashrow">
-									<div class="col-md-2 col-sm-2 col-xs-2">
-										<p class="__dashimgr2">
-											<span class="icon icon-briefcase icon-sm" style="color: #545408;"></span>
-										</p>
-									</div>
-									<div class="col-md-8 col-sm-8 col-xs-7">
-										<p class="f2">Adesola Adekunle</p>
-										<p class="f2">Back-end</p>
-										<hr>
-									</div>
-
-									<div class="col-md-1 col-sm-1 col-xs-2">
-										<div>1</div>
+								</div><br>
+								<p class="text-center f-20">Milestone</p>
+								<div class="">
+									<div class="timeline timeline-line-dotted">
+										<span class="timeline-label">
+											<span class="label label-primary">2018/09/03</span>
+										</span>
+										<div class="timeline-item">
+											<div class="timeline-point timeline-point-success">
+												<!-- <i class="fa fa-check"></i> -->
+											</div>
+											<div class="timeline-event">
+												<div class="timeline-heading">
+													<h4>MoneyService Transfer</h4>
+												</div>
+												<div class="timeline-body">
+													<p>Money transfer. By Alex, Wallet ID: 1234567890, Amount: 10$</p>
+												</div>
+												<div class="timeline-footer">
+													<a href="" class="btn __timbtn">view</a>
+													<a href="" class="btn __timbtn">Accept and make payment</a>
+													<a href="" class="btn __timbtn">Feedback</a>
+													<!-- <p class="text-right">17.03.2016 10:00</p> -->
+												</div>
+											</div>
+										</div>
+										<span class="timeline-label">
+											<span class="label label-primary">2018/09/03</span>
+										</span>
+										<div class="timeline-item">
+											<div class="timeline-point timeline-point-success">
+												<!-- <i class="fa fa-money"></i> -->
+											</div>
+											<div class="timeline-event">
+												<div class="timeline-heading">
+													<h4>MoneyService Transfer</h4>
+												</div>
+												<div class="timeline-body">
+													<p>Money transfer. By Alex, Wallet ID: 1234567890, Amount: 2220$</p>
+												</div>
+												<div class="timeline-footer">
+													<a href="" class="btn __timbtn">view</a>
+													<a href="" class="btn __timbtn">Accept and make payment</a>
+													<a href="" class="btn __timbtn">Feedback</a>
+												</div>
+											</div>
+										</div>
+										<span class="timeline-label">
+											<a href="#" class="btn btn-default" title="More...">
+												<i class="fa fa-fw fa-history"></i>
+											</a>
+										</span>
+                    <div class="clearfix"></div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
-			    </div>
+				</div>
 	      	</div>
-	    </div>
-		<h1>Hello World</h1>
-		<router-link to="/login" class="red" >Login</router-link>
+		</div>
 	</div>
 </template>
 
 <script>
-  import Sidebar from './includes/sidebar.vue';
-  import Nav from './includes/nav.vue';
+import Sidebar from "./includes/sidebar.vue";
+import Nav from "./includes/nav.vue";
 
-	export default {
-    components: {
-      Sidebar,
-      Nav
-    }
+export default {
+	components: {
+		Sidebar,
+		Nav
 	}
+};
 </script>
 
 <style>
+/*project page*/
 
-	/*project page*/
+.__dasmenmsg {
+	margin-top: 2%;
+}
 
-	.__dashlogoimg span {
-	    text-transform: uppercase !important;
-	    font-size: 22px;
-	    letter-spacing: .4rem;
-	    color: #0000008c;
-	}
-	.__dashlogoimg img {
-	    width: 30px !important;
-	    width: 30px !important;
-	    position: relative;
-	    top: -5.5px;
-	    bottom: 5.5px;
-	}
+.__dashmsg {
+	box-shadow: 0px 8px 20px 0px rgba(241, 239, 239, 1);
+	border-radius: 4px;
+	margin-top: 18px;
+	border: 1px solid #b7b7b733;
+}
 
-	.__dashdropdown img {
-	    width: 25px;
-	    /*box-shadow: 0px 0px 16px 0px rgba(241, 239, 239, 1);*/
-	}
+.__dashmsgp {
+	padding: 25px 30px 0px 36px;
+	color: #4a4a4a;
+	font-size: 16px;
+	background: #ffffff;
+}
 
-	.__dashp span {
-	    font-size: 10px !important;
-	    font-weight: 100 !important;
-	}
+.__dashhr {
+	margin-top: 1px;
+	margin-bottom: 1px;
+	border: 1px solid #ddf6ff;
+}
 
-	.__dash {
-	    /* box-shadow: 0px 2px 20px 0px #a9a9a92b; */
-	    border-radius: 4px;
-	    padding-bottom: 3%;
-	    border: 1px solid #8888881f;
-	    border-radius: 6px;
-	    background-color: #ffffff;
-	}
+.__traccard {
+	padding: 30px 30px 0px 30px;
+	background-color: #ffffff;
+}
 
-	.table>thead>tr>th {
-	    vertical-align: bottom;
-	    border-bottom: 1px solid #ddf6ff;
-	    font-size: 14px;
-	    color: #26acf5;
-	    text-transform: uppercase;
-	    font-weight: 100;
-	    /* border-bottom: none; */
-	}
+.__prcard {
+	box-shadow: 0px 3px 4px 0px rgba(241, 239, 239, 1);
+	border: 1px solid #8888881f;
+	border-radius: 6px;
+	padding: 10px;
+	transition: all 0.4s ease-in;
+}
 
-	.table>tbody>tr>td {
-	    border-bottom: none !important;
-	    border-top: none !important;
-	    line-height: 2.0 !important;
-	}
+.__prcard:hover {
+	transform: translateY(-4px) scale(1.02);
+	box-shadow: 0px 14px 24px rgba(62, 57, 107, 0.2);
+	z-index: 999;
+}
 
-	.__dash1 {
-	    /* box-shadow: 0px 0px 16px 0px rgba(241, 239, 239, 1); */
-	    border-radius: 4px;
-	    /*width: 347px;*/
-	    /* height: 321px; */
-	    padding-bottom: 5%;
-	    background-color: #ffffff;
-	    border: 1px solid #8888881f;
-	    border-radius: 6px;
-	}
+.__prcard p:nth-child(1) {
+	font-size: 16px;
+	margin-top: 10px;
+	color: #4a4a4a;
+}
 
-	.__dashimgr1 {
-	    border-radius: 50%;
-	    border: 1px solid;
-	    height: 40px;
-	    width: 40px;
-	    text-align: center;
-	    padding: 8px 2px 2px 2px;
-	    background: #fbd5d3;
-	    color: #fff;
-	    font-size: 12px;
-	    margin-bottom: 5px;
-	}
+.__prcard1 {
+	margin-top: 11px;
+}
 
-	.__dashrow {
-    	padding: 10px 20px 0px;
-	}
+.__prcard1 span {
+	font-size: 52px;
+	color: #3d515878;
+	padding: 4px 13px;
+}
 
-	.__dashpt2 {
-	    font-size: 16px;
-	    color: #4a4a4a;
-	    margin-top: 8px;
-	    margin-bottom: 0px;
-	    /* margin-top: 0px; */
-	}
+.pie-title-center {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	margin-top: 6px;
+}
 
-	.__dashimgr2 {
-	    border-radius: 50%;
-	    border: 1px solid;
-	    height: 40px;
-	    width: 40px;
-	    text-align: center;
-	    padding: 8px 2px 2px 2px;
-	    background: #ffffe3;
-	    color: #fff;
-	    font-size: 12px;
-	    margin-bottom: 5px;
-	}
+.pie-value {
+	display: block;
+	position: absolute;
+	font-size: 13px;
+	height: 40px;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin-top: -25px;
+	line-height: 40px;
+}
 
-	.__dashimgr3 {
-	    border-radius: 50%;
-	    border: 1px solid;
-	    height: 40px;
-	    width: 40px;
-	    text-align: center;
-	    padding: 8px 2px 2px 2px;
-	    background: #e1ffe9;
-	    color: #fff;
-	    font-size: 12px;
-	    margin-bottom: 5px;
-	}
+.__pdashrow {
+	padding: 10px 44px 10px;
+	margin-top: 10px;
+}
 
-	.__dashimgr4 {
-	    border-radius: 50%;
-	    border: 1px solid;
-	    height: 40px;
-	    width: 40px;
-	    text-align: center;
-	    padding: 8px 2px 2px 2px;
-	    background: #c7f0ff;
-	    color: #fff;
-	    font-size: 12px;
-	    margin-bottom: 5px;
-	}
+.__dashpt {
+	font-size: 14px;
+	color: #26acf5;
+	text-transform: uppercase;
+}
 
-	.icon-sm {
-    	font-size: 20px;
-	}
+.__dashlogoimg span {
+	text-transform: uppercase !important;
+	font-size: 22px;
+	letter-spacing: 0.4rem;
+	color: #0000008c;
+}
+.__dashlogoimg img {
+	width: 30px !important;
+	width: 30px !important;
+	position: relative;
+	top: -5.5px;
+	bottom: 5.5px;
+}
 
-	.__nxtmilestone {
-	    border: 1px solid #8888881f;
-	    border-radius: 6px;
-	    background-color: #ffffff;
-	    padding: 11px 30px ;
-	}
+.__dashdropdown img {
+	width: 25px;
+	/*box-shadow: 0px 0px 16px 0px rgba(241, 239, 239, 1);*/
+}
 
-	.__milestonenext {
-    	font-size: 20px;
-	    /*font-weight: 600;*/
-	}
+.__dashp span {
+	font-size: 10px !important;
+	font-weight: 100 !important;
+}
 
-	.__milestonenextp {
-	    font-size: 13px;
-	}
+.__dash {
+	/* box-shadow: 0px 2px 20px 0px #a9a9a92b; */
+	border-radius: 4px;
+	padding-bottom: 3%;
+	border: 1px solid #8888881f;
+	border-radius: 6px;
+	background-color: #ffffff;
+}
 
-	.__milestonecheck{
-	  padding-left: 10px;
-	}
+.table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 1px solid #ddf6ff;
+	font-size: 14px;
+	color: #26acf5;
+	text-transform: uppercase;
+	font-weight: 100;
+	/* border-bottom: none; */
+}
 
-	.__dashp {
-	    color: #4a4a4a;
-	    font-size: 30px;
-	    padding: 11px 30px 1px;
-	    /* font-weight: 600; */
-	}
+.table > tbody > tr > td {
+	border-bottom: none !important;
+	border-top: none !important;
+	line-height: 2 !important;
+}
 
-	/*check box*/
+.__dash1 {
+	/* box-shadow: 0px 0px 16px 0px rgba(241, 239, 239, 1); */
+	border-radius: 4px;
+	/*width: 347px;*/
+	/* height: 321px; */
+	padding-bottom: 5%;
+	background-color: #ffffff;
+	border: 1px solid #8888881f;
+	border-radius: 6px;
+}
 
-		/* The check */
-		.check {
-		    display: block;
-		    position: relative;
-		    padding-left: 20px;
-		    margin-bottom: 12px;
-		    padding-right: 2px;
-		    /*cursor: pointer;*/
-		    font-size: 16px;
-		    -webkit-user-select: none;
-		    -moz-user-select: none;
-		    -ms-user-select: none;
-		    user-select: none;
-		    font-weight: 200;
-		}
+.f-20 {
+    font-size: 20px !important;
+}
 
-		/* Hide the browser's default checkbox */
-		.check input {
-		    position: absolute;
-		    opacity: 0;
-		    cursor: pointer;
-		}
+.__dashpt1 {
+    font-size: 16px;
+    color: #4a4a4a;
+}
 
-		/* Create a custom checkbox */
-		.checkmark {
-		    position: absolute;
-		    top: 2px;
-		    left: 0;
-		    height: 15px;
-		    width: 15px;
-		    background-color: #fff;
-		    border-color: #00aeef;
-		    border-style: solid;
-		    border-width: 2px;
-		}
+.timeline {
+    width: 100%;
+    position: relative;
+    padding: 1px 0;
+    list-style: none;
+    font-weight: 300;
+}
 
+.timeline .timeline-label {
+    position: relative;
+    float: left;
+    clear: left;
+    width: 50%;
+    margin-bottom: 20px;
+    top: 1px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    text-align: center;
+}
 
-		/* When the checkbox is checked, add a blue background */
-		.check input:checked ~ .checkmark {
-		    background-color: #00aeef;
-		}
+.timeline .timeline-label .label-primary {
+    background-color: #888888;
+}
 
-		/* Create the checkmark/indicator (hidden when not checked) */
-		.checkmark:after {
-		    content: "";
-		    position: absolute;
-		    display: none;
-		}
+.timeline .timeline-label + .timeline-item {
+    margin-top: 0;
+}
+.timeline .timeline-item {
+    position: relative;
+    float: left;
+    clear: left;
+    width: 50%;
+    margin-bottom: 20px;
+    padding-left: 0;
+    padding-right: 30px;
+}
 
-		/* Show the checkmark when checked */
-		.check input:checked ~ .checkmark:after {
-		    display: block;
-		}
+.timeline .timeline-item > .timeline-point.timeline-point-success {
+    color: #00aeef;
+    background: #00aeef;
+}
 
-		/* Style the checkmark/indicator */
-		.check .checkmark:after {
-		    left: 4px;
-		    top: 1px;
-		    width: 4px;
-		    height: 9px;
-		    border: solid;
-		    border-color: #ffffff;
-		    border-width: 0 2px 2px 0;
-		    -webkit-transform: rotate(45deg);
-		    -ms-transform: rotate(45deg);
-		    transform: rotate(45deg);
-		}
+.timeline .timeline-item > .timeline-point {
+    color: #888888;
+    background: #fff;
+    right: -21px;
+    width: 17px;
+    height: 17px;
+    margin-top: -9px;
+    margin-left: 12px;
+    margin-right: 12px;
+    position: absolute;
+    z-index: 100;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 100%;
+    line-height: 20px;
+    text-align: center;
+}
+.timeline .timeline-item > .timeline-point {
+    top: 25px;
+}
 
-	/*end*/
+.timeline .timeline-item > .timeline-event {
+    background: #fff;
+    border: 1px solid #8888881f;
+    border-radius: 6px;
+    color: #555;
+    position: relative;
+    float: left;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px 0px rgba(241, 239, 239, 1);
+    padding: 5px 5px 20px 10px;
+}
 
-	/*project page end*/
+.timeline .timeline-item .timeline-event {
+    width: 100%;
+}
 
-	/*
+.timeline .timeline-item > .timeline-event .timeline-heading, .timeline .timeline-item > .timeline-event .timeline-body, .timeline .timeline-item > .timeline-event .timeline-footer {
+    padding: 4px 10px;
+}
+.timeline .timeline-item > .timeline-event * {
+    color: inherit;
+}
+
+.timeline .timeline-item > .timeline-event .timeline-heading h4 {
+    font-weight: 400;
+}
+
+.timeline .timeline-item > .timeline-event .timeline-footer a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.__timbtn {
+    /* box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.43); */
+    border: 1px solid #00aeef;
+    padding: 5px 10px;
+    background: #00aeef;
+    color: #fff !important;
+}
+
+.timeline .timeline-item.timeline-item-right, .timeline .timeline-item:nth-of-type(even):not(.timeline-item-left) {
+    float: right;
+    clear: right;
+}
+
+.timeline .timeline-item.timeline-item-right, .timeline .timeline-item:nth-of-type(even):not(.timeline-item-left) {
+    padding-left: 30px;
+    padding-right: 0;
+}
+
+.timeline.timeline-line-dotted:before {
+    border-right-style: dotted;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100% !important;
+    margin-left: 1px;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: #888888;
+}
+.timeline:before, .timeline:after {
+    content: "";
+    display: block;
+}
+.timeline:before {
+    border-right-style: solid;
+}
+.timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    background-color: #eee;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.timeline .timeline-item.timeline-item-right > .timeline-point, .timeline .timeline-item:nth-of-type(even):not(.timeline-item-left) > .timeline-point {
+    left: -20px;
+}
+
+.__dashimgr1 {
+	border-radius: 50%;
+	border: 1px solid;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	padding: 8px 2px 2px 2px;
+	background: #fbd5d3;
+	color: #fff;
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.__dashrow {
+	padding: 10px 20px 0px;
+}
+
+.__dashpt2 {
+	font-size: 16px;
+	color: #4a4a4a;
+	margin-top: 8px;
+	margin-bottom: 0px;
+	/* margin-top: 0px; */
+}
+
+.__dashimgr2 {
+	border-radius: 50%;
+	border: 1px solid;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	padding: 8px 2px 2px 2px;
+	background: #ffffe3;
+	color: #fff;
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.__dashimgr3 {
+	border-radius: 50%;
+	border: 1px solid;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	padding: 8px 2px 2px 2px;
+	background: #e1ffe9;
+	color: #fff;
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.__dashimgr4 {
+	border-radius: 50%;
+	border: 1px solid;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	padding: 8px 2px 2px 2px;
+	background: #c7f0ff;
+	color: #fff;
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.icon-sm {
+	font-size: 20px;
+}
+
+.__nxtmilestone {
+	border: 1px solid #8888881f;
+	border-radius: 6px;
+	background-color: #ffffff;
+	padding: 11px 30px;
+}
+
+.__milestonenext {
+	font-size: 20px;
+	/*font-weight: 600;*/
+}
+
+.__milestonenextp {
+	font-size: 13px;
+}
+
+.__milestonecheck {
+	padding-left: 10px;
+}
+
+.__dashp {
+	color: #4a4a4a;
+	font-size: 30px;
+	padding: 11px 30px 1px;
+	/* font-weight: 600; */
+}
+
+/*check box*/
+
+/* The check */
+.check {
+	display: block;
+	position: relative;
+	padding-left: 20px;
+	margin-bottom: 12px;
+	padding-right: 2px;
+	/*cursor: pointer;*/
+	font-size: 16px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-weight: 200;
+}
+
+/* Hide the browser's default checkbox */
+.check input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	height: 15px;
+	width: 15px;
+	background-color: #fff;
+	border-color: #00aeef;
+	border-style: solid;
+	border-width: 2px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check input:checked ~ .checkmark {
+	background-color: #00aeef;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.check input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.check .checkmark:after {
+	left: 4px;
+	top: 1px;
+	width: 4px;
+	height: 9px;
+	border: solid;
+	border-color: #ffffff;
+	border-width: 0 2px 2px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/*end*/
+
+/*project page end*/
+
+/*
  * Base structure
  */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
+	padding-top: 50px;
 }
-
 
 /*
  * Global add-ons
  */
 
 .sub-header {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eee;
 }
 
-a, a:active, a:hover, a:focus, a:visited {
-    text-decoration: none;
-    /* background: transparent; */
-    outline: none;
-    color: inherit;
+a,
+a:active,
+a:hover,
+a:focus,
+a:visited {
+	text-decoration: none;
+	/* background: transparent; */
+	outline: none;
+	color: inherit;
 }
 
-.__dashdropdown a:hover{
+.__dashdropdown a:hover {
 	color: #9d9d9d !important;
 }
 
@@ -498,35 +698,34 @@ a, a:active, a:hover, a:focus, a:visited {
  */
 
 .main {
-  padding: 20px;
+	padding: 20px;
 }
 @media (min-width: 768px) {
-  .main {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
+	.main {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
 }
 .main .page-header {
-  margin-top: 0;
+	margin-top: 0;
 }
-
 
 /*
  * Placeholder dashboard ideas
  */
 
 .placeholders {
-  margin-bottom: 30px;
-  text-align: center;
+	margin-bottom: 30px;
+	text-align: center;
 }
 .placeholders h4 {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 .placeholder {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 .placeholder img {
-  display: inline-block;
-  border-radius: 50%;
+	display: inline-block;
+	border-radius: 50%;
 }
 </style>

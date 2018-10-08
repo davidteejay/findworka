@@ -44,7 +44,7 @@
 								<div class="row">
 									<div class="col-md-9"></div>
 									<div class="col-md-3">
-										<router-link to="/avaliabletalent" class="btn __projectbtn">Send Application</router-link>
+										<router-link to="/availabletalent" class="btn __projectbtn">Send Application</router-link>
 									</div>
 								</div>
 							</div>

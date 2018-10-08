@@ -109,64 +109,107 @@
 		          	<br>
 		          	<div class="row">
 						<div class="col-md-8 col-sm-7">
-							<div class="__dash1">
-								<div class="table-responsive">
-									<table class="table table-hover">
-										<thead>
-											<tr>
-												<th class="">Transactions</th>
-												<th class="">Projects</th>
-												<th class="">Date</th>
-												<th class="">Status</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>NGN 20,000</td>
-												<td>Transafty</td>
-												<td>March 1, 2018</td>
-												<td class="">Received</td>
-											</tr>
+									<div class="__dash2">
+										<div class="row __dashrow">
+											<div class="col-md-3 col-xs-3">
+												<p class="__dashpt">Transactions</p>
+											</div>
+											<div class="col-md-3 col-xs-3">
+												<p class="f3 __dashpt"> Projects</p>
+											</div>
+											<div class="col-md-3 col-xs-3">
+												<p class="f3 __dashpt">Date</p>
+											</div>
+											<div class="col-md-3 col-xs-3">
+												<p class="f3 __dashpt">Status</p>
+											</div>
+										</div>
+										<hr class="__dashhr">
+										<div class="__overflow1">
+											<div class="row __dashrow">
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">
+													NGN 20,000</p>
+												</div>
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">Transafty</p>
+												</div>
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">March 1, 2018</p>
+												</div>
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">Received</p>
+												</div>
+											</div>
 
-											<tr>
-												<td>NGN 20,000</td>
-												<td>Findworka</td>
-												<td>March 1, 2018</td>
-												<td class="">Sent</td>
-											</tr>
+											<div class="row __dashrow">
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">
+													NGN 20,000</p>
+												</div>
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">Findworka</p>
+												</div>
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">March 1, 2018</p>
+												</div>
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">Sent</p>
+												</div>
+											</div>
 
-											<tr>
-												<td>NGN 20,000</td>
-												<td>Transafty</td>
-												<td>March 1, 2018</td>
-												<td class="">Received</td>
-											</tr>
+											<div class="row __dashrow">
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">
+													NGN 20,000</p>
+												</div>
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">Saucecode</p>
+												</div>
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">March 2, 2018</p>
+												</div>
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">Received</p>
+												</div>
+											</div>
 
-											<tr>
-												<td>NGN 20,000</td>
-												<td>Findworka</td>
-												<td>March 1, 2018</td>
-												<td class="">Sent</td>
-											</tr>
+											<div class="row __dashrow">
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">
+													NGN 20,000</p>
+												</div>
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">Lunchpad</p>
+												</div>
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">March 3, 2018</p>
+												</div>
+												<div class="col-md-3 col-xs-3">
+													<p class="f2 __dashpt1">Sent</p>
+												</div>
+											</div>
 
-											<tr>
-												<td>NGN 20,000</td>
-												<td>Transafty</td>
-												<td>March 1, 2018</td>
-												<td class="">Received</td>
-											</tr>
-
-											<tr>
-												<td>NGN 20,000</td>
-												<td>Findworka</td>
-												<td>March 1, 2018</td>
-												<td class="">Sent</td>
-											</tr>
-										</tbody>
-									</table>
+											<div class="__dashrown1">
+												<div class="row __dashrow">
+													<div class="col-md-3 col-xs-3">
+														<p class="f2 __dashpta">
+														NGN 20,000</p>
+													</div>
+													<div class="col-md-3 col-xs-3">
+														<p class="f2 __dashpta">Cloudinary</p>
+													</div>
+													<div class="col-md-3 col-xs-3">
+														<p class="f2 __dashpta">March 3, 2018</p>
+													</div>
+													<div class="col-md-3 col-xs-3">
+														<p class="f2 __dashpta">Received</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
 						<div class="col-md-4 col-sm-5">
               <div class="__dash3">
 										<div class="row __dashrow">
@@ -435,6 +478,14 @@
 ::-webkit-scrollbar-track {
     border-radius: 50px;
     /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); */
+}
+
+.__dash2 {
+    padding-bottom: 5%;
+    height: 349px;
+    background-color: #ffffff;
+    border: 1px solid #8888881f;
+    border-radius: 6px;
 }
 
   .__dash3 {

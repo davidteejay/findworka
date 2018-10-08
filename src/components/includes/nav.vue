@@ -5,7 +5,7 @@
 		          	<ul class="nav navbar-nav navbar-right">
                   <li><button href="#" v-on:click="showMenu" class="toggle-menu"><i class="fa fa-bars"></i></button></li>
 			            <li class="dropdown __dashdropdown">
-			              	<a href="#" class="dropdown-toggle __dashdropdown-toggle" data-toggle="dropdown"><img src="../../assets/avatar.png" class="img-circle">&nbsp; &nbsp;<span>Abimbola Odugbesan</span>
+			              	<a href="#" class="dropdown-toggle __dashdropdown-toggle" data-toggle="dropdown"><img src="../../assets/img/avatar.png" class="img-circle">&nbsp; &nbsp;<span>Abimbola Odugbesan</span>
 							        </a>
                       <ul class="dropdown-menu __dropmenu">
                         <li>
@@ -34,14 +34,14 @@
 
 <script>
 export default {
-  name: 'Nav',
-  methods: {
-    showMenu: function(event){
-      document.querySelector('body').style.overflowY = 'hidden';
-      document.querySelector('.sidebar').classList.add('opened')
-    }
-  }
-}
+	name: "Nav",
+	methods: {
+		showMenu: function(event) {
+			document.querySelector("body").style.overflowY = "hidden";
+			document.querySelector(".sidebar").classList.add("opened");
+		}
+	}
+};
 </script>
 
 <style>
@@ -50,53 +50,58 @@ export default {
  * Hide default border to remove 1px line.
  */
 .navbar-fixed-top {
-  border-color: #eee;
-  background: #ffffff;
+	border-color: #eee;
+	background: #ffffff;
 }
 
 .navbar-toggle:focus {
-  background-color: #fff !important;
+	background-color: #fff !important;
 }
 
 .navbar-toggle .icon-bar {
-  background-color: #000 !important;
+	background-color: #000 !important;
 }
 
 .__dashdropdown-toggle {
-  text-align: right;
+	text-align: right;
 }
 
 .__dashdropdown-toggle img {
-  height: 100%;
+	height: 100%;
 }
 
 .dropdown-menu {
-  position: absolute !important;
-  background-color: #fff !important;
+	position: absolute !important;
+	background-color: #fff !important;
 }
 
 .__dashdropdown {
-  float: right
+	float: right;
 }
 
 .toggle-menu {
-  background: transparent;
-  border: none;
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  outline: none !important;
-  color: #797979;
+	background: transparent;
+	border: none;
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+	outline: none !important;
+	color: #797979;
 }
 
-@media (min-width: 768px){
-  .toggle-menu {
-    display: none !important;
-  }
+@media (min-width: 768px) {
+	.toggle-menu {
+		display: none !important;
+	}
 }
 
 .navbar-nav > li {
-  display: inline-block !important;
+	display: inline-block !important;
+}
+
+.navbar-nav {
+	padding-left: 40px;
+	padding-right: 40px;
 }
 </style>
 
