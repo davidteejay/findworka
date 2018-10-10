@@ -26,7 +26,7 @@
 								<div class="row __dashrow">
 												<div class="col-md-8 col-sm-8">
 													<p>
-														<a href="project.html"><span><img src="assets/img/ellipse1.svg"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Website Development for Transafty</span></a>
+														<router-link to="/project"><span><img src="assets/img/ellipse1.svg"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Website Development for Transafty</span></router-link>
 													</p>
 												</div>
 												<div class="col-md-4 col-sm-4">
@@ -37,7 +37,7 @@
 											<div class="row __dashrow">
 												<div class="col-md-8 col-sm-8">
 													<p>
-														<a href="project.html"><span><img src="assets/img/ellipse1.svg"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Findworka new Design</span></a>
+														<router-link to="/project"><span><img src="assets/img/ellipse1.svg"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f2 __dashpt1">Findworka new Design</span></router-link>
 													</p>
 												</div>
 												<div class="col-md-4 col-sm-4">

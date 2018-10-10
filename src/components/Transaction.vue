@@ -14,7 +14,7 @@ S<template>
 		          	<div class="__nxtmilestone">
                   <h3>Transaction History</h3>
                   <hr class="__dashhr">
-						<div class="row" style="box-shadow: 0px 8px 20px 0px rgba(241, 239, 239, 1)">
+						<div class="row">
 							<ul class="nav nav-pills nav-stacked __nav-pills col-md-5 col-sm-5">
 								<li class="active">
 							    	<a href="#tab_a" data-toggle="pill" class="a">
@@ -374,6 +374,8 @@ export default {
     overflow-y: scroll;
     height: 66vh;
     overflow-x: hidden;
+    padding-left: 15px;
+    padding-right: 0;
 	}
 
 	.__nav-pills::-webkit-scrollbar {
@@ -448,8 +450,8 @@ a, a:active, a:hover, a:focus, a:visited {
  }
 
  li.active .a {
-   background-color: #d6f4ff !important;
-   color: inherit !important;
+   background-color: #00aeef !important;
+   color: #fff !important;
  }
 
 .main {

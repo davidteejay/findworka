@@ -13,12 +13,17 @@
     <li :class="{active: classObject('dashboard')}"><router-link to="/" class="" ><span class="icon icon-home icon-sm"></span>
 &nbsp;&nbsp;DASHBOARD</router-link></li>
 
-    <li :class="{active: classObject('projects')}"><router-link to="/project" ><span class="icon icon-briefcase icon-sm"></span>
+    <li :class="{active: classObject('projects')}"><router-link to="/viewallproject" ><span class="icon icon-briefcase icon-sm"></span>
 &nbsp;&nbsp;PROJECTS</router-link></li>
     <li :class="{active: classObject('transactions')}"><router-link to="/transactions" ><span class="icon icon-credit-card icon-sm"></span>
 &nbsp;&nbsp;TRANSACTIONS</router-link></li>
     <li :class="{active: classObject('leads')}"><router-link to="/lead" ><span class="icon icon-settings icon-sm"></span>
 &nbsp;&nbsp;LEADS</router-link></li>
+    <li :class="{active: classObject('inbox')}"><router-link to="/inbox">
+										<span class="icon icon-envelope icon-sm"></span>
+										&nbsp;&nbsp;
+										INBOX
+									</router-link></li>
     <li :class="{active: classObject('milestones')}"><router-link to="/milestone" >MILESTONES</router-link></li>
     <li :class="{active: classObject('talents')}"><router-link to="/talent" >TALENTS</router-link></li>
   </ul>

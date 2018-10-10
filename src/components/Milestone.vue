@@ -10,7 +10,7 @@
 
 		        </div>
 	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-		          	<h1 class="page-header __dashp">Milestone</h1>
+		          	<h1 class="page-header __dashp">Add Milestone</h1>
 
 		          	<div class="row">
 		          		<div class="col-md-8">
@@ -49,13 +49,19 @@
 		                    		</div>
 
 		                    		<div class="form-group">
-		                    			<label for="">Task</label>
-		                    			<input type="text" class="form-control" id="" placeholder="">
+		                    			<label for="">Tasks</label><br>
+                              <span style="color: red">{{ message }}</span>
+                              <div style="margin: 10px 0; display: flex; justify-content: space-between" v-for="(task, i) in tasks" :key="i">
+		                    			  <input :class="singleObject" class="form-control input" v-model="tasks[i]" type="text" id="" placeholder="">
+                                <span :class="noRemove" class="remove" @click="removeTask(i)">&times;</span>
+                              </div>
 		                    		</div>
 
+                            <div style="text-align: right; padding-bottom: 10px">
+                                <span style="cursor:pointer;color: green" @click="addTask()">Add Task</span>
+                              </div>
 			                    	<div class="row">
-										<div class="col-md-10"></div>
-										<div class="col-md-2">
+										<div class="col-md-12" style="text-align: center">
 											<button class="btn btn-next"><i class="fa fa-paper-plane"></i> Done</button>
 										</div>
 
@@ -65,7 +71,6 @@
 
 							</div>
 		          		</div>
-		          		<div class="col-md-4"></div>
 		          	</div>
 		        </div>
 	      	</div>
@@ -78,15 +83,73 @@ import Nav from "./includes/nav";
 import Sidebar from "./includes/sidebar";
 
 export default {
+  name: 'Milestone',
+  data(){
+    return {
+      tasks: [""],
+      message: ''
+    }
+  },
+  computed: {
+    singleObject: function(){
+      return {
+        singleObject: this.tasks.length === 1,
+      }
+    },
+    noRemove: function(){
+      return {
+        noRemove: this.tasks.length === 1
+      }
+    }
+  },
+  methods: {
+    addTask: function(){
+      this.message = '';
+      this.tasks.push("");
+    },
+    removeTask: function(index){
+      if (this.tasks.length > 1) this.tasks.splice(index, 1);
+      else this.message = "You must add at least one task"
+    }
+  },
 	components: {
 		Nav,
-		Sidebar
-	}
+		Sidebar,
+	},
 };
 </script>
 
 <style>
 /*project page*/
+.remove {
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  line-height: 34px;
+  font-size: 22px;
+  color: red;
+  cursor: pointer;
+}
+
+.noRemove {
+  display: none;
+}
+
+.__dashp {
+  border: none !important;
+  padding-left: 0 !important;
+}
+
+.input {
+  width: calc(100% - 44px);
+  margin-right: 10px;
+}
+
+.singleObject {
+  flex: 1;
+  width: 100%;
+  margin-right: 0;
+}
 
 .__dashlogoimg span {
 	text-transform: uppercase !important;

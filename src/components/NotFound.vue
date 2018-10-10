@@ -1,3 +1,3 @@
 <template>
-  <p>dsknfskfsfkdsjk</p>
+  <p>404 Not Found</p>
 </template>

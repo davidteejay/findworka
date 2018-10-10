@@ -14,7 +14,7 @@
 		          	<div class="row">
 		          		<div class="col-md-8 col-sm-7">
 		          			<div class="__nxtmilestone">
-								<p class="__milestonenext">Projects</p>
+								<!-- <p class="__milestonenext">Projects</p> -->
 								<div class="table-responsive">
 									<table class="table table-hover">
 										<thead>
@@ -23,7 +23,7 @@
 												<th class="">Email</th>
 												<th class="">Phone</th>
 												<th class="">SkypeID</th>
-												<th class="">Brief</th>
+												<!-- <th class="">Brief</th> -->
 											</tr>
 										</thead>
 										<tbody>
@@ -32,7 +32,7 @@
 												<td><router-link to="/leadpage"> Transafty@gmail.com</router-link></td>
 												<td><router-link to="/leadpage"> 09842348753</router-link></td>
 												<td><router-link to="/leadpage"> 23456</router-link></td>
-												<td><router-link to="/leadpage"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</router-link></td>
+												<!-- <td><router-link to="/leadpage"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</router-link></td> -->
 											</tr>
 
 											<tr>
@@ -40,7 +40,7 @@
 												<td><router-link to="/leadpage"> Transafty@gmail.com</router-link></td>
 												<td><router-link to="/leadpage"> 09842348753</router-link></td>
 												<td><router-link to="/leadpage"> 23456</router-link></td>
-												<td><router-link to="/leadpage"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</router-link></td>
+												<!-- <td><router-link to="/leadpage"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</router-link></td> -->
 											</tr>
 
 											<tr>
@@ -48,7 +48,7 @@
 												<td><router-link to="/leadpage"> Transafty@gmail.com</router-link></td>
 												<td><router-link to="/leadpage"> 09842348753</router-link></td>
 												<td><router-link to="/leadpage"> 23456</router-link></td>
-												<td><router-link to="/leadpage"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</router-link></td>
+												<!-- <td><router-link to="/leadpage"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</router-link></td> -->
 											</tr>
 
 											<tr>
@@ -56,7 +56,7 @@
 												<td><router-link to="/leadpage"> Transafty@gmail.com</router-link></td>
 												<td><router-link to="/leadpage"> 09842348753</router-link></td>
 												<td><router-link to="/leadpage"> 23456</router-link></td>
-												<td><router-link to="/leadpage"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</router-link></td>
+												<!-- <td><router-link to="/leadpage"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</router-link></td> -->
 											</tr>
 
 											<tr>
@@ -64,7 +64,7 @@
 												<td><router-link to="/leadpage"> Transafty@gmail.com</router-link></td>
 												<td><router-link to="/leadpage"> 09842348753</router-link></td>
 												<td><router-link to="/leadpage"> 23456</router-link></td>
-												<td><router-link to="/leadpage"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</router-link></td>
+												<!-- <td><router-link to="/leadpage"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</router-link></td> -->
 											</tr>
 										</tbody>
 									</table>
@@ -140,6 +140,11 @@
 	    top: -5.5px;
 	    bottom: 5.5px;
 	}
+
+  .__dashp {
+    border: none;
+    padding-left: 0 !important;
+  }
 
 	.__dashdropdown img {
 	    width: 25px;

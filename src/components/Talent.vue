@@ -10,40 +10,73 @@
 
 		        </div>
 	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-		          	<h1 class="page-header __dashp">Talents</h1>
+		          	<!-- <h1 class="page-header __dashp">Talents</h1> -->
 
 		          	<div class="row">
-		          		<div class="col-md-8 col-sm-7">
+		          		<div class="col-md-12 col-sm-12">
 		          			<div class="__nxtmilestone">
-								<p class="__milestonenext">Select reqiured skills</p>
+								<p class="__milestonenext">Select required skills</p>
 
 								<div class="row">
-									<div class="col-md-4 col-sm-4">
+									<div class="col-md-2 col-sm-2">
 										<label for="php" class="check">
 											<input type="checkbox" id="php" name="">
 									  		<span class="checkmark"></span>
-									  		&nbsp;PHP
+									  		&nbsp;&nbsp;&nbsp;PHP
 										</label>
 									</div>
-									<div class="col-md-4 col-sm-4">
+									<div class="col-md-2 col-sm-2">
 										<label for="devops" class="check">
 											<input type="checkbox" id="devops" name="">
 									  		<span class="checkmark"></span>
-									  		&nbsp;DevOPs
+									  		&nbsp;&nbsp;&nbsp;DevOPs
 										</label>
 									</div>
-									<div class="col-md-4 col-sm-4">
+									<div class="col-md-2 col-sm-2">
 										<label for="vue" class="check">
 											<input type="checkbox" id="vue" name="">
 									  		<span class="checkmark"></span>
-									  		&nbsp;VUE
+									  		&nbsp;&nbsp;&nbsp;VUE
+										</label>
+									</div>
+                  <div class="col-md-2 col-sm-2">
+										<label for="vue" class="check">
+											<input type="checkbox" id="vue" name="">
+									  		<span class="checkmark"></span>
+									  		&nbsp;&nbsp;&nbsp;VUE
+										</label>
+									</div>
+                  <div class="col-md-2 col-sm-2">
+										<label for="vue" class="check">
+											<input type="checkbox" id="vue" name="">
+									  		<span class="checkmark"></span>
+									  		&nbsp;&nbsp;&nbsp;VUE
+										</label>
+									</div>
+                  <div class="col-md-2 col-sm-2">
+										<label for="vue" class="check">
+											<input type="checkbox" id="vue" name="">
+									  		<span class="checkmark"></span>
+									  		&nbsp;&nbsp;&nbsp;VUE
+										</label>
+									</div>
+                  <div class="col-md-2 col-sm-2">
+										<label for="vue" class="check">
+											<input type="checkbox" id="vue" name="">
+									  		<span class="checkmark"></span>
+									  		&nbsp;&nbsp;&nbsp;VUE
+										</label>
+									</div>
+                  <div class="col-md-2 col-sm-2">
+										<label for="vue" class="check">
+											<input type="checkbox" id="vue" name="">
+									  		<span class="checkmark"></span>
+									  		&nbsp;&nbsp;&nbsp;VUE
 										</label>
 									</div>
 								</div>
-
 								<div class="row">
-									<div class="col-md-9"></div>
-									<div class="col-md-3">
+									<div class="col-md-12" style="text-align: center">
 										<router-link to="/availabletalent" class="btn __projectbtn">Send Application</router-link>
 									</div>
 								</div>
@@ -235,7 +268,7 @@
 		.check {
 		    display: block;
 		    position: relative;
-		    padding-left: 20px;
+		    padding: 20px;
 		    margin-bottom: 12px;
 		    padding-right: 2px;
 		    /*cursor: pointer;*/
@@ -257,7 +290,7 @@
 		/* Create a custom checkbox */
 		.checkmark {
 		    position: absolute;
-		    top: 2px;
+		    top: 20px;
 		    left: 0;
 		    height: 15px;
 		    width: 15px;

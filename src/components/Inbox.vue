@@ -6,7 +6,7 @@
 	    <div class="container-fluid">
 	      	<div class="row">
 		        <div class="col-sm-3 col-md-2 sidebar">
-		          	<Sidebar/>
+		          	<Sidebar active="inbox"/>
 
 		        </div>
 	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -14,7 +14,7 @@
 
 		          	<div class="__nxtmilestone">
 						<div class="row">
-							<div class="col-md-3 col-sm-3 __msgcol3">
+							<!-- <div class="col-md-3 col-sm-3 __msgcol3">
 								<div class="__dashm">
 									<p class="__dashnewmsg">
 										<a href="">New Message</a>
@@ -39,7 +39,7 @@
 										<span class="__dasp">&nbsp; &nbsp;Inquiries</span>
 									</p>
 								</div>
-							</div>
+							</div> -->
 							<div class="col-md-4 col-sm-4 __daspos">
 								<div class="__dasposs">
 									<span class="__dassearc"><img src="assets
@@ -206,7 +206,7 @@
 									<hr class="__dashhr">
 								</div>
 							</div>
-							<div class="col-md-5 col-sm-5 __msgcol5">
+							<div class="col-md-8 col-sm-8 __msgcol5">
 								<div class="row __msgcol5r">
 									<div>
 										<div class="col-md-1 col-xs-1">
@@ -327,6 +327,8 @@ export default {
 	    /*box-shadow: 0px 0px 16px 0px rgba(241, 239, 239, 1);*/
 	}
 
+
+
 	.__dashp span {
 	    font-size: 10px !important;
 	    font-weight: 100 !important;
@@ -441,6 +443,17 @@ export default {
 }
 .__dashscro::-moz-scrollbar-thumb {
     background: #333;
+}
+
+.__dasp {
+  padding: 5px;
+  color: #444;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.__dasp:hover {
+  background-color: #dfdfdf;
 }
 
 .__actr{

@@ -6,14 +6,14 @@
 	    <div class="container-fluid">
 	      	<div class="row">
 		        <div class="col-sm-3 col-md-2 sidebar">
-		          	<Sidebar/>
+		          	<Sidebar active="talents"/>
 
 		        </div>
 	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 		          	<h1 class="page-header __dashp">Avaliable Talents</h1>
 
 		          	<div class="__nxtmilestone">
-						<p class="__milestonenext">Select reqiured skills</p>
+						<!-- <p class="__milestonenext">Select reqiured skills</p> -->
 
 						<div class="row">
 					        <div class="form-group">
@@ -232,9 +232,6 @@ export default {
 	margin-bottom: 5px;
 }
 
-label.btn-default {
-	background-color: #fff !important;
-}
 .__dashimgr4 {
 	border-radius: 50%;
 	border: 1px solid;
@@ -290,11 +287,16 @@ label.btn-default {
 }
 .card-container label.btn-default {
 	width: 100%;
-	border: 1px solid #efefef;
 	outline: none;
 	margin: 5px;
-	box-shadow: 0px 8px 20px 0 rgba(241, 239, 239, 1);
+	box-shadow: 0px 1px 8px 0 rgba(241, 239, 239, 1);
+  transition: all .5s;
 	/*box-shadow:5px 8px 8px 0 #ccc;*/
+}
+
+.card-container label.btn-default:hover {
+  transform: translateY(-4px) scale(1.02);
+	z-index: 999;
 }
 .card-container label .bizcontent {
 	width: 100%;
