@@ -1,107 +1,34 @@
 <template>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-		    <div class="container-fluid">
-		        <div id="navbar">
-		          	<ul class="nav navbar-nav navbar-right">
-                  <li><button href="#" v-on:click="showMenu" class="toggle-menu"><i class="fa fa-bars"></i></button></li>
-			            <li class="dropdown __dashdropdown">
-			              	<a href="#" class="dropdown-toggle __dashdropdown-toggle" data-toggle="dropdown"><img src="../../assets/img/avatar.png" class="img-circle">&nbsp; &nbsp;<span>Abimbola Odugbesan</span>
-							        </a>
-                      <ul class="dropdown-menu __dropmenu">
-                        <li>
-                          <a href="">
-                          <span><i class="icon icon-note"></i></span>&nbsp; &nbsp;&nbsp; &nbsp; Edit Profile</a>
-                        </li>
-                        <li>
-                          <a href="">
-                          <span><i class="icon icon-key"></i></span>&nbsp; &nbsp;&nbsp; &nbsp; Change Password</a>
-                        </li>
-                        <li>
-                          <a href="">
-                          <span><i class="icon icon-logout"></i></span>&nbsp; &nbsp;&nbsp; &nbsp;Logout</a>
-                        </li>
-                      </ul>
-			            </li>
-		          </ul>
-		          <!-- <form class="navbar-form navbar-right">
-		            <input type="text" class="form-control" placeholder="Search...">
-		          </form> -->
-
-		        </div>
-		    </div>
-	    </nav>
+	<nav class="white z-depth-1">
+		<div class="nav-wrapper">
+			<ul>
+				<li>
+					<button class="dropdown-trigger drop" data-target="profileDrpDwn">
+						sadasddasd
+					</button>
+					<ul id='profileDrpDwn' class='dropdown-content'>
+				<li><a href="#!">one</a></li>
+				<li><a href="#!">two</a></li>
+				<li class="divider" tabindex="-1"></li>
+				<li><a href="#!">three</a></li>
+				<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+				<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+			</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
 </template>
 
 <script>
+let elems = document.querySelectorAll('.dropdown-trigger');
+let options = {
+	constrainWidth: false,
+	coverTrigger: false
+}
+
+M.Dropdown.init(elems, options);
 export default {
 	name: "Nav",
-	methods: {
-		showMenu: function(event) {
-			document.querySelector("body").style.overflowY = "hidden";
-			document.querySelector(".sidebar").classList.add("opened");
-		}
-	}
 };
 </script>
-
-<style>
-/*
- * Top navigation
- * Hide default border to remove 1px line.
- */
-.navbar-fixed-top {
-	border-color: #eee;
-	background: #ffffff;
-}
-
-.navbar-toggle:focus {
-	background-color: #fff !important;
-}
-
-.navbar-toggle .icon-bar {
-	background-color: #000 !important;
-}
-
-.__dashdropdown-toggle {
-	text-align: right;
-}
-
-.__dashdropdown-toggle img {
-	height: 100%;
-}
-
-.dropdown-menu {
-	position: absolute !important;
-	background-color: #fff !important;
-}
-
-.__dashdropdown {
-	float: right;
-}
-
-.toggle-menu {
-	background: transparent;
-	border: none;
-	position: relative;
-	display: block;
-	padding: 10px 15px;
-	outline: none !important;
-	color: #797979;
-}
-
-@media (min-width: 768px) {
-	.toggle-menu {
-		display: none !important;
-	}
-}
-
-.navbar-nav > li {
-	display: inline-block !important;
-}
-
-.navbar-nav {
-	padding-left: 40px;
-	padding-right: 40px;
-}
-</style>
-

@@ -1,0 +1,103 @@
+.login {
+	background-color: $authBg;
+	padding: 30px;
+	padding-bottom: 50px;
+
+	.valign {
+		width: fit-content;
+		min-width: 500px;
+		margin: auto;
+
+		.head {
+			background-color: $blue;
+			padding: 30px;
+
+			h4 {
+				margin: 0;
+				text-align: center;
+				color: #fff;
+			}
+		}
+
+		.body {
+			background-color: $white;
+			padding: 10px 40px;
+
+			form {
+				h6 {
+					font-weight: 600;
+					color: $blue;
+					margin: {
+						bottom: 40px;
+						top: 20px;
+					}
+				}
+
+
+				.input-field {
+					label {
+						font-size: 13px;
+
+						&.active {
+							color: $blue;
+						}
+					}
+
+					input:focus {
+						border-bottom: 1px solid $blue;
+						box-shadow: 0 1px 0 0 $blue;
+					}
+
+					.error {
+						font-size: 13px;
+					}
+
+					.forgot a {
+						color: $blue;
+						font-size: 13px;
+					}
+
+					button {
+						border-radius: 5px;
+						background-color: $blue;
+						font-weight: 600;
+						text-transform: capitalize;
+						width: 100px;
+						height: 27px;
+						line-height: 26px;
+					}
+				}
+			}
+
+			.signup {
+				font-size: 13px;
+
+				a {
+					color: $blue;
+					font-weight: 600;
+				}
+			}
+
+			ul.links {
+				margin-top: 40px;
+
+				li {
+					display: inline-block;
+					margin-right: 20px;
+
+					a {
+						color: $blue;
+						font: {
+							size: 13px;
+							weight: 500
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.copyright {
+		@include abs-pos(auto, 0, 0, 0, 0);
+	}
+}

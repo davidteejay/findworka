@@ -1,0 +1,84 @@
+.dashboard {
+	.content {
+		padding: 40px;
+
+		@include mQ(600px){
+			padding: 30px;
+		}
+
+		.col {
+			padding: 0 20px;
+
+			.summary {
+				margin: 0;
+
+				.col {
+					padding: 0;
+					padding: 0 10px;
+
+					.card {
+						padding: 10px 20px;
+						display: flex;
+						align-items: center;
+						justify-content: space-around;
+						background-color: $white;
+						border-radius: 10px;
+
+						.icon {
+							border-radius: 5px;
+							padding: 10px;
+							margin-right: 10px;
+
+							img {
+								width: 35px;
+							}
+						}
+
+						.text {
+							h4 {
+								margin: 0
+							}
+
+							h6 {
+								margin: {
+									top: 5px;
+									bottom: 0;
+								}
+								font-size: 19px;
+							}
+						}
+					}
+
+					&:first-child {
+						padding-left: 0;
+
+						.icon {
+							background-color: $authBg;
+						}
+					}
+
+					&:nth-child(2) .icon {
+						background-color: $yellow;
+					}
+
+					&:nth-child(3) .icon {
+						background-color: $green;
+					}
+
+					&:last-child {
+						padding-right: 0;
+
+						.icon {
+							background-color: $red;
+						}
+					}
+				}
+			}
+
+			.curr-projects {
+				border-radius: 10px;
+			
+			}
+		}
+	}
+}

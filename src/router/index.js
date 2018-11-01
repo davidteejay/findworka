@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "@/components/Home";
 import Viewallproject from "@/components/Viewallproject";
+import Login from "@/components/Login";
 import Project from "@/components/Project";
 import Lead from "@/components/Lead";
 import LeadPage from "@/components/LeadPage";
@@ -18,7 +19,12 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "Home",
+      name: "Login",
+      component: Login
+    },
+    {
+      path: '/dashboard',
+      name: "Dashboard",
       component: Home
     },
     {

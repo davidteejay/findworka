@@ -1,0 +1,12 @@
+nav {
+	.nav-wrapper {
+		padding: 0 30px;
+
+		ul li a {
+			&.drop {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+}
