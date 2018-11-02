@@ -11,17 +11,17 @@ html *.number, body *.number {
   font-family: 'Open Sans', Raleway, sans-serif !important;
 }
 html *::-webkit-scrollbar, body *::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 7px;
+  height: 7px;
   border-radius: 15px;
 }
 html *::-webkit-scrollbar-track, body *::-webkit-scrollbar-track {
   border-radius: 15px;
-  background-color: rgba(43, 43, 43, 0.3);
+  background-color: rgba(12, 128, 235, 0.3);
 }
 html *::-webkit-scrollbar-thumb, body *::-webkit-scrollbar-thumb {
   border-radius: 15px;
-  background-color: #2B2B2B;
+  background-color: #0C80EB;
 }
 html > div, body > div {
   width: 100%;
@@ -44,6 +44,7 @@ html > div > div:not(.auth), body > div > div:not(.auth) {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100000;
   min-height: 100vh;
   height: auto;
   background-color: #FFFFFF;
@@ -251,8 +252,63 @@ nav .nav-wrapper ul li a.drop {
 .dashboard .content .col .summary .col:last-child .icon {
   background-color: #F8A9B9;
 }
-.dashboard .content .col .curr-projects {
-  border-radius: 10px;
+.dashboard .content .col .curr-projects, .dashboard .content .col .up-projects {
+  margin: 20px 0;
+  border-radius: 5px;
+  width: 100%;
+  overflow: hidden;
+}
+.dashboard .content .col .curr-projects td, .dashboard .content .col .up-projects td {
+  padding: 15px !important;
+  border: none !important;
+}
+.dashboard .content .col .curr-projects thead, .dashboard .content .col .up-projects thead {
+  background-color: #0C80EB;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.dashboard .content .col .curr-projects tbody, .dashboard .content .col .up-projects tbody {
+  background-color: #FFFFFF;
+}
+.dashboard .content .col .curr-projects tbody tr, .dashboard .content .col .up-projects tbody tr {
+  transition: all .5s;
+  border-bottom: 1px solid #F1F1F1;
+}
+.dashboard .content .col .curr-projects tbody tr:hover, .dashboard .content .col .up-projects tbody tr:hover {
+  background-color: #E7EEFE;
+}
+.dashboard .content .col .curr-projects tbody tr td.completed, .dashboard .content .col .up-projects tbody tr td.completed {
+  color: #ADE5AF;
+}
+.dashboard .content .col .curr-projects tbody tr td.in-progress, .dashboard .content .col .up-projects tbody tr td.in-progress {
+  color: #0C80EB;
+}
+.dashboard .content .col .curr-projects tbody tr td.cancelled, .dashboard .content .col .up-projects tbody tr td.cancelled {
+  color: #F8A9B9;
+}
+.dashboard .content .col .curr-projects tbody tr td.pending, .dashboard .content .col .up-projects tbody tr td.pending {
+  color: #F2E67A;
+}
+.dashboard .content .col .curr-projects tbody tr td > .up-flex, .dashboard .content .col .up-projects tbody tr td > .up-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.dashboard .content .col .curr-projects tbody tr td > .up-flex .avatar, .dashboard .content .col .up-projects tbody tr td > .up-flex .avatar {
+  background-color: #b6cbfc;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.dashboard .content .col .curr-projects tbody tr td > .up-flex .title h6, .dashboard .content .col .up-projects tbody tr td > .up-flex .title h6 {
+  margin: 0;
+}
+.dashboard .content .col .more p {
+  text-align: right;
+}
+.dashboard .content .col .more p a {
+  color: #2B2B2B;
 }
 
 /*# sourceMappingURL=style.css.map */

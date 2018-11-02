@@ -63,11 +63,90 @@
               </div>
             </div>
           </div>
-          <table class="curr-projects z-depth-1">
-            
+          <table cellspacing="0" class="curr-projects z-depth-1">
+            <thead>
+              <tr>
+                <td>Current Projects</td>
+                <td>Status</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Android & IOS Build for <b>Bigi Nigeria</b></td>
+                <td class="completed">Completed</td>
+              </tr>
+              <tr>
+                <td>Android & IOS Build for <b>Bigi Nigeria</b></td>
+                <td class="in-progress">In Progress</td>
+              </tr>
+              <tr>
+                <td>Android & IOS Build for <b>Bigi Nigeria</b></td>
+                <td class="pending">Pending</td>
+              </tr>
+              <tr>
+                <td>Android & IOS Build for <b>Bigi Nigeria</b></td>
+                <td class="cancelled">Completed</td>
+              </tr>
+            </tbody>
           </table>
+          <div class="more">
+            <p><a href="#"><i>View More</i></a></p>
+          </div>
+          <table cell-spacing="0" class="up-projects z-depth-1">
+            <thead>
+              <tr>
+                <td colspan="3">Upcoming Projects</td>
+              </tr>
+            </thead>
+            <tbody class="up-body">
+              <tr>
+                <td>
+                  <div class="up-flex">
+                    <div class="avatar"></div>
+                    <div class="title">
+                      <h6><b>Ray Beam Nigeria</b></h6>
+                      <i>iOS / Android Build</i>
+                    </div>
+                  </div>
+                </td>
+                <td>Lagos, Nigeria</td>
+                <td>March, 2018</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="up-flex">
+                    <div class="avatar"></div>
+                    <div class="title">
+                      <h6><b>Ray Beam Nigeria</b></h6>
+                      <i>iOS / Android Build</i>
+                    </div>
+                  </div>
+                </td>
+                <td>Lagos, Nigeria</td>
+                <td>March, 2018</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="up-flex">
+                    <div class="avatar"></div>
+                    <div class="title">
+                      <h6><b>Ray Beam Nigeria</b></h6>
+                      <i>iOS / Android Build</i>
+                    </div>
+                  </div>
+                </td>
+                <td>Lagos, Nigeria</td>
+                <td>March, 2018</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="more">
+            <p><a href="#"><i>View More</i></a></p>
+          </div>
         </div>
-        <div class="col s12 m4 l3"></div>
+        <div class="col s12 m4 l3">
+          
+        </div>
       </div>
     </div>
 	</div>

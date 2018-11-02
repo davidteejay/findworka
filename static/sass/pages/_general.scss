@@ -15,19 +15,19 @@ html, body {
 		}
 
 		&::-webkit-scrollbar {
-			width: 5px;
-			height: 5px;
+			width: 7px;
+			height: 7px;
 			border-radius: 15px;
 		}
 		
 		&::-webkit-scrollbar-track {
 			border-radius: 15px;
-			background-color: rgba($black, .3);
+			background-color: rgba($blue, .3);
 		}
 		
 		&::-webkit-scrollbar-thumb {
 			border-radius: 15px;
-			background-color: $black;
+			background-color: $blue;
 		}
 	}
 
