@@ -1,0 +1,186 @@
+.transactions {
+	.content {
+		padding: 40px;
+
+		@include mQ(600px){
+			padding: 30px;
+		}
+
+		h5.title {
+			font-weight: 600
+		}
+
+		> div {
+			background-color: $white;
+			border-radius: 5px;
+			padding: 20px;
+
+			.top-section {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-direction: row;
+
+				.pagin {
+					span {
+						line-height: 40px;
+						margin: 0 7px;
+					}
+
+					button {
+						background-color: $bg;
+						color: $black;
+						border-radius: 3px;
+						height: 40px;
+						line-height: 40px;
+					}
+
+					input {
+						text-align: center;
+						height: 40px;
+						width: 60px;
+						border: 1px solid $bg;
+						outline: none !important;
+						-moz-appearance: textfield;
+
+						&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+							-webkit-appearance: none;
+							margin: 0;
+						}
+					}
+				}
+
+				.date-filter {
+					button {
+						background-color: $blue;
+						border-radius: 7px;
+						height: 40px;
+
+						span {
+							margin: 0 5px;
+							font-weight: 600;
+							line-height: 40px;
+
+							i {
+								font-size: 16px;
+							}
+						}
+					}
+
+					ul.dropdown-content {
+						border-radius: 7px;
+
+						li a {
+							color: $black;
+							font-weight: 600;
+							padding: 7px 15px
+						}
+					}
+				}
+			}
+
+			.trans-table {
+				margin: 20px 0;
+				border-radius: 5px;
+				width: 100%;
+				overflow: hidden;
+				border: 1px solid $bg;
+				
+				td {
+					padding: 15px !important;
+					border: none !important;
+				}
+
+				thead {
+					background-color: $blue;
+					color: $white;
+					font-weight: 600;
+				}
+
+				tbody {
+					background-color: $white;
+					overflow-y: scroll !important;
+					max-height: 600px;
+
+					tr {
+						border-bottom: 1px solid $bg;
+						cursor: pointer;
+
+						&:nth-child(odd){
+							background-color: $lightBlue;
+						}
+
+						td {
+							font-weight: 600;
+
+							&.date {
+								color: $blue;
+							}
+
+							&.incomplete {
+								color: darken($red, 10%);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.modal {
+		z-index: 1000000 !important;
+
+		.modal-content {
+			padding: 30px 60px;
+
+			@include mQ(600px){
+				padding: 20px;
+			}
+
+			.row {
+				margin: 0 auto;
+				width: 70%;
+
+				@include mQ(992px){
+					width: 85%;
+				}
+
+				@include mQ(600px){
+					width: 100%;
+				}
+
+				.col {
+					padding: 20px 40px;
+
+					@include mQ(600px){
+						padding: 20px;
+					}
+
+					&:first-child {
+						border-right: 1px solid $black;
+
+						@include mQ(600px){
+							border: none;
+						}
+					}
+	
+					tr {
+						border: none;
+
+						td {
+							padding: 7px 0;
+
+							&:last-child {
+								font-weight: 600;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.modal-overlay {
+		z-index: 999999 !important;
+	}
+}

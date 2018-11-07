@@ -311,4 +311,273 @@ nav .nav-wrapper ul li a.drop {
   color: #2B2B2B;
 }
 
+.transactions .content {
+  padding: 40px;
+}
+@media screen and (max-width: 600px) {
+  .transactions .content {
+    padding: 30px;
+  }
+}
+.transactions .content h5.title {
+  font-weight: 600;
+}
+.transactions .content > div {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 20px;
+}
+.transactions .content > div .top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.transactions .content > div .top-section .pagin span {
+  line-height: 40px;
+  margin: 0 7px;
+}
+.transactions .content > div .top-section .pagin button {
+  background-color: #F1F1F1;
+  color: #2B2B2B;
+  border-radius: 3px;
+  height: 40px;
+  line-height: 40px;
+}
+.transactions .content > div .top-section .pagin input {
+  text-align: center;
+  height: 40px;
+  width: 60px;
+  border: 1px solid #F1F1F1;
+  outline: none !important;
+  -moz-appearance: textfield;
+}
+.transactions .content > div .top-section .pagin input::-webkit-outer-spin-button, .transactions .content > div .top-section .pagin input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.transactions .content > div .top-section .date-filter button {
+  background-color: #0C80EB;
+  border-radius: 7px;
+  height: 40px;
+}
+.transactions .content > div .top-section .date-filter button span {
+  margin: 0 5px;
+  font-weight: 600;
+  line-height: 40px;
+}
+.transactions .content > div .top-section .date-filter button span i {
+  font-size: 16px;
+}
+.transactions .content > div .top-section .date-filter ul.dropdown-content {
+  border-radius: 7px;
+}
+.transactions .content > div .top-section .date-filter ul.dropdown-content li a {
+  color: #2B2B2B;
+  font-weight: 600;
+  padding: 7px 15px;
+}
+.transactions .content > div .trans-table {
+  margin: 20px 0;
+  border-radius: 5px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #F1F1F1;
+}
+.transactions .content > div .trans-table td {
+  padding: 15px !important;
+  border: none !important;
+}
+.transactions .content > div .trans-table thead {
+  background-color: #0C80EB;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.transactions .content > div .trans-table tbody {
+  background-color: #FFFFFF;
+  overflow-y: scroll !important;
+  max-height: 600px;
+}
+.transactions .content > div .trans-table tbody tr {
+  border-bottom: 1px solid #F1F1F1;
+  cursor: pointer;
+}
+.transactions .content > div .trans-table tbody tr:nth-child(odd) {
+  background-color: #E7EEFE;
+}
+.transactions .content > div .trans-table tbody tr td {
+  font-weight: 600;
+}
+.transactions .content > div .trans-table tbody tr td.date {
+  color: #0C80EB;
+}
+.transactions .content > div .trans-table tbody tr td.incomplete {
+  color: #f47a93;
+}
+.transactions .modal {
+  z-index: 1000000 !important;
+}
+.transactions .modal .modal-content {
+  padding: 30px 60px;
+}
+@media screen and (max-width: 600px) {
+  .transactions .modal .modal-content {
+    padding: 20px;
+  }
+}
+.transactions .modal .modal-content .row {
+  margin: 0 auto;
+  width: 70%;
+}
+@media screen and (max-width: 992px) {
+  .transactions .modal .modal-content .row {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .transactions .modal .modal-content .row {
+    width: 100%;
+  }
+}
+.transactions .modal .modal-content .row .col {
+  padding: 20px 40px;
+}
+@media screen and (max-width: 600px) {
+  .transactions .modal .modal-content .row .col {
+    padding: 20px;
+  }
+}
+.transactions .modal .modal-content .row .col:first-child {
+  border-right: 1px solid #2B2B2B;
+}
+@media screen and (max-width: 600px) {
+  .transactions .modal .modal-content .row .col:first-child {
+    border: none;
+  }
+}
+.transactions .modal .modal-content .row .col tr {
+  border: none;
+}
+.transactions .modal .modal-content .row .col tr td {
+  padding: 7px 0;
+}
+.transactions .modal .modal-content .row .col tr td:last-child {
+  font-weight: 600;
+}
+.transactions .modal-overlay {
+  z-index: 999999 !important;
+}
+
+.talent .content {
+  padding: 40px;
+}
+@media screen and (max-width: 600px) {
+  .talent .content {
+    padding: 30px;
+  }
+}
+.talent .content > div {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 40px;
+}
+@media screen and (max-width: 600px) {
+  .talent .content > div {
+    padding: 20px;
+  }
+}
+.talent .content > div .title {
+  font-weight: 600;
+  color: #0C80EB;
+}
+.talent .content > div .row {
+  margin: 0;
+}
+.talent .content > div .row .col {
+  padding: 10px 0;
+  padding-right: 40px;
+}
+@media screen and (max-width: 992px) {
+  .talent .content > div .row .col {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .talent .content > div .row .col {
+    padding-right: 20px;
+  }
+}
+.talent .content > div .row .col .addTrigger {
+  color: #0C80EB;
+  font-size: 18px;
+  display: none;
+  opacity: 0;
+  transition: all .5;
+}
+.talent .content > div .row .col .addTrigger.show {
+  display: block;
+  opacity: 1;
+}
+.talent .content > div .row .col.skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.talent .content > div .row .col p {
+  cursor: pointer;
+}
+.talent .content > div .row .col p span {
+  color: #2B2B2B;
+}
+.talent .content > div .row .col p [type="checkbox"].filled-in:checked + span:after {
+  border: 2px solid #0C80EB;
+  background-color: #0C80EB;
+  border-radius: 3px;
+}
+.talent .content > div .row .col p [type="checkbox"].filled-in:not(:checked) + span:after {
+  border: 2px solid #0C80EB;
+  border-radius: 3px;
+}
+.talent .content > div .row .col .add {
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 0;
+  transition: all .5s;
+  opacity: 0;
+}
+.talent .content > div .row .col .add.show {
+  display: flex;
+  opacity: 1;
+}
+.talent .content > div .row .col .add button {
+  background-color: #0C80EB;
+  color: #FFFFFF;
+  border-radius: 6px;
+  height: 35px;
+  line-height: 35px;
+}
+.talent .content > div .row .col .add input {
+  height: 35px;
+  width: 200px;
+  border: none !important;
+  outline: none !important;
+  background-color: #F1F1F1;
+  border-radius: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 10px;
+}
+.talent .content > div .send {
+  background-color: #0C80EB;
+  color: #FFFFFF;
+  border-radius: 6px;
+  margin-top: 100px;
+}
+@media screen and (max-width: 600px) {
+  .talent .content > div .send {
+    margin-top: 50px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

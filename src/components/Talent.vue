@@ -1,94 +1,39 @@
 <template>
-	<div>
-
+	<div class="talent">
 		<Nav/>
-
-	    <div class="container-fluid">
-	      	<div class="row">
-		        <div class="col-sm-3 col-md-2 sidebar">
-		          	<Sidebar active="talents"/>
-
-		        </div>
-	        	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-		          	<!-- <h1 class="page-header __dashp">Talents</h1> -->
-
-		          	<div class="row">
-		          		<div class="col-md-12 col-sm-12">
-		          			<div class="__nxtmilestone">
-								<p class="__milestonenext">Select required skills</p>
-
-								<div class="row">
-									<div class="col-md-2 col-sm-2">
-										<label for="php" class="check">
-											<input type="checkbox" id="php" name="">
-									  		<span class="checkmark"></span>
-									  		&nbsp;&nbsp;&nbsp;PHP
-										</label>
-									</div>
-									<div class="col-md-2 col-sm-2">
-										<label for="devops" class="check">
-											<input type="checkbox" id="devops" name="">
-									  		<span class="checkmark"></span>
-									  		&nbsp;&nbsp;&nbsp;DevOPs
-										</label>
-									</div>
-									<div class="col-md-2 col-sm-2">
-										<label for="vue" class="check">
-											<input type="checkbox" id="vue" name="">
-									  		<span class="checkmark"></span>
-									  		&nbsp;&nbsp;&nbsp;VUE
-										</label>
-									</div>
-                  <div class="col-md-2 col-sm-2">
-										<label for="vue" class="check">
-											<input type="checkbox" id="vue" name="">
-									  		<span class="checkmark"></span>
-									  		&nbsp;&nbsp;&nbsp;VUE
-										</label>
-									</div>
-                  <div class="col-md-2 col-sm-2">
-										<label for="vue" class="check">
-											<input type="checkbox" id="vue" name="">
-									  		<span class="checkmark"></span>
-									  		&nbsp;&nbsp;&nbsp;VUE
-										</label>
-									</div>
-                  <div class="col-md-2 col-sm-2">
-										<label for="vue" class="check">
-											<input type="checkbox" id="vue" name="">
-									  		<span class="checkmark"></span>
-									  		&nbsp;&nbsp;&nbsp;VUE
-										</label>
-									</div>
-                  <div class="col-md-2 col-sm-2">
-										<label for="vue" class="check">
-											<input type="checkbox" id="vue" name="">
-									  		<span class="checkmark"></span>
-									  		&nbsp;&nbsp;&nbsp;VUE
-										</label>
-									</div>
-                  <div class="col-md-2 col-sm-2">
-										<label for="vue" class="check">
-											<input type="checkbox" id="vue" name="">
-									  		<span class="checkmark"></span>
-									  		&nbsp;&nbsp;&nbsp;VUE
-										</label>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12" style="text-align: center">
-										<router-link to="/availabletalent" class="btn __projectbtn">Send Application</router-link>
-									</div>
-								</div>
-							</div>
-		          		</div>
-		          		<div class="col-md-4 col-sm-5"></div>
-		          	</div>
-		          	<br>
-
-		        </div>
-	      	</div>
-	    </div>
+		<Sidebar active="talents"/>
+		<div class="content">
+			<div>
+				<h6 class="title">Select required skills</h6>
+				<div class="row">
+					<div class="col l2 m3 s6 skill" v-for="(skill, i) in skills" :key="i">
+						<p>
+							<label>
+								<input type="checkbox" class="filled-in" :value="skill" v-model="checked" />
+								<span>{{skill}}</span>
+							</label>
+						</p>
+						<p @click="removeSkill(i)">
+							<i class="red-text fa fa-close"></i>
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<span class="addTrigger" :class="{ show: !show }" @click="showAdd">
+							<i class="fa fa-plus"></i>
+							Add Skill
+						</span>
+						<form class="add" :class="{ show }" @submit.prevent="addSkill">
+							<input type="text" class="browser-default" v-model="skill" placeholder="Add New Skill">
+							<button type="submit" class="btn z-depth-0" >Add Skill</button>
+						</form>
+						<span class="red-text">{{ error }}</span>
+					</div>
+				</div>
+				<button class="btn z-depth-0 send">Send Application</button>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -96,311 +41,61 @@
   import Sidebar from './includes/sidebar.vue';
   import Nav from './includes/nav.vue';
 
-	export default {
+export default {
+	name: 'Talent',
+	data(){
+		return {
+			skills: ['VueJS', 'ReactJS', 'React Native', 'Angular', 'JavaScript', 'CSS', 'SASS', 'HTML', 'JAVA', 'Python', 'C++', 'PHP'],
+			checked: [],
+			skill: '',
+			error: '',
+			show: false
+		}
+	},
+	methods: {
+		addSkill: function(){
+			this.error = ''
+
+			let { checked, skill, skills } = this
+			if (skill !== ''){
+				if (skills.includes(skill)) this.error = 'Skill already included'
+				else {
+					checked.push(skill)
+					skills.push(skill)
+					
+					this.skill = ''
+					this.checked = checked
+					this.skills = skills
+					this.show = false
+				}
+			}
+		},
+		removeSkill: function(index){
+			this.error = ''
+
+			let { checked, skills } = this
+
+			let skill = skills[index]
+			skills.splice(index, 1)
+			if (checked.includes(skill)){
+				let i = checked.indexOf(skill)
+				checked.splice(i, 1)
+			}
+
+			this.checked = checked
+			this.skills = skills
+		},
+		showAdd: function(){
+			this.show = true
+		}
+	},
+	// computed: {
+	// 	show: function(){
+	// 		return this.show
+	// 	}
+	// }
     components: {
       Sidebar, Nav
     }
-	}
+}
 </script>
-
-<style>
-
-	/*project page*/
-
-	.__dashlogoimg span {
-	    text-transform: uppercase !important;
-	    font-size: 22px;
-	    letter-spacing: .4rem;
-	    color: #0000008c;
-	}
-	.__dashlogoimg img {
-	    width: 30px !important;
-	    width: 30px !important;
-	    position: relative;
-	    top: -5.5px;
-	    bottom: 5.5px;
-	}
-
-	.__dashdropdown img {
-	    width: 25px;
-	    /*box-shadow: 0px 0px 16px 0px rgba(241, 239, 239, 1);*/
-	}
-
-	.__dashp span {
-	    font-size: 10px !important;
-	    font-weight: 100 !important;
-	}
-
-	.__dash {
-	    /* box-shadow: 0px 2px 20px 0px #a9a9a92b; */
-	    border-radius: 4px;
-	    padding-bottom: 3%;
-	    border: 1px solid #8888881f;
-	    border-radius: 6px;
-	    background-color: #ffffff;
-	}
-
-	.table>thead>tr>th {
-	    vertical-align: bottom;
-	    border-bottom: 1px solid #ddf6ff;
-	    font-size: 14px;
-	    color: #26acf5;
-	    text-transform: uppercase;
-	    font-weight: 100;
-	    /* border-bottom: none; */
-	}
-
-	.table>tbody>tr>td {
-	    border-bottom: none !important;
-	    border-top: none !important;
-	    line-height: 2.0 !important;
-	}
-
-	.__dash1 {
-	    /* box-shadow: 0px 0px 16px 0px rgba(241, 239, 239, 1); */
-	    border-radius: 4px;
-	    /*width: 347px;*/
-	    /* height: 321px; */
-	    padding-bottom: 5%;
-	    background-color: #ffffff;
-	    border: 1px solid #8888881f;
-	    border-radius: 6px;
-	}
-
-	.__dashimgr1 {
-	    border-radius: 50%;
-	    border: 1px solid;
-	    height: 40px;
-	    width: 40px;
-	    text-align: center;
-	    padding: 8px 2px 2px 2px;
-	    background: #fbd5d3;
-	    color: #fff;
-	    font-size: 12px;
-	    margin-bottom: 5px;
-	}
-
-	.__dashrow {
-    	padding: 10px 20px 0px;
-	}
-
-	.__dashpt2 {
-	    font-size: 16px;
-	    color: #4a4a4a;
-	    margin-top: 8px;
-	    margin-bottom: 0px;
-	    /* margin-top: 0px; */
-	}
-
-	.__dashimgr2 {
-	    border-radius: 50%;
-	    border: 1px solid;
-	    height: 40px;
-	    width: 40px;
-	    text-align: center;
-	    padding: 8px 2px 2px 2px;
-	    background: #ffffe3;
-	    color: #fff;
-	    font-size: 12px;
-	    margin-bottom: 5px;
-	}
-
-	.__dashimgr3 {
-	    border-radius: 50%;
-	    border: 1px solid;
-	    height: 40px;
-	    width: 40px;
-	    text-align: center;
-	    padding: 8px 2px 2px 2px;
-	    background: #e1ffe9;
-	    color: #fff;
-	    font-size: 12px;
-	    margin-bottom: 5px;
-	}
-
-	.__dashimgr4 {
-	    border-radius: 50%;
-	    border: 1px solid;
-	    height: 40px;
-	    width: 40px;
-	    text-align: center;
-	    padding: 8px 2px 2px 2px;
-	    background: #c7f0ff;
-	    color: #fff;
-	    font-size: 12px;
-	    margin-bottom: 5px;
-	}
-
-	.icon-sm {
-    	font-size: 20px;
-	}
-
-	.__nxtmilestone {
-	    border: 1px solid #8888881f;
-	    border-radius: 6px;
-	    background-color: #ffffff;
-	    padding: 11px 30px ;
-	}
-
-	.__milestonenext {
-    	font-size: 20px;
-	    /*font-weight: 600;*/
-	}
-
-	.__milestonenextp {
-	    font-size: 13px;
-	}
-
-	.__milestonecheck{
-	  padding-left: 10px;
-	}
-
-	.__dashp {
-	    color: #4a4a4a;
-	    font-size: 30px;
-	    padding: 11px 30px 1px;
-	    /* font-weight: 600; */
-	}
-
-	/*check box*/
-
-		/* The check */
-		.check {
-		    display: block;
-		    position: relative;
-		    padding: 20px;
-		    margin-bottom: 12px;
-		    padding-right: 2px;
-		    /*cursor: pointer;*/
-		    font-size: 16px;
-		    -webkit-user-select: none;
-		    -moz-user-select: none;
-		    -ms-user-select: none;
-		    user-select: none;
-		    font-weight: 200;
-		}
-
-		/* Hide the browser's default checkbox */
-		.check input {
-		    position: absolute;
-		    opacity: 0;
-		    cursor: pointer;
-		}
-
-		/* Create a custom checkbox */
-		.checkmark {
-		    position: absolute;
-		    top: 20px;
-		    left: 0;
-		    height: 15px;
-		    width: 15px;
-		    background-color: #fff;
-		    border-color: #00aeef;
-		    border-style: solid;
-		    border-width: 2px;
-		}
-
-
-		/* When the checkbox is checked, add a blue background */
-		.check input:checked ~ .checkmark {
-		    background-color: #00aeef;
-		}
-
-		/* Create the checkmark/indicator (hidden when not checked) */
-		.checkmark:after {
-		    content: "";
-		    position: absolute;
-		    display: none;
-		}
-
-		/* Show the checkmark when checked */
-		.check input:checked ~ .checkmark:after {
-		    display: block;
-		}
-
-		/* Style the checkmark/indicator */
-		.check .checkmark:after {
-		    left: 4px;
-		    top: 1px;
-		    width: 4px;
-		    height: 9px;
-		    border: solid;
-		    border-color: #ffffff;
-		    border-width: 0 2px 2px 0;
-		    -webkit-transform: rotate(45deg);
-		    -ms-transform: rotate(45deg);
-		    transform: rotate(45deg);
-		}
-
-		.__projectbtn{
-		    background: #26acf5;
-		    color: #fff !important;
-		}
-
-	/*end*/
-
-	/*project page end*/
-
-	/*
- * Base structure
- */
-
-/* Move down content because we have a fixed navbar that is 50px tall */
-body {
-  padding-top: 50px;
-}
-
-
-/*
- * Global add-ons
- */
-
-.sub-header {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
-}
-
-a, a:active, a:hover, a:focus, a:visited {
-    text-decoration: none;
-    /* background: transparent; */
-    outline: none;
-    color: inherit;
-}
-
-/*
- * Main content
- */
-
-.main {
-  padding: 20px;
-}
-@media (min-width: 768px) {
-  .main {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-}
-.main .page-header {
-  margin-top: 0;
-}
-
-
-/*
- * Placeholder dashboard ideas
- */
-
-.placeholders {
-  margin-bottom: 30px;
-  text-align: center;
-}
-.placeholders h4 {
-  margin-bottom: 0;
-}
-.placeholder {
-  margin-bottom: 20px;
-}
-.placeholder img {
-  display: inline-block;
-  border-radius: 50%;
-}
-</style>

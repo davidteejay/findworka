@@ -3,7 +3,7 @@
 		<div class="nav-wrapper">
 			<ul>
 				<li>
-					<button class="dropdown-trigger drop" data-target="profileDrpDwn">
+					<!-- <button class="dropdown-trigger drop" data-target="profileDrpDwn">
 						sadasddasd
 					</button>
 					<ul id='profileDrpDwn' class='dropdown-content'>
@@ -13,7 +13,7 @@
 				<li><a href="#!">three</a></li>
 				<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
 				<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-			</ul>
+			</ul> -->
 				</li>
 			</ul>
 		</div>
