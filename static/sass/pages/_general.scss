@@ -1,3 +1,8 @@
+/*
+Feel the beauty of SASS :-)
+General Style Rules
+*/
+
 @import '../utils/mixins';
 @import '../utils/vars';
 
@@ -9,6 +14,10 @@ html, body {
 
 	* {
 		font-family: Raleway, sans-serif;
+
+		&.z-depth-1 {
+			box-shadow: rgba(0, 0, 0, 0.098) 0px 4px 14px !important;
+		}
 
 		&.number {
 			font-family: 'Open Sans', Raleway, sans-serif !important;

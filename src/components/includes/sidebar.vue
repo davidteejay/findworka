@@ -26,7 +26,8 @@
 			<li :class="{active: classObject('inbox')}" class="list-item">
 				<router-link to="/inbox">
 					<span class="icon"><i class="fa fa-envelope"></i></span>
-					<span class="text">INBOX</span>
+					<span class="text">INBOX <span class="badge">10</span></span>
+					<!-- <span class="badge">10</span> -->
 				</router-link>
 			</li>
    			<li :class="{active: classObject('leads')}" class="list-item">

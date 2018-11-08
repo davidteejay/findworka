@@ -4,7 +4,7 @@
 		<Sidebar active="transactions"/>
 	    <div class="content">
 	      	<h5 class="title">Transactions</h5>
-			<div>
+			<div class="z-depth-1">
 				<div class="top-section">
 					<div class="pagin">
 						<span>Page</span>

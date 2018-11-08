@@ -1,3 +1,7 @@
+/*
+Feel the beauty of SASS :-)
+General Style Rules
+*/
 html, body {
   width: 100%;
   height: 100%;
@@ -6,6 +10,9 @@ html, body {
 }
 html *, body * {
   font-family: Raleway, sans-serif;
+}
+html *.z-depth-1, body *.z-depth-1 {
+  box-shadow: rgba(0, 0, 0, 0.098) 0px 4px 14px !important;
 }
 html *.number, body *.number {
   font-family: 'Open Sans', Raleway, sans-serif !important;
@@ -38,6 +45,9 @@ html > div > div:not(.auth), body > div > div:not(.auth) {
   width: calc(100% - 45px);
 }
 
+/*
+Sidebar Component
+*/
 .sidemenu {
   padding: 20px 0;
   width: 45px;
@@ -49,7 +59,7 @@ html > div > div:not(.auth), body > div > div:not(.auth) {
   height: auto;
   background-color: #FFFFFF;
   overflow-x: hidden;
-  transition: all .5s;
+  transition: all .3s;
 }
 .sidemenu .list-item {
   padding: 15px;
@@ -57,6 +67,10 @@ html > div > div:not(.auth), body > div > div:not(.auth) {
 }
 .sidemenu .list-item a {
   color: #2B2B2B;
+  transition: all .5s;
+}
+.sidemenu .list-item a:hover {
+  color: #0C80EB;
 }
 .sidemenu .list-item.active {
   position: relative;
@@ -76,6 +90,7 @@ html > div > div:not(.auth), body > div > div:not(.auth) {
 }
 .sidemenu .list-item .icon {
   margin-right: 15px;
+  transition: all .5s;
 }
 .sidemenu .list-item .icon.open-menu {
   cursor: pointer;
@@ -90,6 +105,18 @@ html > div > div:not(.auth), body > div > div:not(.auth) {
   font-size: 17px;
   font-weight: 600;
 }
+.sidemenu .list-item .badge {
+  color: #fff;
+  background-color: #0C80EB;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  min-width: 30px;
+  opacity: 0;
+  transition: all .5s;
+}
 .sidemenu ul.menu {
   margin-top: 40px;
 }
@@ -97,10 +124,13 @@ html > div > div:not(.auth), body > div > div:not(.auth) {
   width: 300px;
   overflow: visible;
 }
-.sidemenu.opened .text, .sidemenu:hover .text {
+.sidemenu.opened .text, .sidemenu.opened .badge, .sidemenu:hover .text, .sidemenu:hover .badge {
   opacity: 1;
 }
 
+/*
+Nav Component
+*/
 nav .nav-wrapper {
   padding: 0 30px;
 }
@@ -109,6 +139,9 @@ nav .nav-wrapper ul li a.drop {
   align-items: center;
 }
 
+/*
+Login Page
+*/
 .login {
   background-color: #E7EEFE;
   padding: 30px;
@@ -192,6 +225,9 @@ nav .nav-wrapper ul li a.drop {
   position: absolute;
 }
 
+/*
+Dashboard Page
+*/
 .dashboard .content {
   padding: 40px;
 }
@@ -311,6 +347,9 @@ nav .nav-wrapper ul li a.drop {
   color: #2B2B2B;
 }
 
+/*
+Transaction Page
+*/
 .transactions .content {
   padding: 40px;
 }
@@ -468,6 +507,9 @@ nav .nav-wrapper ul li a.drop {
   z-index: 999999 !important;
 }
 
+/*
+Talents Page
+*/
 .talent .content {
   padding: 40px;
 }
@@ -512,6 +554,7 @@ nav .nav-wrapper ul li a.drop {
   font-size: 18px;
   display: none;
   opacity: 0;
+  cursor: pointer;
   transition: all .5;
 }
 .talent .content > div .row .col .addTrigger.show {
@@ -578,6 +621,96 @@ nav .nav-wrapper ul li a.drop {
   .talent .content > div .send {
     margin-top: 50px;
   }
+}
+
+/*
+Inbox Page
+*/
+.inbox .content {
+  padding: 40px;
+}
+@media screen and (max-width: 600px) {
+  .inbox .content {
+    padding: 30px;
+  }
+}
+.inbox .content > div {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 20px;
+}
+@media screen and (max-width: 600px) {
+  .inbox .content > div {
+    padding: 20px;
+  }
+}
+.inbox .content > div .row {
+  margin: 0;
+}
+.inbox .content > div .row .col {
+  padding: 0;
+  border: 1px solid #E7EEFE;
+}
+.inbox .content > div .row .col .top-bar {
+  height: 70px;
+  padding: 15px 20px;
+}
+.inbox .content > div .row .col .top-bar.box-head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #0C80EB;
+}
+.inbox .content > div .row .col .top-bar.box-head .avatar {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.inbox .content > div .row .col .top-bar.box-head h5 {
+  margin: 0;
+  color: #FFFFFF;
+}
+.inbox .content > div .row .col .message-pane {
+  height: 400px;
+  padding: 0 20px;
+  overflow-y: scroll;
+}
+.inbox .content > div .row .col .message-pane .message-cover {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+.inbox .content > div .row .col .message-pane .message-cover .message {
+  padding: 10px 15px;
+  border-radius: 100vh;
+  width: fit-content;
+  max-width: 60%;
+}
+.inbox .content > div .row .col .message-pane .message-cover .time {
+  margin-top: 5px;
+}
+.inbox .content > div .row .col .message-pane .message-cover.incoming .message {
+  background-color: #0C80EB;
+  border-bottom-left-radius: 0;
+  color: #FFFFFF;
+}
+.inbox .content > div .row .col .message-pane .message-cover.outgoing {
+  align-items: flex-end;
+}
+.inbox .content > div .row .col .message-pane .message-cover.outgoing .message {
+  background-color: #E7EEFE;
+  border-bottom-right-radius: 0;
+  color: #2B2B2B;
+}
+.inbox .content > div .row .col .not-select {
+  height: 500px;
+  width: 100%;
+}
+.inbox .content > div .row .col .not-select .valign {
+  width: 100%;
+  padding: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

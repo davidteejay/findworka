@@ -3,7 +3,7 @@
 		<Nav/>
 		<Sidebar active="talents"/>
 		<div class="content">
-			<div>
+			<div class="z-depth-1">
 				<h6 class="title">Select required skills</h6>
 				<div class="row">
 					<div class="col l2 m3 s6 skill" v-for="(skill, i) in skills" :key="i">

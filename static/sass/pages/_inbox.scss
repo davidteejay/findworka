@@ -1,0 +1,108 @@
+/*
+Inbox Page
+*/
+
+.inbox {
+	.content {
+		padding: 40px;
+
+		@include mQ(600px){
+			padding: 30px;
+		}
+
+		> div {
+			background-color: $white;
+			border-radius: 5px;
+			padding: 20px;
+
+			@include mQ(600px){
+				padding: 20px;
+			}
+
+			.row {
+				margin: 0;
+
+				.col {
+					padding: 0;
+					border: 1px solid $lightBlue;
+
+					.top-bar {
+						height: 70px;
+						padding: 15px 20px;
+
+						&.box-head {
+							display: flex;
+							align-items: center;
+							justify-content: flex-start;
+							background-color: $blue;
+
+							.avatar {
+								width: 40px;
+								height: 40px;
+								border: 1px solid $white;
+								border-radius: 50%;
+								margin-right: 20px;
+							}
+
+							h5 {
+								margin: 0;
+								color: $white;
+							}
+						}
+					}
+
+					.message-pane {
+						height: 400px;
+						padding: 0 20px;
+						overflow-y: scroll;
+
+						.message-cover {
+							padding: 10px 0;
+							display: flex;
+							flex-direction: column;
+
+							.message {
+								padding: 10px 15px;
+								border-radius: 100vh;
+								width: fit-content;
+								max-width: 60%;
+							}
+
+							.time {
+								margin-top: 5px;
+							}
+
+							&.incoming {
+								.message {
+									background-color: $blue;
+									border-bottom-left-radius: 0;
+									color: $white;
+								}
+							}
+
+							&.outgoing {
+								align-items: flex-end;
+
+								.message {
+									background-color: $lightBlue;
+									border-bottom-right-radius: 0;
+									color: $black;
+								}
+							}
+						}
+					}
+
+					.not-select {
+						height: 500px;
+						width: 100%;
+
+						.valign {
+							width: 100%;
+							padding: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
