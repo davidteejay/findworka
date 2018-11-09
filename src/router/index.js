@@ -2,6 +2,10 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "@/components/Home";
 import Viewallproject from "@/components/Viewallproject";
+import StartProject from "@/components/StartProject";
+import Setting from "@/components/Setting";
+import ProjectProgress from "@/components/ProjectProgress";
+import TotalProject from "@/components/TotalProject";
 import Login from "@/components/Login";
 import Project from "@/components/Project";
 import Lead from "@/components/Lead";
@@ -80,6 +84,31 @@ export default new Router({
       name: "Inbox",
       component: Inbox
     },
+
+    {
+      path: "/start",
+      name: "StartProject",
+      component: StartProject
+    },
+
+    {
+      path: "/setting",
+      name: "Setting",
+      component: Setting
+    }, 
+
+    {
+      path: "/projectprogress",
+      name: "ProjectProgress",
+      component: ProjectProgress
+    },
+
+    {
+      path: "/totalproject",
+      name: "totalproject",
+      component: TotalProject
+    },    
+    
 
     {
       path: "/*",
