@@ -3,13 +3,114 @@ Nav Component
 */
 
 nav {
-	.nav-wrapper {
-		padding: 0 30px;
+	height: 75px;
+	padding: 15px 0;
 
-		ul li a {
-			&.drop {
+	.nav-wrapper {
+		padding: 0 40px;
+
+		ul:not(.dropdown-content) {
+			float: right;
+			height: 100%;
+
+			> li {
+				height: 100%;
+				padding-left: 50px;
+				border-left: 1px solid $black;
+
+				button {				
+					display: flex;
+					align-items: center;
+					height: 100%;
+					background: transparent;
+					border: none;
+					color: $black;
+
+					:not(.avatar){
+						text-align: right;
+
+						h6 {
+							margin: 0;
+							margin-bottom: 3px;
+						}
+
+						p {
+							margin: 0;
+							font: {
+								size: 13px;
+								// style: italic;
+							}
+						}
+					}
+
+					.avatar {
+						width: 45px;
+						height: 45px;
+						border: 1px solid $black;
+						border-radius: 50%;
+						margin-left: 20px;
+					}
+				}
+			}
+		}
+
+		ul.dropdown-content {
+			border-radius: 5px;
+			top: 55px !important;
+
+			li a {
+				color: $blue;
+
+				&:hover {
+					background-color: transparent;
+				}
+
+				i {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		.search-cover {
+			height: 100%;
+			float: left;
+			padding: 5px 20px;
+			display: none;
+
+			&.shown {
+				display: block;
+			}
+
+			.search {
+				border: 1px solid lighten($black, 10%);
+				border-radius: 4px;
+				height: 100%;
+				width: 500px;
 				display: flex;
 				align-items: center;
+				justify-content: center;
+
+				span {
+					line-height: 40px;
+					width: 40px;
+					text-align: center;
+					color: lighten($black, 10%);
+				}
+
+				input {
+					border: none;
+					outline: none;
+					box-shadow: none;
+					height: 100%;
+					width: calc(100% - 40px);
+					line-height: 40px;
+					padding: 0 10px;
+					background: transparent;
+					@include placeholder(){
+						color: lighten($black, 10%);
+						font-style: italic;
+					};
+				}
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 <template>
-	<div class="sidemenu z-depth-2" :class="{opened: opened}" >
+	<div class="sidemenu z-depth-2 opened" :class="{opened: opened}" >
    		<div class="logo list-item">
 			<span class="icon open-menu" @click="openMenu()"><i class="fa fa-bars"></i></span>
 			<span class="text text-title">HORUS</span>

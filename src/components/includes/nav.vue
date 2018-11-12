@@ -1,19 +1,27 @@
 <template>
 	<nav class="white z-depth-1">
 		<div class="nav-wrapper">
+			<div class="search-cover" :class="{shown: hasSearch}">
+				<form class="search">
+					<span>
+						<i class="fa fa-search"></i>
+					</span>
+					<input type="search" class="browser-default" placeholder="Search...">
+				</form>
+			</div>
 			<ul>
 				<li>
-					<!-- <button class="dropdown-trigger drop" data-target="profileDrpDwn">
-						sadasddasd
+					<button class="dropdown-trigger drop" data-target="profileDrpDwn">
+						<div>
+							<h6>'Tunde Yusuf</h6>
+							<p>Backend Developer</p>
+						</div>
+						<div class="avatar"></div>
 					</button>
-					<ul id='profileDrpDwn' class='dropdown-content'>
-				<li><a href="#!">one</a></li>
-				<li><a href="#!">two</a></li>
-				<li class="divider" tabindex="-1"></li>
-				<li><a href="#!">three</a></li>
-				<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-				<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-			</ul> -->
+					<ul id='profileDrpDwn' class='dropdown-content z-depth-1'>
+						<li><a href="#!"><i class="fa fa-user"></i>View Profile</a></li>
+						<li><a href="#!"><i class="fa fa-sign-out-alt"></i>Log out</a></li>
+					</ul>
 				</li>
 			</ul>
 		</div>
@@ -21,14 +29,22 @@
 </template>
 
 <script>
-let elems = document.querySelectorAll('.dropdown-trigger');
-let options = {
-	constrainWidth: false,
-	coverTrigger: false
-}
-
-M.Dropdown.init(elems, options);
 export default {
 	name: "Nav",
+	mounted(){		
+		let drp = document.querySelectorAll('.dropdown-trigger')
+		let drpOptions = {
+			constrainWidth: true,
+			coverTrigger: false,
+			alignment: 'right'
+		}
+		let drpInstances = M.Dropdown.init(drp, drpOptions)
+	},
+	props: {
+		hasSearch: {
+			type: Boolean,
+			default: false
+		}
+  	},
 };
 </script>

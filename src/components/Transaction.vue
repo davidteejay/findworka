@@ -1,6 +1,6 @@
 <template>
 	<div class="transactions">
-		<Nav/>
+		<Nav hasSearch/>
 		<Sidebar active="transactions"/>
 	    <div class="content">
 	      	<h5 class="title">Transactions</h5>

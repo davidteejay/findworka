@@ -5,7 +5,7 @@
         &copy; Findworka Solutions
       </p>
     </div>
-    <div class="valign z-depth-3">
+    <div class="valign z-depth-1">
       <div class="head">
         <h4>Welcome to Horus</h4>
       </div>

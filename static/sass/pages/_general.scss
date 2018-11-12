@@ -31,7 +31,7 @@ html, body {
 		
 		&::-webkit-scrollbar-track {
 			border-radius: 15px;
-			background-color: rgba($blue, .3);
+			background-color: transparent;
 		}
 		
 		&::-webkit-scrollbar-thumb {
@@ -51,8 +51,8 @@ html, body {
 			width: 100%;
 
 			&:not(.auth){
-				margin-left: 45px !important;
-				width: calc(100% - 45px);
+				margin-left: 250px !important;
+				width: calc(100% - 250px);
 			}
 		}
 	}
