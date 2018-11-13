@@ -3,7 +3,7 @@
 		<Nav/>
 		<Sidebar active="settings"/>
 	    <div class="content">
-	    	<div class="container">
+	    	<div class="container-fluid">
 
 	    		<h5 class="setting-head"> Lorem ipsum </h5>
 

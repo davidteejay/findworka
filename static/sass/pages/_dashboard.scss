@@ -4,12 +4,6 @@ Dashboard Page
 
 .dashboard {
 	.content {
-		padding: 40px;
-
-		@include mQ(600px){
-			padding: 30px;
-		}
-
 		.col {
 			padding: 0 20px;
 

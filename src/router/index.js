@@ -92,7 +92,7 @@ export default new Router({
     },
 
     {
-      path: "/setting",
+      path: "/settings",
       name: "Setting",
       component: Setting
     }, 

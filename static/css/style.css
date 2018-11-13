@@ -44,6 +44,20 @@ html > div > div:not(.auth), body > div > div:not(.auth) {
   margin-left: 250px !important;
   width: calc(100% - 250px);
 }
+html > div > div > .content, body > div > div > .content {
+  padding: 40px;
+}
+@media screen and (max-width: 600px) {
+  html > div > div > .content, body > div > div > .content {
+    padding: 30px;
+  }
+}
+html > div > div > .content.inprogress, body > div > div > .content.inprogress {
+  background-color: #ADE5AF;
+}
+html > div > div > .content.total, body > div > div > .content.total {
+  background-color: #F2E67A;
+}
 
 /*
 Sidebar Component
@@ -345,14 +359,6 @@ Login Page
 /*
 Dashboard Page
 */
-.dashboard .content {
-  padding: 40px;
-}
-@media screen and (max-width: 600px) {
-  .dashboard .content {
-    padding: 30px;
-  }
-}
 .dashboard .content .col {
   padding: 0 20px;
 }

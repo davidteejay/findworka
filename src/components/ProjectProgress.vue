@@ -2,14 +2,14 @@
 	<div class="milestone">
 		<Nav/>
 		<Sidebar active="projects"/>
-	    <div class="content">
-	    	<div class="container">
+	    <div class="content inprogress">
+	    	<div class="container-fluid">
 
-				<h6 class="progress-title"> 21 &nbsp; &nbsp;&nbsp; Project-in-progresss </h6>
+				<h5 class="progress-title"> <span class="number">21</span> Projects in-progress </h5>
 		    	<div class="milestonediv">
 		    		
 		    		<div class="row">
-					    <table class="responsive-table">
+					    <table class="responsive-table tableau">
 						        
 
 						        <tbody>
@@ -30,7 +30,7 @@
 						            </td>
 						            <td class="main-text">Lagos</td>
 						            <td class="main-text">March 2018</td>
-						            <td>  <button class="btn waves-effect waves-light table-button" type="submit" name="action">See Project
+						            <td>  <button class="btn waves-effect waves-light table-button z-depth-0" type="submit" name="action">See Project
 								  </button></td>
 						            <td class="fa fa-trash icon-size"> </td>
 						          </tr>
@@ -52,7 +52,7 @@
 						            </td>
 						            <td class="main-text">Lagos</td>
 						            <td class="main-text">March 2018</td>
-						            <td> <button class="btn waves-effect waves-light table-button" type="submit" name="action">See Project
+						            <td> <button class="btn waves-effect waves-light table-button z-depth-0" type="submit" name="action">See Project
 								  </button></td>
 						            <td class="fa fa-trash icon-size"> </td>
 						          </tr>
@@ -74,7 +74,7 @@
 						            </td>
 						            <td class="main-text">Lagos</td>
 						            <td class="main-text">March 2018</td>
-						            <td>  <button class="btn waves-effect waves-light table-button" type="submit" name="action">See Project
+						            <td>  <button class="btn waves-effect waves-light table-button z-depth-0" type="submit" name="action">See Project
 								  </button></td>
 						            <td class="fa fa-trash icon-size"> </td>
 						          </tr>
@@ -96,7 +96,7 @@
 						            </td>
 						            <td class="main-text">Lagos</td>
 						            <td class="main-text">March 2018</td>
-						            <td> <button class="btn waves-effect waves-light table-button" type="submit" name="action">See Project
+						            <td> <button class="btn waves-effect waves-light table-button z-depth-0" type="submit" name="action">See Project
 								  </button></td>
 						            <td class="fa fa-trash icon-size"> </td>
 						          </tr>
@@ -118,7 +118,7 @@
 						            </td>
 						            <td class="main-text">Lagos</td>
 						            <td class="main-text">March 2018</td>
-						            <td>  <button class="btn waves-effect waves-light table-button" type="submit" name="action">See Project
+						            <td>  <button class="btn waves-effect waves-light table-button z-depth-0" type="submit" name="action">See Project
 								  </button></td>
 						            <td class="fa fa-trash icon-size"> </td>
 						          </tr>
@@ -141,7 +141,7 @@
 						            <td class="main-text">Lagos</td>
 						            <td class="main-text">March 2018</td>
 						            <td> 
-						            	<button class="btn waves-effect waves-light table-button" type="submit" name="action">See Project
+						            	<button class="btn waves-effect waves-light table-button z-depth-0" type="submit" name="action">See Project
 								  		</button>
 									</td>
 						            <td class="fa fa-trash icon-size"> </td>
@@ -165,7 +165,7 @@
 						            <td class="main-text">Lagos</td>
 						            <td class="main-text">March 2018</td>
 						            <td>
-						            	<button class="btn waves-effect waves-light table-button" type="submit" name="action">See Project
+						            	<button class="btn waves-effect waves-light table-button z-depth-0" type="submit" name="action">See Project
 								  		</button> 
 
 						            </td>
@@ -190,7 +190,7 @@
 						            <td class="main-text">Lagos</td>
 						            <td class="main-text">March 2018</td>
 						            <td> 
-						            	 <button class="btn waves-effect waves-light table-button" type="submit" name="action">See Project
+						            	 <button class="btn waves-effect waves-light table-button z-depth-0" type="submit" name="action">See Project
 								  		</button>
 						            </td>
 						            <td class="fa fa-trash icon-size"> </td>
@@ -214,7 +214,7 @@
 						            <td class="main-text">Lagos</td>
 						            <td class="main-text">March 2018</td>
 						            <td> 
-						            	 <button class="btn waves-effect waves-light table-button" type="submit" name="action">See Project
+						            	 <button class="btn waves-effect waves-light table-button z-depth-0" type="submit" name="action">See Project
 								  		</button>
 						            </td>
 						            <td class="fa fa-trash icon-size"> </td>
@@ -238,7 +238,7 @@
 						            <td class="main-text">Lagos</td>
 						            <td class="main-text">March 2018</td>
 						            <td>
-						            	<button class="btn waves-effect waves-light table-button" type="submit" name="action">See Project
+						            	<button class="btn waves-effect waves-light table-button z-depth-0" type="submit" name="action">See Project
 								  		</button>
 						            </td>
 						            <td class="fa fa-trash icon-size"> </td>
@@ -262,7 +262,7 @@
 						            <td class="main-text">Lagos</td>
 						            <td class="main-text">March 2018</td>
 						            <td>
-						            	<button class="btn waves-effect waves-light table-button" type="submit" name="action">See Project
+						            	<button class="btn waves-effect waves-light table-button z-depth-0" type="submit" name="action">See Project
 								  		</button>
 						            </td>
 						            <td class="fa fa-trash icon-size"> </td>

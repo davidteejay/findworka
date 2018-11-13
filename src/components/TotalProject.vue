@@ -2,14 +2,14 @@
 	<div class="milestone">
 		<Nav/>
 		<Sidebar active="projects"/>
-	    <div class="content">
-	    	<div class="container">
+	    <div class="content total">
+	    	<div class="container-fluid">
 
-				<h6 class="progress-title"> 105 &nbsp; &nbsp;&nbsp; Total Projects </h6>
+				<h6 class="progress-title"> <span class="number">105</span>  Total Projects </h6>
 		    	<div class="milestonediv">
 		    		
 		    		<div class="row">
-					    <table class="responsive-table">
+					    <table class="responsive-table tableau">
 						        
 
 						        <tbody>

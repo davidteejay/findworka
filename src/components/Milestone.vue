@@ -3,7 +3,7 @@
 		<Nav/>
 		<Sidebar active="leads"/>
 	    <div class="content">
-	    	<div class="container">
+	    	<div class="container-fluid">
 
 		    	<div class="milestonediv">
 		    		<p class="milestonedivp">Create new milestone</p>
@@ -23,7 +23,7 @@
 						        <div class="input-field __inputf col s6">
 						          <input placeholder="Start Date" id="" type="text" class="__input validateinput ">
 						        </div>
-						        <div class="input-field col s6">
+						        <div class="input-field __inputf col s6">
 						          <input placeholder="End Date" id="last_name" type="text" class="__input input validate">
 						        </div>
 					      	</div>
@@ -33,8 +33,8 @@
 						        </div>
 					      	</div>
 					      	<div class="row __row">
-					      		
-						        <div class="input-field __inputf col s11"  v-for="(task, i) in tasks" :key="i">
+					      		<div  v-for="(task, i) in tasks" :key="i">
+											<div class="input-field __inputf col s11">
 						          <input placeholder="Task"  type="text" :class="singleObject" class="__input validateinput " v-model="tasks[i]" >
 						          
 						        </div>
@@ -42,8 +42,9 @@
 						        <div class="col s1">
 						        	<p :class="noRemove" class="remove" @click="removeTask(i)">&times;</p>
 						        </div>
-						        <span id="message"> {{message}} </span>
-					      	</div>
+										</div>
+						        
+					      	</div><span id="message"> {{message}} </span>
 					      	<div class="row">
 						        <p class="right" id="task"  @click="addTask()"> &plus;Add task </p>
 					      	</div>

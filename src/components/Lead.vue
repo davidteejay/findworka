@@ -1,12 +1,12 @@
 <template>
 	<div class="milestone">
-		<Nav/>
+		<Nav hasSearch/>
 		<Sidebar active="leads"/>
 	    <div class="content">
 	    	<div class="container-fluid">
 
 		    	<div>
-		    		<h6 class="lead-title"> Leads </h6>
+		    		<h5 class="lead-title"> Leads </h5>
 		    		<div class="row">
 					    <div class="col m9" id="lead">
 					    	<table class="responsive-table">

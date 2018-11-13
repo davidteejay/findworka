@@ -6,9 +6,9 @@
 	    	<div class="container-fluid">
 
 		    	<div>
-		    		<h6 class="lead-title"> Leads </h6>
+		    		<!-- <h5 class="lead-title"> Leads </h5> -->
 		    		<div class="row">
-					    <div class="col m9" id="lead">
+					    <div class="col m9 leadpage" id="lead">
 					    	<table class="responsive-table">
 
 						        <tbody>
@@ -25,7 +25,6 @@
 						          <tr class="table-border">
 						            <td class="table-width">Phone</td>
 						            <td>09011122239</td>
-						           
 						          </tr>
 						          <tr class="table-border">
 						            
