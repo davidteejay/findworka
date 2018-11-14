@@ -54,8 +54,13 @@
         error: ''
       }
     },
+    mounted(){
+      let userData = sessionStorage.getItem('userData')
+      if (userData) this.$router.push('dashboard')
+    },
     methods: {
       login: function(){
+        // console.log("this")
         this.loading = true
         this.error = ''
 
@@ -66,8 +71,12 @@
           })
           .then(res => {
             res = res.data
+            console.log(res)
             if (res.error) this.error = 'Incorrect Username or Password'
-            else alert('Logged In')
+            else {
+              sessionStorage.setItem('userData', JSON.stringify(res.data))
+              this.$router.push('dashboard')
+            }
           })
           .catch(err => console.log(err))
           .finally(this.loading = false)
