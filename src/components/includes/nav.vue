@@ -20,7 +20,8 @@
 					</button>
 					<ul id='profileDrpDwn' class='dropdown-content z-depth-1'>
 						<li><a href="#!"><i class="fa fa-user"></i>View Profile</a></li>
-						<li><a href="#!"><i class="fa fa-sign-out-alt"></i>Log out</a></li>
+						<!-- <li><a href="" @click="logout"><i class="fa fa-sign-out-alt"></i>Log out</a></li> -->
+						<li><a href="#" @click="logout"><i class="fa fa-sign-out-alt"></i>Log out</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -46,5 +47,12 @@ export default {
 			default: false
 		}
   	},
+  	methods: {
+  		logout: function(){
+			sessionStorage.clear();
+			this.$router.push('/')
+  		}
+  	}
 };
+
 </script>
