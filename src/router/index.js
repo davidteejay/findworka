@@ -50,9 +50,10 @@ export default new Router({
     },
 
     {
-      path: "/leadpage",
+      path: "/lead/:id",
       name: "LeadPage",
-      component: LeadPage
+      component: LeadPage,
+      props: true
     },
 
     {
@@ -86,9 +87,10 @@ export default new Router({
     },
 
     {
-      path: "/start",
+      path: "/start/:leadId",
       name: "StartProject",
-      component: StartProject
+      component: StartProject,
+      props: true
     },
 
     {

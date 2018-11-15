@@ -53,6 +53,11 @@ html, body {
 			&:not(.auth){
 				margin-left: 250px !important;
 				width: calc(100% - 250px);
+
+				@include mQ(992px){
+					margin-left: 45px !important;
+					width: calc(100% - 45px);
+				}
 			}
 
 			> .content {

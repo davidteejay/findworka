@@ -46,9 +46,15 @@ nav {
 					.avatar {
 						width: 45px;
 						height: 45px;
-						border: 1px solid $black;
+						// border: 1px solid $black;
 						border-radius: 50%;
 						margin-left: 20px;
+						overflow: hidden;
+
+						img {
+							width: 45px;
+							height: auto;
+						}
 					}
 				}
 			}

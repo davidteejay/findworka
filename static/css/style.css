@@ -44,6 +44,12 @@ html > div > div:not(.auth), body > div > div:not(.auth) {
   margin-left: 250px !important;
   width: calc(100% - 250px);
 }
+@media screen and (max-width: 992px) {
+  html > div > div:not(.auth), body > div > div:not(.auth) {
+    margin-left: 45px !important;
+    width: calc(100% - 45px);
+  }
+}
 html > div > div > .content, body > div > div > .content {
   padding: 40px;
 }
@@ -161,6 +167,29 @@ Sidebar Component
   }
 }
 
+.loader {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000000000;
+  position: fixed;
+  background-color: #FFFFFF;
+  display: none;
+}
+.loader.active {
+  display: flex;
+}
+.loader .valign {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader .valign .spinner-blue-only {
+  border-color: #0C80EB;
+}
+
 /*
 Nav Component
 */
@@ -202,9 +231,13 @@ nav .nav-wrapper ul:not(.dropdown-content) > li button :not(.avatar) p {
 nav .nav-wrapper ul:not(.dropdown-content) > li button .avatar {
   width: 45px;
   height: 45px;
-  border: 1px solid #2B2B2B;
   border-radius: 50%;
   margin-left: 20px;
+  overflow: hidden;
+}
+nav .nav-wrapper ul:not(.dropdown-content) > li button .avatar img {
+  width: 45px;
+  height: auto;
 }
 nav .nav-wrapper ul.dropdown-content {
   border-radius: 5px;
@@ -390,7 +423,9 @@ Dashboard Page
 .dashboard .content .col .summary .col .card .text h6 {
   margin-top: 5px;
   margin-bottom: 0;
-  font-size: 19px;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  word-break: keep-all;
 }
 .dashboard .content .col .summary .col:first-child {
   padding-left: 0;

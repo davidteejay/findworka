@@ -2,6 +2,7 @@
 	<div class="start-project">
 		<Nav/>
 		<Sidebar active="leads"/>
+		<Loader v-bind:active="loading"/>
 	    <div class="content">
 	    	<div class="container-fluid">
 	    		<h5 class="project-title">Start New Project</h5>
@@ -59,7 +60,7 @@
 								     <!-- <p class="waves-effect waves-light enter-align __starticon z-depth-0"> <i class="fa fa-lock __starticon"></i></p> -->
 
 
-								      <button class="waves-effect waves-light btn  center-align __postbtn right z-depth-0" >post 
+								      <button class="waves-effect waves-light btn  center-align __postbtn right z-depth-0" >Start 
 								      </button>
 						   		 </div>
 						       
@@ -77,28 +78,32 @@
 <script>
 import Nav from "./includes/nav";
 import Sidebar from "./includes/sidebar";
+import Loader from "./includes/Loader"
 
 export default {
-  name: 'StartProject',
-
+	name: 'StartProject',
 	components: {
 		Nav,
 		Sidebar,
+		Loader
+	},
+	props: ['leadId'],
+	data(){
+		return {
+			leadData: {},
+			loading: false
+		}
 	},
 	mounted(){
+		const userData = sessionStorage.getItem('userData')
+		if (!userData) this.$router.push('/')
+
 		document.querySelector('#base-input5').addEventListener('change', (e) => {
 			console.log(e.target.value)
 			document.getElementById('fake-input5').value = e.target.value.replace(`C:\\fakepath\\`, '') 
 		})
+
+		
 	}
 };
-// window.addEventListener('load', () => {
-// 	document.querySelector('#base-input5').addEventListener('change', (e) => {
-// 		console.log(e.target.value)
-// 		document.getElementById('fake-input5').value = e.target.value.replace(`C:\\fakepath\\`, '') 
-// 	})
-// })
-// $().change(function() {
-// $().val($(this).val().replace("C:\\fakepath\\", ""));
-// });
 </script>
