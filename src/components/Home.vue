@@ -2,6 +2,7 @@
 	<div class="dashboard">
 		<Nav/>
 		<Sidebar active="dashboard"/>
+    <Loader v-bind:active="loading"/>
     <div class="content">
       <div class="row">
         <div class="col s12 m8 l9">
@@ -12,9 +13,37 @@
                   <img src="/static/img/project.svg" alt="">
                 </div>
                 <div class="text">
-                  <h4 class="number">105</h4>
+                  <h4 class="number">{{ all }}</h4>
                   <h6>
                     Total<br>
+                    Projects
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l3">
+              <div class="card z-depth-1 hoverable" @click="progress">
+                <div class="icon">
+                  <img src="/static/img/project.svg" alt="">
+                </div>
+                <div class="text">
+                  <h4 class="number">{{ inprogress }}</h4>
+                  <h6>
+                    Projects<br>
+                    InProgress
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l3">
+              <div class="card z-depth-1 hoverable">
+                <div class="icon">
+                  <img src="/static/img/project.svg" alt="">
+                </div>
+                <div class="text">
+                  <h4 class="number">{{ complete }}</h4>
+                  <h6>
+                    Completed<br>
                     Projects
                   </h6>
                 </div>
@@ -26,38 +55,10 @@
                   <img src="/static/img/project.svg" alt="">
                 </div>
                 <div class="text">
-                  <h4 class="number">105</h4>
+                  <h4 class="number">{{ trans }}</h4>
                   <h6>
-                    Total<br>
-                    Projects
-                  </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card z-depth-1 hoverable">
-                <div class="icon">
-                  <img src="/static/img/project.svg" alt="">
-                </div>
-                <div class="text">
-                  <h4 class="number">105</h4>
-                  <h6>
-                    Total<br>
-                    Projects
-                  </h6>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l3">
-              <div class="card z-depth-1 hoverable">
-                <div class="icon">
-                  <img src="/static/img/project.svg" alt="">
-                </div>
-                <div class="text">
-                  <h4 class="number">105</h4>
-                  <h6>
-                    Total<br>
-                    Projects
+                    Completed<br>
+                    Transactions
                   </h6>
                 </div>
               </div>
@@ -155,12 +156,76 @@
 <script>
   import Nav from './includes/nav.vue';
   import Sidebar from './includes/sidebar.vue';
+  import Loader from './includes/Loader.vue'
+  import axios from 'axios'
+  import constants from './includes/constants.js'
+
+  const { API_URL } = constants
 
 	export default {
       name: 'Home',
       components: {
         Nav,
-        Sidebar
+        Sidebar,
+        Loader
+      },
+      mounted(){
+        const userData = sessionStorage.getItem('userData')
+        if (!userData) this.$router.push('/')
+
+        const { token } = JSON.parse(sessionStorage.userData)
+        axios
+          .get(`${API_URL}/projects/fetchAll`, {
+            headers: {
+              'Authorization': `Bearer ${token}`
+            }
+          })
+          .then(res => {
+            res = res.data
+            console.log(res)
+            if (res.error) M.toast({ html: '<span>Something went wrong. Please check your internet connection and try again</span>' })
+            else {
+              this.all = res.data.length
+
+              const inP = res.data.filter(datum => datum.status === 'in-progress')
+              this.inprogress = inP.length
+
+              const comp = res.data.filter(datum => datum.status === 'completed')
+              this.complete = comp.length
+
+              axios
+                .get(`${API_URL}/transactions/fetchAll`, {
+                  headers: {
+                    'Authorization': `Bearer ${token}`
+                  }
+                })
+                .then(res => {
+                  res = res.data
+                  console.log(res)
+                  if (res.error) M.toast({ html: '<span>Something went wrong. Please check your internet connection and try again</span>' })
+                    else {
+                      this.trans = res.data.length
+
+                      this.loading = false
+                    }
+                })
+            }
+          })
+          .catch(err => console.error(err))
+      },
+      data(){
+        return {
+          loading: true,
+          all: 0,
+          inprogress: 0,
+          complete: 0,
+          trans: 0
+        }
+      },
+      methods: {
+        progress: function(){
+          this.$router.push('/projects/in-progress')
+        }
       }
 	}
 </script>

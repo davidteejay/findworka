@@ -20,6 +20,7 @@ Dashboard Page
 						justify-content: space-around;
 						background-color: $white;
 						border-radius: 10px;
+						cursor: pointer;
 
 						.icon {
 							border-radius: 5px;
@@ -41,7 +42,9 @@ Dashboard Page
 									top: 5px;
 									bottom: 0;
 								}
-								font-size: 19px;
+								font-size: 15px;
+								text-overflow: ellipsis;
+								word-break: keep-all;
 							}
 						}
 					}
