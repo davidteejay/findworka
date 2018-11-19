@@ -16,9 +16,15 @@
 							</div>
 							<div class="thread-pane">
 								<div class="thread" :class="{active: isActive(i)}" v-for="(thread, i) in threads" :key="i" @click="selectThread(i)">
-									<div class="avatar"></div>
 									<div>
-										<h6>{{ thread.recipient }}</h6>
+										<img src="../assets/img/avatar.png" height="50px" width="50px">
+									</div>
+									<div>
+										<h6>{{ thread.receiver.id === userId ? thread.sender.first_name : thread.receiver.first_name }}
+											<span>
+												{{ thread.receiver.id === userId ? thread.sender.last_name : thread.receiver.last_name }}
+											</span>
+										</h6>
 										<p>{{ thread.messages[thread.messages.length - 1].message }}</p>
 									</div>
 								</div>
@@ -27,8 +33,16 @@
 						<div class="col m8 l7">
 							<div v-if="activeThread !== ''" class="message-container">
 								<div class="top-bar box-head">
-									<div class="avatar"></div>
-									<h5 v-if="activeThread !== ''">{{ threads[activeThread - 1].recipient }}</h5>
+									
+									<div>
+										<img src="../assets/img/avatar.png" height="50px" width="50px">
+									</div>
+									<h5 v-if="activeThread !== ''">
+										{{ threads[activeThread].receiver.first_name }} 
+										<span>
+											{{ threads[activeThread].receiver.last_name }}
+										</span>
+									</h5>
 								</div>							
 								<div class="message-pane">
 									<div v-for="(message, i) in messages" :key="i" class="message-cover" :class="message.type">
@@ -37,6 +51,7 @@
 										</div>
 										<div class="time">
 											{{ message.time }}
+											
 										</div>
 									</div>
 								</div>
@@ -66,82 +81,110 @@
 <script>
 import Sidebar from './includes/sidebar';
 import Nav from './includes/nav';
+import constants from './includes/constants'
+import axios from 'axios'
+import moment from 'moment'
 
+const { API_URL } = constants
 export default {
   components: {
     Sidebar, Nav
 	},
 	data(){
 		return {
-			threads: [
-				{
-					id: 1,
-					recipient: 'Abimbola Odugbesan',
-					messages: [
-						{
-							message: 'How far',
-							time: '11:55',
-							type: 'incoming'
-						}, {
-							message: 'Hello',
-							time: '11:57',
-							type: 'outgoing'
-						}, {
-							message: 'Hi',
-							time: '11:58',
-							type: 'incoming'
-						}
-					]
-				}, {
-					id: 2,
-					recipient: '\'Tunde Yusuf',
-					messages: [
-						{
-							message: 'Yo',
-							time: '11:55',
-							type: 'incoming'
-						}, {
-							message: 'Watsup',
-							time: '11:57',
-							type: 'outgoing'
-						}
-					]
-				}
-			],
+			threads: [],
 			activeThread: '',
 			messages: [],
-			message: ''
+			message: '',
+			userId: 0
 		}
 	},
 	methods: {
 		selectThread: function(id){
+			console.log(id)
 			let thread = this.threads[id]
-			this.activeThread = thread.id
-			this.messages = thread.messages
-		},
-		isActive: function(key){
-			if (this.activeThread === key + 1) return true
-			return false
-		},
-		sendMessage: function(){
-			let { activeThread, threads, messages, message } = this
+			this.activeThread = id
 
-			function pad(n) { return (n < 10) ? ("0" + n) : n; }
-			let newMessage = {
-				message,
-				time: `${new Date().getHours()}:${pad(new Date().getMinutes())}`,
-				type: 'outgoing'
+			let messages = thread.messages
+			
+
+			for (let message of messages){
+				message.type = message.senderId === this.userId ? 'outgoing' : 'incoming'
+				
+				let newTime =  new Date(message.created_at)
+				console.log('fg' + newTime)
+				/*let times = moment().subtract(6, 'newTime').calendar()*/
+				let times = moment().startOf('newTime').fromNow()
+				message.time = times
 			}
 
-			let currThread = threads[activeThread - 1]
-			let currMessages = currThread.messages
-			currMessages.push(newMessage)
-			currThread.messages = currMessages
-			threads[activeThread - 1] = currThread
+			this.messages = messages
+		},
 
-			this.threads = threads
-			this.message = ''
-		}
-	}
+		isActive: function(key){
+			if (this.activeThread === key) return true
+			return false
+		},
+
+		sendMessage: function(){
+			const { token } = JSON.parse(sessionStorage.userData)
+			const threadId = this.threads[this.activeThread].id
+			const projectId = this.threads[this.activeThread].projectId
+			console.log(threadId)
+
+			axios
+				.post(`${API_URL}/inbox/sendMessage`, {
+					senderId: this.userId,
+					threadId,
+					projectId,
+					message: this.message
+				}, {
+					headers: {
+						'Authorization': `Bearer ${token}`
+					}
+				})
+				.then(res =>{
+					console.log(res.data)
+					res = res.data
+					if (res.error) M.toast({ html: 'Something went wrong. Please check your internet connection and try again' })
+					else {
+						this.fetchThreads(token, this.userId)
+						this.selectThread(this.activeThread)
+					}
+				})			
+		},
+
+		fetchThreads: function(token, id){
+			axios
+				.get(`${API_URL}/inbox/getThreads?userId=${id}`, {
+					headers: {
+						'Authorization': `Bearer ${token}`
+					}
+				})
+				.then(res => {
+					console.log(res.data)
+					res = res.data
+					if (res.error) M.toast({ html: 'Something went wrong. Please check your internet connection and try again' })
+					else {
+						this.threads = res.data
+					}
+				})
+				.catch(err => console.error(err))
+		},
+
+
+	},
+
+
+
+	mounted() {
+		const userData = sessionStorage.userData
+		if (!userData) this.$router.push('/')
+		const { token, id } = JSON.parse(userData)
+		this.userId = id
+
+		this.fetchThreads(token, id)
+	},
+
 }
 </script>
