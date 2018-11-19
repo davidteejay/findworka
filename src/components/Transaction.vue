@@ -102,6 +102,13 @@
 							<td>N986,000</td>
 							<td>01234567890</td>
 						</tr>
+						<tr @click="showModal" v-for=" transaction in transactions">
+							<td class="date">{{ transaction.time}}</td>
+							<td>{{ transaction.clientName}}</td>
+							<td>{{ transaction.type}}</td>
+							<td>{{ transaction.amount}}</td>
+							<td>{{ transaction.transactionId}}</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -158,11 +165,53 @@
 <script>
 import Nav from './includes/nav';
 import Sidebar from './includes/sidebar';
-
+import constants from './includes/constants'
+import axios from 'axios'
+import moment from 'moment'
+const dd = moment("2018-11-17T19:16:03.000Z").format('L')
+const { API_URL } = constants
+const user = JSON.parse(sessionStorage.getItem('userData'))
+const token = user ? user.token : ''
+axios.defaults.headers.common['Authorization'] = token;
 export default {
   components: {
     Nav,
     Sidebar
+  },
+  data() {
+  	return {
+  		transactions2:[],
+  		date: dd,
+  		transactionst: [
+  			{ time:'25/10/2018 14:25',
+  			  clientName:'Raybeam Nigeria',
+  			  type:'Credit card',
+  			  amount:'N986,000',
+  			  transactio:'01234567890'
+  			}, 
+  			{ time:'25/10/2018 14:25',
+  			  clientName:'Jolabel Nigeria',
+  			  type:'Credit card',
+  			  amount:'N986,000',
+  			  transactio:'01234567890'
+  			},
+  			 { time:'25/10/2018 14:25',
+  			  clientName:'Alade Nigeria',
+  			  type:'Credit card',
+  			  amount:'N986,000',
+  			  transactio:'01234567890'
+  			},
+  			 { time:'25/10/2018 14:25',
+  			  clientName:'Poland Nigeria',
+  			  type:'Credit card',
+  			  amount:'N986,000',
+  			  transactio:'01234567890'
+  			},
+  		],
+  		pages: '',
+  		currPage: '',
+  		filteredTransaction: []
+  	}
   },
   mounted(){
 	let modal = document.querySelectorAll('.modal')
@@ -174,15 +223,67 @@ export default {
 		coverTrigger: false,
 	}
     let drpInstances = M.Dropdown.init(drp, drpOptions)
+    // this.$on('updateDetails', () => this.updateDet() )
+    this.getTransactions()
   },
   methods: {
 	showModal: function(){
 		let elems = document.querySelector('.modal')
 		let instance = M.Modal.getInstance(elems)
 		instance.open()
+	},
+	filterByMonth: function(to, from){
+		const filtered =  this.transaction.filter(function(transaction) {
+		return transaction.time < to && transaction.time > from 
+		});
+		return filtered
+	},
+	filterByNumber: function(){
+		const numb = this.pages
+		const filtered =  this.transaction.filter(function(transaction) {
+		return transaction[transaction.indexOf(transaction)] < numb
+		});
+		return filtered
+	},
+	getTransactions: function(){
+		axios.get(`${API_URL}/transactions/fetchAll`,{
+			headers: {
+			Authorization: "Bearer " + token }
+		})
+		.then(
+			(res) => this.transactions2 = res.data.data)
+		this.$emit('updateDetails')
+		//this.date = moment("2018-11-17T19:16:03.000Z")
+		.catch(err => console.log(err))
+	},
+	updateDet: function(){
+		const tr = this.transactions2
+		tr.map((t) => {
+			t.time = moment(t.updated_at).format('L H a')
+			t.clientName = t.client.first_name
+		})
+		return tr
 	}
+	},
+	computed:{
+		transactions: function(){
+			const tr = this.transactions2
+
+			tr.map((t) => {
+				t.time = moment(t.updated_at).format('L hh:mm ')
+				t.clientName = t.client.first_name
+				//t.diff = moment.duration(t.created_at- t.updated_at).humanize()
+				//t.diff = moment.duration(t.created_at.diff(t.updated_at))
+				//t.diff = moment.duration(moment("2015-12-4").diff(moment("2015-12-8")))
+				t.diff = moment.duration(moment(t.time).diff(moment("01/17/2018 09:16"))).days()
+
+			})
+			return tr
+		}
+	}
+
   }
-}
+
 
 // document.addEventListener('DOMContentLoaded', function() {
     

@@ -67,7 +67,10 @@
           .then(res => {
             res = res.data
             if (res.error) this.error = 'Incorrect Username or Password'
-            else alert('Logged In')
+            else {
+              sessionStorage.setItem('userData', JSON.stringify(res.data))
+              this.$router.push('dashboard')
+            }
           })
           .catch(err => console.log(err))
           .finally(this.loading = false)
