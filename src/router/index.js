@@ -100,7 +100,7 @@ export default new Router({
     }, 
 
     {
-      path: "/projectprogress",
+      path: "/projects/in-progress",
       name: "ProjectProgress",
       component: ProjectProgress
     },

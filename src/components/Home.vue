@@ -22,7 +22,7 @@
               </div>
             </div>
             <div class="col s12 m6 l3">
-              <div class="card z-depth-1 hoverable">
+              <div class="card z-depth-1 hoverable" @click="progress">
                 <div class="icon">
                   <img src="/static/img/project.svg" alt="">
                 </div>
@@ -161,7 +161,6 @@
   import constants from './includes/constants.js'
 
   const { API_URL } = constants
-  const { token } = JSON.parse(sessionStorage.userData)
 
 	export default {
       name: 'Home',
@@ -174,6 +173,7 @@
         const userData = sessionStorage.getItem('userData')
         if (!userData) this.$router.push('/')
 
+        const { token } = JSON.parse(sessionStorage.userData)
         axios
           .get(`${API_URL}/projects/fetchAll`, {
             headers: {
@@ -193,12 +193,25 @@
               const comp = res.data.filter(datum => datum.status === 'completed')
               this.complete = comp.length
 
-              // axios
+              axios
+                .get(`${API_URL}/transactions/fetchAll`, {
+                  headers: {
+                    'Authorization': `Bearer ${token}`
+                  }
+                })
+                .then(res => {
+                  res = res.data
+                  console.log(res)
+                  if (res.error) M.toast({ html: '<span>Something went wrong. Please check your internet connection and try again</span>' })
+                    else {
+                      this.trans = res.data.length
 
+                      this.loading = false
+                    }
+                })
             }
           })
           .catch(err => console.error(err))
-          .finally(() => this.loading = false)
       },
       data(){
         return {
@@ -207,6 +220,11 @@
           inprogress: 0,
           complete: 0,
           trans: 0
+        }
+      },
+      methods: {
+        progress: function(){
+          this.$router.push('/projects/in-progress')
         }
       }
 	}

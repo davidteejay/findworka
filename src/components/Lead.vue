@@ -17,6 +17,7 @@
 						              <th class="table-head">Email</th>
 						              <th class="table-head">Phone</th>
 						              <th class="table-head">Skype-ID</th>
+									  <th class="table-head">Status</th>
 						              <th></th>
 						          </tr>
 						        </thead>
@@ -26,6 +27,7 @@
 						            <td @click="viewLead(lead.id)">{{ lead.email }}</td>
 						            <td @click="viewLead(lead.id)">{{ lead.phone }}</td>
 						            <td @click="viewLead(lead.id)">{{ lead.skypeId }}</td>
+									<td @click="viewLead(lead.id)" style="text-transform: capitalize">{{ lead.status.replace('-', ' ') }}</td>
 						            <td class="fa fa-trash" style="cursor: pointer" @click="deleteLead(lead.id, i)"> </td>
 						          </tr>
 						        </tbody>
@@ -72,7 +74,6 @@ import Loader from "./includes/Loader";
 import axios from 'axios'
 import constants from './includes/constants.js'
 const { API_URL } = constants
-const { token } = JSON.parse(sessionStorage.userData)
 
 export default {
   name: 'Leads',  
@@ -90,7 +91,8 @@ export default {
 	mounted(){
 		const userData = sessionStorage.getItem('userData')
 		if (!userData) this.$router.push('/')
-		
+
+		const { token } = JSON.parse(sessionStorage.userData)
 		axios
 			.get(`${API_URL}/leads/fetchAll`, {
 				headers: {
@@ -98,7 +100,7 @@ export default {
 				}
 			})
 			.then(res => {
-				console.log(res.data)
+				// console.log(res.data)
 				if (res.data.error) {
 					M.toast({ html: '<span>Couldn\'t get leads. Please check your internet connection and try again</span>' })
 				} else {
@@ -110,6 +112,8 @@ export default {
 	},
 	methods: {
 		deleteLead: function(leadId, index){
+			const { token } = JSON.parse(sessionStorage.userData)
+
 			axios
 				.get(`${API_URL}/leads/deleteLead?id=${leadId}`, {
 					headers: {

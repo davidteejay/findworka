@@ -93,7 +93,6 @@ import Loader from "./includes/Loader";
 import axios from 'axios'
 import constants from './includes/constants.js'
 const { API_URL } = constants
-const { token } = JSON.parse(sessionStorage.userData)
 
 export default {
   name: 'LeadPage',  
@@ -114,6 +113,7 @@ export default {
 		const userData = sessionStorage.getItem('userData')
 		if (!userData) this.$router.push('/')
 		
+		const { token } = JSON.parse(sessionStorage.userData)
 		axios
 			.get(`${API_URL}/leads/fetchOne?id=${this.id}`, {
 				headers: {
@@ -121,7 +121,7 @@ export default {
 				}
 			})
 			.then(res => {
-				console.log(res.data)
+				// console.log(res.data)
 				if (res.data.error) M.toast({ html: '<span>Couldn\'t load lead. Please check your internet connection and try again</span>' })
 				else {
 					this.data = res.data.data
@@ -150,7 +150,7 @@ export default {
 					}
 				})
 				.then(res => {
-					console.log(res.data)
+					// console.log(res.data)
 					if (res.data.error) M.toast({ html: '<span>Couldn\'t delete lead. Please check your internet connection and try again</span>' })
 					else {
 						M.toast({ html: '<span>Lead deleted successfully</span>' })

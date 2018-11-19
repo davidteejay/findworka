@@ -50,8 +50,13 @@ html > div > div:not(.auth), body > div > div:not(.auth) {
     width: calc(100% - 45px);
   }
 }
+html > div > div:not(.auth).inprogress, body > div > div:not(.auth).inprogress {
+  background-color: #F2E67A;
+}
 html > div > div > .content, body > div > div > .content {
   padding: 40px;
+  min-height: 100%;
+  height: auto;
 }
 @media screen and (max-width: 600px) {
   html > div > div > .content, body > div > div > .content {
@@ -59,10 +64,10 @@ html > div > div > .content, body > div > div > .content {
   }
 }
 html > div > div > .content.inprogress, body > div > div > .content.inprogress {
-  background-color: #ADE5AF;
+  background-color: #F2E67A;
 }
 html > div > div > .content.total, body > div > div > .content.total {
-  background-color: #F2E67A;
+  background-color: #ADE5AF;
 }
 
 /*
@@ -408,6 +413,7 @@ Dashboard Page
   justify-content: space-around;
   background-color: #FFFFFF;
   border-radius: 10px;
+  cursor: pointer;
 }
 .dashboard .content .col .summary .col .card .icon {
   border-radius: 5px;

@@ -58,21 +58,27 @@ html, body {
 					margin-left: 45px !important;
 					width: calc(100% - 45px);
 				}
+
+				&.inprogress {
+					background-color: $yellow;
+				}
 			}
 
 			> .content {
 				padding: 40px;
+				min-height: 100%;
+				height: auto;
 
 				@include mQ(600px){
 					padding: 30px;
 				}
 
 				&.inprogress {
-					background-color: $green;
+					background-color: $yellow;
 				}
 
 				&.total {
-					background-color: $yellow;
+					background-color: $green;
 				}
 			}
 		}
